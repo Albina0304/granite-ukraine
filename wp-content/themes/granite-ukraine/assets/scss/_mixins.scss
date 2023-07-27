@@ -1,0 +1,17 @@
+@mixin reset-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  @mixin media-down ($name) {
+    $max: map-get($breakpoints, $name);
+    @media (max-width: $max) {
+      @content;
+    }
+  }
+  @mixin media-up ($name) {
+    $min: map-get($breakpoints, $name);
+    @media (min-width: $min) {
+      @content;
+    }
+  }

@@ -1,0 +1,32 @@
+.btn {
+    position: relative;
+    z-index: 1;
+    cursor: pointer;
+	background-color: transparent;
+	display: inline-block;
+	font-size: $btn-size;
+	line-height: $base-height;
+	font-weight: 600;
+	color: $btn-color;
+	text-align: center;
+    border: 1px solid $btn-color;
+    border-radius: 100px;
+    padding: 12px 40px;
+    overflow: hidden;
+	transition: all 0.5s ease-out;
+		&:hover{
+            color: $black;
+            background-color: $btn-color;
+		}
+	&-secondary {
+        font-size: $sm-size;
+        line-height: $btn-height;
+        padding: 16px 40px;
+        color: $black;
+        background-color: $btn-color;
+        &:hover{
+            color: $btn-color;
+            background-color: transparent;
+		}
+	}
+}

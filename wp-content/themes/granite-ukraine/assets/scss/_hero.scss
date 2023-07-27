@@ -1,0 +1,10 @@
+.hero {
+    padding: 157px 0 297px;
+    text-align: center;
+    &-title {
+        margin-bottom: 48px;
+        p {
+            color: $white;
+        }
+    }
+}

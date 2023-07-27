@@ -1,0 +1,72 @@
+* {
+	box-sizing: border-box;
+}
+.container {
+    max-width: 1240px;
+    padding: 0 20px;
+    margin: 0 auto;
+}
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+	font-size: $base-size;
+	color: $primary-color;
+	margin: 0;
+    line-height: $base-height;
+}
+a,
+button {
+    cursor: pointer;
+}
+a {
+    text-decoration: none;
+}
+img {
+	max-width: 100%;
+    display: block;
+    height: auto;
+}
+p {
+    color: $text-color;
+    margin: 0;
+}
+h1 {
+    font-family: 'Chakra Petch', sans-serif;
+    font-style: normal;
+    text-transform: uppercase;
+    font-weight: 500;
+	font-size: $h1-size;
+	line-height: $h1-height;
+	margin: 0;
+    color: $white;
+}
+h2 {
+    font-family: 'Chakra Petch', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+	font-size: $big-size;
+	line-height: $big-height;
+	margin: 0;
+}
+h3 {
+    font-family: 'Chakra Petch', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: $main;
+    line-height: $main-height;
+	margin: 0;
+}
+// .section {
+//     margin: 88px 0;
+// }
+.wrapper {
+    // padding-top: 97px;
+    overflow: hidden;
+}
+.decor {
+    background-image: url('../../assets/images/bacgrond-black.png');
+}
+.declight {
+    background-image: url('../../assets/images/declight.png');
+}
