@@ -45,21 +45,27 @@ h2 {
     font-family: 'Chakra Petch', sans-serif;
     font-style: normal;
     font-weight: 500;
-	font-size: $big-size;
-	line-height: $big-height;
+	font-size: $main-height;
+	line-height: $title-height;
 	margin: 0;
 }
 h3 {
     font-family: 'Chakra Petch', sans-serif;
     font-style: normal;
     font-weight: 500;
-    font-size: $main;
-    line-height: $main-height;
+    font-size: $mobile-card;
+    line-height: $sm-height;
 	margin: 0;
 }
-// .section {
-//     margin: 88px 0;
-// }
+h4 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: $min-height;
+    font-style: normal;
+    font-weight: 400;
+    line-height: $base-height;
+    color: $black;
+    margin: 0;
+}
 .wrapper {
     // padding-top: 97px;
     overflow: hidden;
@@ -68,5 +74,5 @@ h3 {
     background-image: url('../../assets/images/bacgrond-black.png');
 }
 .declight {
-    background-image: url('../../assets/images/declight.png');
+    background: url('../../assets/images/declight.png'), lightgray 50% / cover no-repeat;
 }

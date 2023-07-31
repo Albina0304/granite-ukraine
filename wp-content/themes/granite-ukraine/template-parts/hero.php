@@ -3,9 +3,11 @@ $link = get_field('btn_primary', 'options');?>
 <section class="hero decor">
     <div class="container">
         <div class="hero-title">
-            <h1>
-                <?php echo $text;?>
-            </h1>
+            <?php if ($text):?>
+                <h1>
+                    <?php echo $text;?>
+                </h1>
+            <?php endif;?>
         </div>
         <div class="section-button">
             <?php 
