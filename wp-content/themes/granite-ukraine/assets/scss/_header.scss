@@ -1,10 +1,11 @@
 .header {
     background-image: url('../../assets/images/bacgrond-black.png');
-    // position: fixed;
-    // z-index: 2;
+    position: fixed;
+    z-index: 2;
     width: 100%;
     top: 0;
     &-top {
+        padding: 6px 0;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -28,6 +29,9 @@
                     &.show::after {
                         content: '';
                         transform: rotate(180deg);
+                    }
+                    &::after {
+                        margin-left: 8px;
                     }
                 }
             }
@@ -90,6 +94,8 @@
             font-size: $min-size;
             transition: color .3s;
             outline: none;
+            display: flex;
+            align-items: center;
             svg path {
                 transition: fill .3s;
             }
@@ -103,32 +109,12 @@
                 margin-right: 8px;
             }
         }
-        #menu-languages {
-            @include reset-list;
-            margin-bottom: -16px;
-            .menu-item-object-custom {
-                padding: 0;
-            }
-            li a {
-                display: flex;
-                align-items: center;
-                margin-bottom: 16px;
-                color: $dropdown
-            }
-        }
         .dropdown-menu.show {
             padding: 8px;
-            min-width: 200px; 
         }
         .dropdown-menu.dropdown-mobile.show {
             li {
                 display: flex;
-            }
-        }
-        #menu-languages .sub-menu {
-            @include reset-list;
-            li a {
-                color: $white;
             }
         }
         &-contact {
@@ -157,11 +143,13 @@
                         }
                     }
                     @include media-down(md) {
-                        color: $white;
+                        color: $black;
                         display: flex;
                         align-items: center;
                         padding: 13px 0;
                         margin: 0;
+                        font-size: $mobile-size;
+                        line-height: $btn-size;
                     }
                     svg {
                         margin-right: 8px;
@@ -174,7 +162,7 @@
                                 fill: $btn-color;
                             }
                             @include media-down(md) {
-                                fill: $white;
+                                fill: $black;
                                 &:hover {
                                     fill: $btn-color;
                                 }
@@ -221,7 +209,7 @@
                     padding: 13px 0;
                 }
                 a {
-                    color: $white;
+                    color: $black;
                     transition: color .3s;
                     display: flex;
                     svg path {
@@ -234,15 +222,12 @@
                         }
                     }
                     @include media-down(md) {
-                        font-size: $min-size;
-                        line-height: 14px;
-                        &:focus {
-                            color: $dropdown;
-                        }
+                        font-size: $mobile-size;
+                        line-height: $btn-size;
                     }
                     svg path {
                         @include media-down(md) {
-                            fill: $white;
+                            fill: $black;
                         }
                     }
                 }
@@ -273,13 +258,22 @@
                 }
             }
         }
+        .header-logo-mobile {
+            display: none;
+            @include media-down(s) {
+                display: block;
+                position: relative;
+                z-index: 4;
+                
+            }
+        }
         .section-button {
             .btn-primary {
                 padding: 10px 16px;
                 @include media-down(s) {
-                    padding: 8px 12px;
-                    font-size: $mobile-size;
-                    line-height: $mobile-height;
+                    padding: 12px 40px;
+                    font-size: $min-size;
+                    line-height: $mobile-card;
                 }
             }
             @include media-down(md) {
@@ -296,8 +290,7 @@
             }
             svg {
                 @include media-down(s) {
-                    max-width: 101px;
-                    max-height: 28px
+                    display: none;
                     
                 }
             }
@@ -312,25 +305,30 @@
             @include media-down(md) {
                 margin: 0 -14px;
             }
-            li a {
-                padding: 0 24px;
-                color: $white;
-                font-size: $base-size;
-                line-height: $main;
-                transition: color .3s;
-                @include media-down(xl) {
-                    padding: 0 12px;
-                }
+            li {
                 @include media-down(md) {
-                    line-height: 20px;
-                    font-size: 17px;
-                    letter-spacing: 0.6px;
-                    padding: 0 0 0 22px;
+                    padding: 24px 0;
                 }
-                &:hover {
-                    color: $btn-color;
+                a {
+                    padding: 0 24px;
+                    color: $white;
+                    font-size: $base-size;
+                    line-height: $main;
+                    transition: color .3s;
+                    @include media-down(xl) {
+                        padding: 0 12px;
+                    }
+                    @include media-down(md) {
+                        line-height: $sm-height;
+                        font-size: $sm-size;
+                        letter-spacing: 0.6px;
+                        padding: 0;
+                    }
+                    &:hover {
+                        color: $btn-color;
+                    }
                 }
-            }
+            } 
         }
     }
     #burger-nav {
@@ -347,19 +345,19 @@
         transition: .5s ease-in-out;
         cursor: pointer;
         @include media-down(s) {
-            width: 23px;
-            height: 15px;
+            width: 24px;
+            height: 32px;
         }
         &.open {
             @include media-down(s) {
-                width: 23px;
-                height: 28px;
+                width: 24px;
+                height: 32px;
             }
         }
         & span {
             display: block;
             position: absolute;
-            height: 5px;
+            height: 3px;
             width: 90%;
             background: $white;
             border-radius: 9px;
@@ -374,7 +372,7 @@
             -o-transition: .25s ease-in-out;
             transition: .25s ease-in-out;
             @include media-down(s) {
-                height: 3px;
+                height: 2px;
                 width: 100%;
             }
             &:nth-child(1) {
@@ -427,27 +425,37 @@
             position: absolute;
             z-index: 3;
             left: 14px;
-            top: 29px;
+            align-items: center;
             flex-direction: column;
             width: 100%;
             height: 100vh;
             &.is-active {
                 display: flex;
+                padding: 64px 0;
+                background-image: url('../../assets/images/bacgrond-black.png');
             }
         }
-        &.header-bottom-menus.is-active {
-            background-color: $body;
-            font-weight: 500;
-        }
-        .menu-item-object-custom {
-            margin: 24px 0;
-        }
     }
-    #menu-main,
-    #menu-main-ru,
-    #menu-menu-pl {
-        @include media-down(md) {
-            padding: 140px 0;
+    .wpml-ls-legacy-list-horizontal {
+        padding: 0;
+        border: none;
+        a {
+            color: $black;
+            margin: 8px 0;
+            font-size: 10px;
+            padding: 0;
+            line-height: $btn-size;
+        }
+        &.wpml-ls-statics-footer {
+            margin: 0;
+            &>ul {
+                text-align: start;
+                display: flex;
+                flex-direction: column; 
+            }
+        }
+        &.wpml-ls-flag+span {
+            margin-left: 4px;
         }
     }
 }

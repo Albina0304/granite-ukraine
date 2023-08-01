@@ -6,11 +6,12 @@ function cc_mime_types($mimes) {
 }
 add_filter('upload_mimes', 'cc_mime_types');
 function my_scripts() {
-    wp_enqueue_script( 'main_js', get_template_directory_uri()."/dist/js/main.js", array(), '', true);
     wp_enqueue_script( 'jQuery', "https://code.jquery.com/jquery-3.6.3.js", array(), '', true);
-    wp_enqueue_style ( 'main_css', get_template_directory_uri()."/dist/css/main.css");
+    wp_enqueue_script('main_js', get_template_directory_uri() . "/dist/js/main.js", array('jquery'), '', true);
+    wp_enqueue_style('main_css', get_template_directory_uri() . "/dist/css/main.css");
 }
 add_action('wp_enqueue_scripts', 'my_scripts');
+
 
 add_theme_support( 'menus' );
 if ( ! function_exists( 'granite_ukraine_register_nav_menu' ) ) {

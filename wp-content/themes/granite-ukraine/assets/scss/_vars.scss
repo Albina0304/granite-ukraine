@@ -4,6 +4,7 @@ $white:#FFFFFF;
 $btn-color:#9ACD32;
 $text-color: #2D2C2A;
 $black: #1B3019;
+$dropdown: #7A8279;
 $base-size: 16px;
 $base-height: 24px;
 $sm-size: 18px;
@@ -20,26 +21,26 @@ $h1-size: 70px;
 $h1-height: 80px;
 $title-height: 48px;
 $mobile-card: 20px;
+$mobile-size: 10px;
 
 
-$hover-color:#0C29DD;
-$color-number: #005DEF;
-$strong-text: #2332F3;
-$h2-mobsize: 28px;
-$h2-mobheight: 32px;
-$hover-btn: #FFA901;
-$colorText-secondary: #DAE1EE;
-$body: #E5E5E5;
-$header-top-bg:#021128;
-$header-bg:#F3F6FB;
-$border-color: #8192AC;
-$dropdown: #8899B4;
-$star-color: #FF8178;
-$color-title: #05142C;
-$mobile-size: 13px;
-$mobile-height: 19px;
-$mobile-big-size: 42px;
-$mobile-big-height: 44px;
+// $hover-color:#0C29DD;
+// $color-number: #005DEF;
+// $strong-text: #2332F3;
+// $h2-mobsize: 28px;
+// $h2-mobheight: 32px;
+// $hover-btn: #FFA901;
+// $colorText-secondary: #DAE1EE;
+// $body: #E5E5E5;
+// $header-top-bg:#021128;
+// $header-bg:#F3F6FB;
+// $border-color: #8192AC;
+// $star-color: #FF8178;
+// $color-title: #05142C;
+// $mobile-size: 13px;
+// $mobile-height: 19px;
+// $mobile-big-size: 42px;
+// $mobile-big-height: 44px;
 
 
 $breakpoints: (
@@ -47,7 +48,7 @@ $breakpoints: (
   s: 540px,
   sm: 620px,
   lsm: 768px,
-  ms: 872px,
+  ms: 890px,
   md: 960px,
   up: 961px,
   xl: 1044px,

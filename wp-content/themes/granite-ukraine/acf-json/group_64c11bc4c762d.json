@@ -17,7 +17,8 @@
                 "id": ""
             },
             "placement": "top",
-            "endpoint": 0
+            "endpoint": 0,
+            "wpml_cf_preferences": 3
         },
         {
             "key": "field_64c11d2e85641",
@@ -42,7 +43,34 @@
             "max_width": "",
             "max_height": "",
             "max_size": "",
-            "mime_types": ""
+            "mime_types": "",
+            "wpml_cf_preferences": 3
+        },
+        {
+            "key": "field_64c9060e444bb",
+            "label": "Логотип мобільна версія",
+            "name": "logo_mobile",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "return_format": "array",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "",
+            "preview_size": "medium"
         },
         {
             "key": "field_64c11d6385642",
@@ -62,7 +90,8 @@
             "placeholder": "",
             "prepend": "",
             "append": "",
-            "maxlength": ""
+            "maxlength": "",
+            "wpml_cf_preferences": 2
         },
         {
             "key": "field_64c11d6e85643",
@@ -81,7 +110,8 @@
             "default_value": "",
             "placeholder": "",
             "prepend": "",
-            "append": ""
+            "append": "",
+            "wpml_cf_preferences": 3
         },
         {
             "key": "field_64c11da485644",
@@ -101,7 +131,9 @@
             "min": 0,
             "max": 0,
             "layout": "table",
-            "button_label": "Add Row",
+            "button_label": "Додати рядок",
+            "rows_per_page": 20,
+            "wpml_cf_preferences": 3,
             "sub_fields": [
                 {
                     "key": "field_64c11dd585645",
@@ -127,7 +159,8 @@
                     "max_height": "",
                     "max_size": "",
                     "mime_types": "",
-                    "parent_repeater": "field_64c11da485644"
+                    "parent_repeater": "field_64c11da485644",
+                    "wpml_cf_preferences": 3
                 },
                 {
                     "key": "field_64c11def85646",
@@ -148,7 +181,8 @@
                     "prepend": "",
                     "append": "",
                     "maxlength": "",
-                    "parent_repeater": "field_64c11da485644"
+                    "parent_repeater": "field_64c11da485644",
+                    "wpml_cf_preferences": 2
                 },
                 {
                     "key": "field_64c11e0485647",
@@ -166,10 +200,10 @@
                     },
                     "default_value": "",
                     "placeholder": "",
-                    "parent_repeater": "field_64c11da485644"
+                    "parent_repeater": "field_64c11da485644",
+                    "wpml_cf_preferences": 3
                 }
-            ],
-            "rows_per_page": 20
+            ]
         },
         {
             "key": "field_64c11eb85cfe7",
@@ -189,7 +223,8 @@
             "placeholder": "",
             "prepend": "",
             "append": "",
-            "maxlength": ""
+            "maxlength": "",
+            "wpml_cf_preferences": 2
         },
         {
             "key": "field_64c18329094a2",
@@ -205,7 +240,8 @@
                 "class": "",
                 "id": ""
             },
-            "return_format": "array"
+            "return_format": "array",
+            "wpml_cf_preferences": 3
         }
     ],
     "location": [
@@ -226,5 +262,6 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1690403680
+    "acfml_field_group_mode": "localization",
+    "modified": 1690896030
 }

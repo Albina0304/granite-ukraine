@@ -76,3 +76,9 @@ h4 {
 .declight {
     background: url('../../assets/images/declight.png'), lightgray 50% / cover no-repeat;
 }
+.customize-support {
+    padding-top: 32px;
+    .header {
+        top: 32px;
+    }
+}
