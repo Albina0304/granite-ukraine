@@ -82,3 +82,87 @@ h4 {
         top: 32px;
     }
 }
+.menu-contact {
+    display: flex;
+    @include reset-list;
+    li {
+        display: flex;
+        align-items: flex-start;
+        a {
+            color: $white;
+            font-size: $min-size;
+            line-height: $min-height;
+            margin-right: 56px;
+            transition: color .3s;
+            letter-spacing: 0.6px;
+            display: flex;
+            &:hover {
+                color: $btn-color;
+                & svg path {
+                    fill: $btn-color;
+                }
+            }
+            svg {
+                margin-right: 8px;
+                path {
+                    transition: fill .3s;
+                    &:hover {
+                        fill: $btn-color;
+                    }
+                }
+            }
+        }
+    }
+}
+.contact-navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2px 0;
+}
+.global-menus {
+    @include reset-list;
+    display: flex;
+    margin: 0 -28px;
+    li {
+        padding: 0 24px;
+        a {
+            color: $white;
+            font-size: $base-size;
+            line-height: $main;
+            transition: color .3s;
+            &:hover {
+                color: $btn-color;
+            }
+        }
+    } 
+}
+.social {
+    display: flex;
+    @include reset-list;
+    margin: 0 -24px;
+    li {
+        padding: 0 12px;
+        align-items: flex-start;
+        a {
+            color: $black;
+            transition: color .3s;
+            display: flex;
+            svg path {
+                transition: fill .3s;
+            }
+            &:hover {
+                color: $btn-color;
+                svg path {
+                    fill: $btn-color;
+                }
+            }
+        }
+    }
+    &-title {
+        color: $white;
+        font-size: 10px;
+        line-height: 14px;
+        display: none;
+    }
+}
