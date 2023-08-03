@@ -37,6 +37,7 @@ add_action('wp_enqueue_scripts', 'my_scripts');
 add_image_size( 'logo-size', 140, 41 );
 add_image_size( 'social-img', 16, 16 );
 add_image_size( 'product-img', 282, 200 );
+add_image_size( 'card-img', 40, 40 );
 function getImage($image, $size = false) {
     if($image['mime_type'] !== 'image/svg+xml'):
     return wp_get_attachment_image($image['ID'], $size ? $size : 'full');
