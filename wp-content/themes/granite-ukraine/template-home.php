@@ -9,6 +9,8 @@ if( have_rows('modules') ):
             echo get_template_part('template-parts/products');
         elseif( get_row_layout() == 'advantages' ): 
             echo get_template_part('template-parts/advantages');
+        elseif( get_row_layout() == 'about' ): 
+            echo get_template_part('template-parts/about');
         endif;
     endwhile;
 else:

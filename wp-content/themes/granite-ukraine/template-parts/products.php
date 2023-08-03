@@ -6,7 +6,7 @@ $products = get_posts(
         'posts_per_page' => -1
     )
 );?>
-<section class="products declight">
+<section class="products declight section">
     <div class="container">
         <div class="products-title">
             <?php if ($title):?>

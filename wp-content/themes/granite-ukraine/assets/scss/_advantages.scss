@@ -1,8 +1,4 @@
 .advantages {
-    padding: 88px 0;
-    @include media-down(md) {
-        padding: 64px 0;
-    }
     .advantage {
         &-title {
             text-align: center;
