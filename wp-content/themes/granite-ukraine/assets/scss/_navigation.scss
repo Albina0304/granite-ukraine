@@ -1,0 +1,58 @@
+.menu-contact {
+    display: flex;
+    @include reset-list;
+    li {
+        display: flex;
+        align-items: flex-start;
+        margin-right: 56px;
+        a {
+            color: $white;
+            font-size: $min-size;
+            line-height: $min-height;
+            transition: color .3s;
+            letter-spacing: 0.6px;
+            display: flex;
+            &:hover {
+                color: $btn-color;
+                & svg path {
+                    fill: $btn-color;
+                }
+            }
+            svg {
+                margin-right: 8px;
+                path {
+                    transition: fill .3s;
+                    &:hover {
+                        fill: $btn-color;
+                    }
+                }
+            }
+        }
+    }
+}
+.wpml-ls-current-language {
+    display: none;
+}
+.contact-navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2px 0;
+}
+.global-menus {
+    @include reset-list;
+    display: flex;
+    margin: 0 -24px;
+    li {
+        padding: 0 24px;
+        a {
+            color: $white;
+            font-size: $base-size;
+            line-height: $main;
+            transition: color .3s;
+            &:hover {
+                color: $btn-color;
+            }
+        }
+    } 
+}

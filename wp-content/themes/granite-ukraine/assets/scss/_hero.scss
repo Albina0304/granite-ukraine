@@ -5,22 +5,18 @@
         padding-bottom: 200px;
     }
     &-title {
-        margin-bottom: 48px;
-        h1 {
-            @include media-down(xl) {
-                font-size: 60px;
-            }
-            @include media-down(ms) {
-                font-size: 41px;
-                line-height: 49px;
-            }
-            @include media-down(sm) {
-                text-align: start;
-            }
+        text-transform: uppercase;
+        color: $white;
+        margin: 0 0 48px;
+        @include media-down(xl) {
+            font-size: 60px;
         }
-
-        p {
-            color: $white;
+        @include media-down(ms) {
+            font-size: 41px;
+            line-height: 49px;
+        }
+        @include media-down(sm) {
+            text-align: start;
         }
     }
     .btn-secondary {

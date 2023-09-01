@@ -6,8 +6,8 @@ function cc_mime_types($mimes) {
 }
 add_filter('upload_mimes', 'cc_mime_types');
 function my_scripts() {
-    wp_enqueue_script( 'jQuery', "https://code.jquery.com/jquery-3.6.3.js", array(), '', true);
-    wp_enqueue_script('main_js', get_template_directory_uri() . "/dist/js/main.js", array('jquery'), '', true);
+    wp_enqueue_script( 'jQuery', "https://code.jquery.com/jquery-3.6.3.js", array(), false, true);
+    wp_enqueue_script('main_js', get_template_directory_uri() . "/dist/js/main.js", array('jQuery'), false, true);
     wp_enqueue_style('main_css', get_template_directory_uri() . "/dist/css/main.css");
 }
 add_action('wp_enqueue_scripts', 'my_scripts');
@@ -33,7 +33,6 @@ if( function_exists('acf_add_options_page') ) {
         'redirect'      => false
     ));
 }
-add_action('wp_enqueue_scripts', 'my_scripts');
 add_image_size( 'logo-size', 140, 41 );
 add_image_size( 'social-img', 16, 16 );
 add_image_size( 'product-img', 282, 200 );
@@ -47,7 +46,7 @@ function getImage($image, $size = false) {
     endif;
 }
 
-function wpdocs_codex_product_init() {
+function granite_ukraine() {
 	$labels = array(
 		'name'                  => _x( 'Products', 'Post type general name', 'textdomain' ),
 		'singular_name'         => _x( 'Product', 'Post type singular name', 'textdomain' ),
@@ -66,7 +65,8 @@ function wpdocs_codex_product_init() {
 		'featured_image'        => _x( 'Product Cover Image', 'textdomain' ),
 		'set_featured_image'    => _x( 'Set cover image', 'textdomain' ), 
 		'remove_featured_image' => _x( 'Remove cover image', 'textdomain' ),
-		'use_featured_image'    => _x( 'Use as cover image', 'textdomain' ) 
+		'use_featured_image'    => _x( 'Use as cover image', 'textdomain' ),
+
 	);
 
 	$args = array(
@@ -87,4 +87,4 @@ function wpdocs_codex_product_init() {
 	register_post_type( 'product', $args );
 }
 
-add_action( 'init', 'wpdocs_codex_product_init' );
+add_action( 'init', 'granite_ukraine' );

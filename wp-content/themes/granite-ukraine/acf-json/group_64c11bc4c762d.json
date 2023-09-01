@@ -242,6 +242,23 @@
             },
             "return_format": "array",
             "wpml_cf_preferences": 3
+        },
+        {
+            "key": "field_64f06429a8d7d",
+            "label": "Вторинна Кнопка",
+            "name": "secondary_button",
+            "aria-label": "",
+            "type": "link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 3,
+            "return_format": "array"
         }
     ],
     "location": [
@@ -263,5 +280,5 @@
     "description": "",
     "show_in_rest": 0,
     "acfml_field_group_mode": "localization",
-    "modified": 1690896030
+    "modified": 1693475996
 }

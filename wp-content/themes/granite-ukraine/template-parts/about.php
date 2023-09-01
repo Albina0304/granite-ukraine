@@ -3,27 +3,26 @@ $title = get_sub_field('title');
 $description = get_sub_field('description');
 $repeater = get_sub_field('repeater');
 $link = get_field('btn_primary', 'options');
+if('about') :
 ?>
-<section class="section about declight">
+<section class="section about decor-light">
     <div class="container">
-        <div class="about-title">
-            <?php if ($title):?>
-                <h2>
-                    <?php echo $title;?>
-                </h2>
-            <?php endif;?>
-        </div>
-        <div class="about-colons">
-            <div class="colon-description">
+        <?php if ($title):?>
+            <h2 class="about-title">
+                <?php echo $title;?>
+            </h2>
+        <?php endif;?>
+        <div class="about-columns">
+            <div class="column">
                 <?php echo $description;?>
             </div>
-            <div class="colon-right">
+            <div class="column">
                 <?php
                 if ($repeater) {
                     foreach ($repeater as $img) {
                         $image = $img['image'];?>
                         <?php if ($image) : ?>
-                            <div class="colon-image">
+                            <div class="column-image">
                                 <?php echo wp_get_attachment_image($image['ID'], 'about-image'); ?>  
                             <?php endif; ?>
                         </div>
@@ -35,10 +34,11 @@ $link = get_field('btn_primary', 'options');
             <?php 
             if( $link ): 
                 $link_target = $link['target'] ? $link['target'] : '_self';?>
-                <a class="btn btn-secondary" href="<?php echo get_home_url();?>/#contacts">
+                <a class="btn btn-secondary" href="<?php echo get_home_url();?>">
                     <?php echo esc_html( $link['title'] ); ?>
                 </a>
             <?php endif; ?>
         </div>
     </div>
 </section>
+<?php endif;?>

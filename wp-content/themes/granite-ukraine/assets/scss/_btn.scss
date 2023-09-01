@@ -14,10 +14,10 @@
     padding: 12px 40px;
     overflow: hidden;
 	transition: all 0.5s ease-out;
-		&:hover{
-            color: $black;
-            background-color: $btn-color;
-		}
+    &:hover{
+        color: $black;
+        background-color: $btn-color;
+    }
 	&-secondary {
         font-size: $sm-size;
         line-height: $btn-height;

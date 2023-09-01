@@ -35,23 +35,6 @@
             }
         }
     }
-    .menu-contact li a {
-        font-size: $btn-size;
-        line-height: $mobile-card;
-        @include media-down(lsm) {
-            margin: 0;
-            padding: 0 12px;
-        }
-    }
-    .contact-navigation {
-        margin: 16px 0 32px;
-        @include media-down(lsm) {
-            flex-direction: column;
-        }
-        @include media-down(s) {
-            margin: 32px 0;
-        }
-    }
     .menu-contact {
         @include media-down(lsm) {
             margin-bottom: 12px;
@@ -61,10 +44,29 @@
             margin: 0;
         }
         li {
+            @include media-down(lsm) {
+                margin: 0;
+                padding: 0 16px;
+            }
             @include media-down(s) {
                 justify-content: center;
                 margin: 12px 0;
+                padding: 0;
             } 
+            a {
+                font-size: $btn-size;
+                line-height: $mobile-card;
+            }
+        }
+    }
+    .contact-navigation {
+        max-width: 687px;
+        margin: 16px auto 32px;
+        @include media-down(lsm) {
+            flex-direction: column;
+        }
+        @include media-down(s) {
+            margin: 32px auto;
         }
     }
     &-copyright {
@@ -75,7 +77,6 @@
         @include media-down(s) {
             padding-bottom: 16px;
         } 
-
     }
     &-bottom {
         width: 100%;
@@ -127,8 +128,8 @@
         &:hover svg path{
             fill: $btn-color;
         }
-    }
-    #scroll:hover {
-        color: $btn-color;
+        &:hover {
+            color: $btn-color;
+        }
     }
 }

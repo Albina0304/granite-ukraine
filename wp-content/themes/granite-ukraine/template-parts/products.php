@@ -5,16 +5,16 @@ $products = get_posts(
         'post_type' => 'product',
         'posts_per_page' => -1
     )
-);?>
-<section class="products declight section">
+);
+if($products) :
+?>
+<section class="products decor-light section">
     <div class="container">
-        <div class="products-title">
-            <?php if ($title):?>
-                <h2>
-                    <?php echo $title;?>
-                </h2>
-            <?php endif;?>
-        </div>
+        <?php if ($title):?>
+            <h2 class="products-title">
+                <?php echo $title;?>
+            </h2>
+        <?php endif;?>
         <div class="product-cards">
             <?php
             if ($products) {
@@ -39,6 +39,7 @@ $products = get_posts(
         </div>
     </div>
 </section>
+<?php endif;?>
 
 
 

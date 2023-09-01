@@ -1,16 +1,15 @@
 <?php 
 $title = get_sub_field('title');
 $repeater_cards = get_sub_field('repeater_card');
+if('advantages') :
 ?>
-<section class="advantages declight section">
+<section class="advantages decor-light section">
     <div class="container">
-        <div class="advantage-title">
-            <?php if ($title):?>
-                <h2>
-                    <?php echo $title;?>
-                </h2>
-            <?php endif;?>
-        </div>
+        <?php if ($title):?>
+            <h2 class="advantage-title">
+                <?php echo $title;?>
+            </h2>
+        <?php endif;?>
         <div class="advantage-colons">
         <?php
             if ($repeater_cards) {
@@ -40,3 +39,4 @@ $repeater_cards = get_sub_field('repeater_card');
         </div>
     </div>
 </section>
+<?php endif;?>

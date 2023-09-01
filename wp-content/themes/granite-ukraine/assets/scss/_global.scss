@@ -11,7 +11,7 @@ body {
     font-weight: 400;
     font-style: normal;
 	font-size: $base-size;
-	color: $primary-color;
+	color: $text-color;
 	margin: 0;
     line-height: $base-height;
 }
@@ -27,53 +27,37 @@ img {
     display: block;
     height: auto;
 }
-p {
-    color: $text-color;
-    margin: 0;
-}
 h1 {
     font-family: 'Chakra Petch', sans-serif;
-    font-style: normal;
-    text-transform: uppercase;
     font-weight: 500;
 	font-size: $h1-size;
 	line-height: $h1-height;
-	margin: 0;
-    color: $white;
 }
 h2 {
     font-family: 'Chakra Petch', sans-serif;
-    font-style: normal;
     font-weight: 500;
 	font-size: $main-height;
 	line-height: $title-height;
-	margin: 0;
 }
 h3 {
     font-family: 'Chakra Petch', sans-serif;
-    font-style: normal;
     font-weight: 500;
     font-size: $mobile-card;
     line-height: $sm-height;
-	margin: 0;
 }
 h4 {
     font-family: 'Open Sans', sans-serif;
     font-size: $min-height;
-    font-style: normal;
     font-weight: 400;
     line-height: $base-height;
-    color: $black;
-    margin: 0;
 }
 .wrapper {
-    // padding-top: 97px;
     overflow: hidden;
 }
 .decor {
-    background-image: url('../../assets/images/bacgrond-black.png');
+    background: linear-gradient(0deg, rgba(18, 18, 18, 0.00) 60.46%, rgba(18, 18, 18, 0.80) 100%), linear-gradient(0deg, rgba(18, 18, 18, 0.70) 0%, rgba(18, 18, 18, 0.70) 100%), url('../../assets/images/bgbg.png'), lightgray 50% / cover no-repeat;
 }
-.declight {
+.decor-light {
     background: url('../../assets/images/declight.png'), lightgray 50% / cover no-repeat;
 }
 .section {
@@ -86,89 +70,5 @@ h4 {
     padding-top: 32px;
     .header {
         top: 32px;
-    }
-}
-.menu-contact {
-    display: flex;
-    @include reset-list;
-    li {
-        display: flex;
-        align-items: flex-start;
-        a {
-            color: $white;
-            font-size: $min-size;
-            line-height: $min-height;
-            margin-right: 56px;
-            transition: color .3s;
-            letter-spacing: 0.6px;
-            display: flex;
-            &:hover {
-                color: $btn-color;
-                & svg path {
-                    fill: $btn-color;
-                }
-            }
-            svg {
-                margin-right: 8px;
-                path {
-                    transition: fill .3s;
-                    &:hover {
-                        fill: $btn-color;
-                    }
-                }
-            }
-        }
-    }
-}
-.contact-navigation {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 2px 0;
-}
-.global-menus {
-    @include reset-list;
-    display: flex;
-    margin: 0 -28px;
-    li {
-        padding: 0 24px;
-        a {
-            color: $white;
-            font-size: $base-size;
-            line-height: $main;
-            transition: color .3s;
-            &:hover {
-                color: $btn-color;
-            }
-        }
-    } 
-}
-.social {
-    display: flex;
-    @include reset-list;
-    margin: 0 -24px;
-    li {
-        padding: 0 12px;
-        align-items: flex-start;
-        a {
-            color: $black;
-            transition: color .3s;
-            display: flex;
-            svg path {
-                transition: fill .3s;
-            }
-            &:hover {
-                color: $btn-color;
-                svg path {
-                    fill: $btn-color;
-                }
-            }
-        }
-    }
-    &-title {
-        color: $white;
-        font-size: 10px;
-        line-height: 14px;
-        display: none;
     }
 }

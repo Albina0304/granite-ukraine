@@ -2,9 +2,9 @@
     .advantage {
         &-title {
             text-align: center;
-            margin-bottom: 40px;
+            margin: 0 0 40px;
             @include media-down(md) {
-                margin-bottom: 24px;
+                margin: 0 0 24px;
             }
         }
         &-colons {
@@ -40,6 +40,9 @@
                 @include media-down(md) {
                     margin-bottom: 8px;
                 }
+            }
+            .description-card p {
+                margin: 0;
             }
         }
     } 
