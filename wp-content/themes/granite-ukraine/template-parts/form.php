@@ -17,7 +17,7 @@ if('form') :
                 </div>
             <?php endif;?>
             <div class="form-contact">
-                <?php echo do_shortcode('[contact-form-7 id="4239414" title="Form Application"]');?>
+                <?php echo do_shortcode('[custom_contact_form]');?>
             </div>
         </div>
     </div>

@@ -15,6 +15,7 @@
         }
         @include media-down(lsm) {
             grid-template-columns: repeat(2, auto);
+            margin: 24px 0 32px;
         }
         .box img {
             width: 100%;
@@ -29,13 +30,8 @@
             grid-row: 1 / 3;
             grid-column: 3 / 4;
             @include media-down(lsm) {
-                grid-row: 3 / 4;
+                grid-row: 3 / 5;
                 grid-column: 1 / 2;
-            }
-        }
-        .box:nth-child(3) {
-            @include media-down(lsm) {
-                max-height: 50%;
             }
         }
         .box:nth-child(4) {
@@ -61,5 +57,8 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        .btn-primary {
+            font-size: $base-size;
+        }
     }
 }
