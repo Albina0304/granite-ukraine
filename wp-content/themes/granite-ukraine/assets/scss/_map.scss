@@ -1,0 +1,23 @@
+.map {
+    padding: 56px 0;
+    .title-card {
+        margin: 0 0 8px;
+        color: $white;
+    }
+    .description-card {
+        color: $secondary-color;
+        p {
+            margin: 0;
+        }
+    }
+    .address{ 
+        &-colons {
+            display: flex;
+            justify-content: space-between;
+        }
+        &-card {
+            max-width: 25%;
+        }
+    }
+    
+}

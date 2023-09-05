@@ -11,7 +11,7 @@ if('form') :
                     <?php echo $title;?>
                 </h2>
             <?php endif;?>
-            <?php if ($title):?>
+            <?php if ($text):?>
                 <div class="form-description">
                     <?php echo $text;?>
                 </div>

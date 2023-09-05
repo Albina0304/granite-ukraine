@@ -40,11 +40,12 @@
             margin-bottom: 24px;
         }
         &.form-wrapper-button {
+            margin: 0;
             .btn-secondary {
                 width: 100%;
-                margin: 24px 0 56px;
+                margin: 24px 0 0;
                 @include media-down(s) {
-                    margin: 8px 0 40px;
+                    margin: 8px 0 0;
                     font-size: $base-size;
                     line-height: $base-height;
                 }
@@ -81,3 +82,23 @@
     font-weight: 400;
     min-height: 48px;
 }
+.section.form {
+    padding-bottom: 0;
+}
+    .wpcf7 {
+        form {
+            .wpcf7-response-output {
+                color: $white;
+                font-size: $min-size;
+                border: none;
+                border-bottom: 1px solid;
+                margin-bottom: 0;
+                text-align: center;
+            }
+        }
+        &-not-valid-tip {
+            font-size: $min-size;
+            display: flex;
+            position: absolute;
+        }
+    }

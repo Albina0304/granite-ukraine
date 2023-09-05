@@ -88,7 +88,7 @@
                             <?php 
                             if( $link ): 
                                 $link_target = $link['target'] ? $link['target'] : '_self';?>
-                                <a class="btn btn-primary" href="<?php echo get_home_url();?>">
+                                <a type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal-form" href="#">
                                     <?php echo esc_html( $link['title'] ); ?>
                                 </a>
                             <?php endif; ?>

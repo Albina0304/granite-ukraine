@@ -1,0 +1,104 @@
+.modal {
+    &-main {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    &-title {
+        margin-bottom: 40px;
+        color: $white;
+    }
+    &-content {
+        padding: 40px 88px;
+        border-radius: 4px;
+        max-width: 764px;
+        max-height: 588px;
+    }
+    &-body {
+        padding: 0;
+        table {
+            thead {
+                tr {
+                    color: $secondary-color;
+                }
+            }
+        }
+    }
+    .btn-close {
+        background-color: transparent;
+        border: none;
+        position: absolute;
+        right: 0;
+        top: 10px;
+    }
+    .form-wrapper {
+        margin-bottom: 32px;
+        position: relative;
+        @include media-down(s) {
+            margin-bottom: 24px;
+        }
+        &:nth-child(4) {
+            display: none;
+        }
+        &.form-wrapper-button {
+            margin: 0;
+            .btn-secondary {
+                width: 100%;
+                margin: 24px 0 0;
+                @include media-down(s) {
+                    margin: 8px 0 0;
+                    font-size: $base-size;
+                    line-height: $base-height;
+                }
+            }
+        }
+        .label {
+            position: absolute;
+            z-index: 1;
+            top: 50%;
+            left: 16px;
+            transform: translateY(-50%);
+            @include media-down(s) {
+                font-size: $btn-size;
+            }
+        }
+        p {
+            margin: 0;
+        }
+        br {
+            display: none;
+        }
+    }
+    .wpcf7-form-control-wrap {
+        position: relative;
+    }
+    &.show .modal-dialog {
+        min-width: 763px;
+        min-height: 408px;
+    }
+    .modal-dialog { 
+        .modal-body {
+            table {
+                width: 100%;
+                text-align: center;
+                tr {
+                    th {
+                        padding-bottom: 8px;
+                    }
+                    td {
+                        color: $white;
+                        img {
+                            margin: 0 auto;
+                        }
+                        p {
+                            margin: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+  
+  
+  

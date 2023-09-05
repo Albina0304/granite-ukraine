@@ -15,6 +15,10 @@ if( have_rows('modules') ):
             echo get_template_part('template-parts/labors');
         elseif( get_row_layout() == 'form' ): 
             echo get_template_part('template-parts/form');
+        elseif (get_row_layout() == 'map'):
+           echo get_template_part('template-parts/map');
+        elseif (get_row_layout() == 'modal'):
+            echo get_template_part('template-parts/modal');
         endif;
     endwhile;
 else:

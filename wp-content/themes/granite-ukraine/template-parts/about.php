@@ -34,7 +34,7 @@ if('about') :
             <?php 
             if( $link ): 
                 $link_target = $link['target'] ? $link['target'] : '_self';?>
-                <a class="btn btn-secondary" href="<?php echo get_home_url();?>">
+                <a type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#modal-form" href="#">
                     <?php echo esc_html( $link['title'] ); ?>
                 </a>
             <?php endif; ?>
