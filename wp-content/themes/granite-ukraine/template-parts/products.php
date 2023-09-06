@@ -3,7 +3,8 @@ $title = get_sub_field('title');
 $products = get_posts(
     array(
         'post_type' => 'product',
-        'posts_per_page' => -1
+        'posts_per_page' => -1,
+        'suppress_filters' => false
     )
 );
 if($products) :
