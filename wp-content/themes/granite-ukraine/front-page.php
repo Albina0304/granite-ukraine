@@ -21,7 +21,6 @@ if( have_rows('modules') ):
             echo get_template_part('template-parts/modal');
         endif;
     endwhile;
-else:
 endif;
 get_footer();
 

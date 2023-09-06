@@ -87,19 +87,4 @@ function granite_ukraine() {
 
 	register_post_type( 'product', $args );
 }
-
 add_action( 'init', 'granite_ukraine' );
-function custom_contact_form_shortcode() {
-    if (function_exists('icl_get_current_language')) {
-        $current_language = icl_get_current_language();
-        if ($current_language === 'uk') {
-            return do_shortcode('[contact-form-7 id="4239414"]');
-        } elseif ($current_language === 'ru') {
-            return do_shortcode('[contact-form-7 id="100f41b"]');
-        } elseif ($current_language === 'pl') {
-            return do_shortcode('[contact-form-7 id="b29e419"]');
-        }
-    }
-}
-
-

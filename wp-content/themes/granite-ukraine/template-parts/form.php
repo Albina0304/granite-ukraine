@@ -1,7 +1,7 @@
 <?php 
 $title = get_sub_field('title');
 $text = get_sub_field('text');
-if('form') :
+if($title) :
 ?>
 <section class="section form decor">
     <div class="form-global">
@@ -17,7 +17,7 @@ if('form') :
                 </div>
             <?php endif;?>
             <div class="form-contact">
-                <?php echo do_shortcode('[custom_contact_form]');?>
+                <?php echo do_shortcode (__('[contact-form-7 id="4239414"]','granite-ukraine'));?>
             </div>
         </div>
     </div>
