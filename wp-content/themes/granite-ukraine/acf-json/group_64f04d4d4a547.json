@@ -1,6 +1,6 @@
 {
     "key": "group_64f04d4d4a547",
-    "title": "Product Images",
+    "title": "Single Product",
     "fields": [
         {
             "key": "field_64f04d4eaec95",
@@ -16,7 +16,7 @@
                 "class": "",
                 "id": ""
             },
-            "wpml_cf_preferences": 0,
+            "wpml_cf_preferences": 1,
             "layout": "table",
             "pagination": 0,
             "min": 0,
@@ -39,7 +39,7 @@
                         "class": "",
                         "id": ""
                     },
-                    "wpml_cf_preferences": 0,
+                    "wpml_cf_preferences": 1,
                     "return_format": "array",
                     "library": "all",
                     "min_width": "",
@@ -53,6 +53,27 @@
                     "parent_repeater": "field_64f04d4eaec95"
                 }
             ]
+        },
+        {
+            "key": "field_64fb24d6d9d7e",
+            "label": "labors Title",
+            "name": "labors_title",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 0,
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
         }
     ],
     "location": [
@@ -74,5 +95,5 @@
     "description": "",
     "show_in_rest": 0,
     "acfml_field_group_mode": "translation",
-    "modified": 1693470147
+    "modified": 1694180663
 }

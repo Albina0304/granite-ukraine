@@ -1,4 +1,4 @@
-<?php 
+<?php
 $title = get_sub_field('title');
 $products = get_posts(
     array(
@@ -7,7 +7,7 @@ $products = get_posts(
         'suppress_filters' => false
     )
 );
-if($products) :
+// if($products) :
 ?>
 <section class="products decor-light section">
     <div class="container">
@@ -22,25 +22,15 @@ if($products) :
                 foreach ($products as $post) {
                     setup_postdata($post);?>
                     <div class="product-col">
-                        <a href="<?php echo get_permalink();?>" class="product-card">
-                            <div class="card-image">
-                                <?php the_post_thumbnail('product-img'); ?>
-                            </div>
-                            <div class="card-title">
-                                <h4>
-                                    <?php the_title();?>
-                                </h4>
-                            </div>
-                        </a>
+                        <?php echo get_template_part('template-parts/cards/product-card');?>
                     </div>
                 <?php }
-            
             wp_reset_postdata(); }
             ?>
         </div>
     </div>
 </section>
-<?php endif;?>
+<?php //endif;?>
 
 
 

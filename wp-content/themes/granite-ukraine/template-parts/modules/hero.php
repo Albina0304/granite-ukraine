@@ -1,6 +1,6 @@
-<?php $text = get_sub_field('text');
+<?php
+$text = get_sub_field('text');
 $link = get_field('btn_primary', 'options');
-if('hero') :
 ?>
 <section class="hero decor">
     <div class="container">
@@ -20,4 +20,3 @@ if('hero') :
         </div>
     </div>
 </section>
-<?php endif;?>

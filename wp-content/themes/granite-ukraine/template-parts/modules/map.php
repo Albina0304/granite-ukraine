@@ -1,6 +1,6 @@
 <?php 
 $repeater_cards = get_sub_field('address');
-if('map') :
+if($repeater_cards) :
 ?>
 <section class="map decor">
     <div class="map-global">
@@ -27,12 +27,6 @@ if('map') :
                 }}?>
             </div>
             <div class="google-map">
-            <?php
-// Подключаем плагин WP Go Maps
-//if (function_exists('insert_wpgmaps')) {
-    //echo insert_wpgmaps('[wpgmza id="1"]'); // Замените "1" на ID вашей карты
-//}
-?>
             </div>
         </div>
     </div>
