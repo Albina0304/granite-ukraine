@@ -27,7 +27,7 @@ get_header();?>
     ?>
 </section>
 
-<section class="related-products">
+<section class="related-products products decor-light section">
     <div class="container">
         <?php
         $post_id = get_the_ID();
@@ -39,7 +39,23 @@ get_header();?>
                 'post__not_in' => array($post_id),
                 'orderby' => 'rand'
             )
-        );?>
+        );
+        if (isset($title)):?>
+            <h2 class="products-title">
+                <?php echo $title; ?>
+            </h2>
+        <?php endif;?>
+        <div class="product-cards">
+            <?php if ($related_products) {
+                foreach($related_products as $post) {
+                    setup_postdata($post);?>
+                    <div class="product-col">
+                        <?php echo get_template_part('template-parts/cards/product-card');?>
+                    </div>
+                <?php }
+            wp_reset_postdata(); }?>
+        </div>
+    </div>
     </div>
 </section>
 

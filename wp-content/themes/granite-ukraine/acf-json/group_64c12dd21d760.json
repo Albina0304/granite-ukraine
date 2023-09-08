@@ -469,6 +469,24 @@
                     ],
                     "min": "",
                     "max": ""
+                },
+                "layout_64fb436d110b7": {
+                    "key": "layout_64fb436d110b7",
+                    "name": "social",
+                    "label": "Social",
+                    "display": "block",
+                    "sub_fields": [],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_64fb4379110b9": {
+                    "key": "layout_64fb4379110b9",
+                    "name": "modal",
+                    "label": "Modal",
+                    "display": "block",
+                    "sub_fields": [],
+                    "min": "",
+                    "max": ""
                 }
             },
             "min": "",
@@ -495,5 +513,5 @@
     "description": "",
     "show_in_rest": 0,
     "acfml_field_group_mode": "translation",
-    "modified": 1694179899
+    "modified": 1694188420
 }

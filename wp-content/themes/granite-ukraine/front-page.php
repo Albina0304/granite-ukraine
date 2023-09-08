@@ -36,6 +36,8 @@ if( have_rows('modules') ):
             echo get_template_part('template-parts/modules/form');
         elseif (get_row_layout() == 'map'):
            echo get_template_part('template-parts/modules/map');
+           elseif (get_row_layout() == 'social'):
+            echo get_template_part('template-parts/modules/social');
         elseif (get_row_layout() == 'modal'):
             echo get_template_part('template-parts/modules/modal');
         endif;

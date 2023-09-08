@@ -6,9 +6,7 @@ $products = get_posts(
         'posts_per_page' => -1,
         'suppress_filters' => false
     )
-);
-// if($products) :
-?>
+);?>
 <section class="products decor-light section">
     <div class="container">
         <?php if ($title):?>
@@ -30,7 +28,6 @@ $products = get_posts(
         </div>
     </div>
 </section>
-<?php //endif;?>
 
 
 
