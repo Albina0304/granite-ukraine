@@ -1,4 +1,7 @@
             <?php
+            echo get_template_part('template-parts/modules/modal');
+            echo get_template_part('template-parts/modules/form');
+            echo get_template_part('template-parts/modules/map');
             $logo = get_field('logo', 'options');
             $phone = get_field('phone', 'options');
             $email = get_field('email', 'options');
@@ -31,7 +34,7 @@
                                     <a href="mailto:<?php echo $email;?>"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="ic" clip-path="url(#clip0_1346_3222)"><mask id="mask0_1346_3222" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24"><rect id="Bounding box" width="24" height="24" fill="#D9D9D9"/></mask><g mask="url(#mask0_1346_3222)"><path id="mail" d="M2.87188 13C2.53513 13 2.25008 12.8833 2.01675 12.65C1.78341 12.4166 1.66675 12.1316 1.66675 11.7948V4.20513C1.66675 3.86838 1.78341 3.58333 2.01675 3.35C2.25008 3.11667 2.53513 3 2.87188 3H13.1282C13.465 3 13.75 3.11667 13.9834 3.35C14.2167 3.58333 14.3334 3.86838 14.3334 4.20513V11.7948C14.3334 12.1316 14.2167 12.4166 13.9834 12.65C13.75 12.8833 13.465 13 13.1282 13H2.87188ZM13.3334 4.9615L8.32441 8.16792C8.27314 8.19697 8.22015 8.21983 8.16545 8.2365C8.11075 8.25317 8.05562 8.2615 8.00006 8.2615C7.94451 8.2615 7.88938 8.25317 7.83468 8.2365C7.77998 8.21983 7.72699 8.19697 7.67571 8.16792L2.66673 4.9615V11.7948C2.66673 11.8547 2.68596 11.9038 2.72443 11.9423C2.7629 11.9808 2.81205 12 2.87188 12H13.1282C13.1881 12 13.2372 11.9808 13.2757 11.9423C13.3142 11.9038 13.3334 11.8547 13.3334 11.7948V4.9615ZM8.00006 7.33332L13.2308 3.99998H2.7693L8.00006 7.33332ZM2.66673 5.11533V4.35318V4.37305V4.3519V5.11533Z" fill="white"/></g></g><defs><clipPath id="clip0_1346_3222"><rect width="16" height="16" fill="white"/></clipPath></defs></svg><?php echo $email;?></a>
                                 </li>
                             </ul>
-                            <?php echo get_template_part('template-parts/social') ;?>
+                            <?php echo get_template_part('template-parts/modules/social') ;?>
                         </nav>
                         <div class="footer-bottom">
                             <?php if (isset($copyright)):?>

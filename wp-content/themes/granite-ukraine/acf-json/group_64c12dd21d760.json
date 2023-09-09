@@ -340,58 +340,6 @@
                     "min": "",
                     "max": ""
                 },
-                "layout_64f092575b0d8": {
-                    "key": "layout_64f092575b0d8",
-                    "name": "form",
-                    "label": "Form",
-                    "display": "block",
-                    "sub_fields": [
-                        {
-                            "key": "field_64f092645b0da",
-                            "label": "Title",
-                            "name": "title",
-                            "aria-label": "",
-                            "type": "text",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "wpml_cf_preferences": 2,
-                            "default_value": "",
-                            "maxlength": "",
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": ""
-                        },
-                        {
-                            "key": "field_64f092745b0db",
-                            "label": "Text",
-                            "name": "text",
-                            "aria-label": "",
-                            "type": "wysiwyg",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "wpml_cf_preferences": 2,
-                            "default_value": "",
-                            "tabs": "all",
-                            "toolbar": "full",
-                            "media_upload": 1,
-                            "delay": 0
-                        }
-                    ],
-                    "min": "",
-                    "max": ""
-                },
                 "layout_64f1da0550b1c": {
                     "key": "layout_64f1da0550b1c",
                     "name": "map",
@@ -469,24 +417,6 @@
                     ],
                     "min": "",
                     "max": ""
-                },
-                "layout_64fb436d110b7": {
-                    "key": "layout_64fb436d110b7",
-                    "name": "social",
-                    "label": "Social",
-                    "display": "block",
-                    "sub_fields": [],
-                    "min": "",
-                    "max": ""
-                },
-                "layout_64fb4379110b9": {
-                    "key": "layout_64fb4379110b9",
-                    "name": "modal",
-                    "label": "Modal",
-                    "display": "block",
-                    "sub_fields": [],
-                    "min": "",
-                    "max": ""
                 }
             },
             "min": "",
@@ -513,5 +443,5 @@
     "description": "",
     "show_in_rest": 0,
     "acfml_field_group_mode": "translation",
-    "modified": 1694188420
+    "modified": 1694199492
 }

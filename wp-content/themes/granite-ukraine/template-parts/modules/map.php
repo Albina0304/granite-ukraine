@@ -1,16 +1,17 @@
 <?php 
-$repeater_cards = get_sub_field('address');
-if($repeater_cards) :
+$address_cards = get_field('address_cards', 'options');
+// $repeater_cards = get_sub_field('address');
+if($address_cards) :
 ?>
 <section class="map decor">
     <div class="map-global">
         <div class="container">
             <div class="address-colons">
             <?php
-                if ($repeater_cards) {
-                    foreach ($repeater_cards as $card) {
-                        $title_card = $card['title'];
-                        $description = $card['text'];?>
+                if ($address_cards) {
+                    foreach ($address_cards as $card) {
+                        $title_card = $card['country'];
+                        $description = $card['address'];?>
                         <div class="address-card">
                             <?php if ($title_card) : ?>
                                 <h3 class="title-card">

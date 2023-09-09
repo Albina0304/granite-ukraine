@@ -2,14 +2,23 @@
 get_header();?>
 <section class="section decor-light hero-product">
     <div class="container">
-        <div class="card-image">
-            <?php the_post_thumbnail('product-img'); ?>
-        </div>
-        <h3 class="card-title">
-            <?php the_title();?>
-        </h3>
-        <div class="card-description">
-            <?php the_content();?>
+        <div class="hero-card">
+            <div class="card-image">
+                <?php the_post_thumbnail('product-card'); ?>
+            </div>
+            <div class="hero-info">
+                <h3 class="card-title">
+                    <?php the_title();?>
+                </h3>
+                <div class="card-description">
+                    <?php the_content();?>
+                </div>
+                <div class="price-from">
+                    <?php 
+                    $price_from = get_field('price_from');
+                    echo $price_from;?>
+                </div>
+            </div>
         </div>
     </div>
 </section>

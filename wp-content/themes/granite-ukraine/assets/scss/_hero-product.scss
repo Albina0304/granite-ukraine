@@ -1,0 +1,23 @@
+.hero-product {
+    .hero-card {
+        display: flex;
+        gap: 126px;
+        .card-image,
+        .hero-info {
+            width: 50%;
+        }
+        .card-title {
+            margin: 0 0 8px;
+        }
+        .card-description {
+            margin: 8px 0 24px;
+            p {
+                margin: 0;
+            }
+        }
+        .price-from {
+            font-size: $sm-size;
+            line-height: $sm-height;
+        }
+    }
+}
