@@ -558,8 +558,8 @@
             "delay": 0
         },
         {
-            "key": "field_64fb6f11f3d36",
-            "label": "Налаштування адрес",
+            "key": "field_64feea2f5b57c",
+            "label": "Google Maps",
             "name": "",
             "aria-label": "",
             "type": "tab",
@@ -571,14 +571,14 @@
                 "class": "",
                 "id": ""
             },
-            "wpml_cf_preferences": 0,
+            "wpml_cf_preferences": 3,
             "placement": "top",
             "endpoint": 0
         },
         {
-            "key": "field_64fb6f43f3d37",
-            "label": "Address Cards",
-            "name": "address_cards",
+            "key": "field_64feea595b57d",
+            "label": "Maps",
+            "name": "maps",
             "aria-label": "",
             "type": "repeater",
             "instructions": "",
@@ -589,8 +589,8 @@
                 "class": "",
                 "id": ""
             },
-            "wpml_cf_preferences": 0,
-            "layout": "block",
+            "wpml_cf_preferences": 3,
+            "layout": "table",
             "pagination": 0,
             "min": 0,
             "max": 0,
@@ -599,11 +599,11 @@
             "rows_per_page": 20,
             "sub_fields": [
                 {
-                    "key": "field_64fb6f68f3d38",
-                    "label": "Country",
-                    "name": "country",
+                    "key": "field_64feea715b57e",
+                    "label": "Map",
+                    "name": "map",
                     "aria-label": "",
-                    "type": "text",
+                    "type": "google_map",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -612,37 +612,35 @@
                         "class": "",
                         "id": ""
                     },
-                    "wpml_cf_preferences": 0,
-                    "default_value": "",
-                    "maxlength": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "parent_repeater": "field_64fb6f43f3d37"
-                },
-                {
-                    "key": "field_64fb6fdbf3d39",
-                    "label": "Address",
-                    "name": "address",
-                    "aria-label": "",
-                    "type": "text",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "wpml_cf_preferences": 0,
-                    "default_value": "",
-                    "maxlength": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "parent_repeater": "field_64fb6f43f3d37"
+                    "wpml_cf_preferences": 3,
+                    "center_lat": "",
+                    "center_lng": "",
+                    "zoom": "",
+                    "height": "",
+                    "parent_repeater": "field_64feea595b57d"
                 }
             ]
+        },
+        {
+            "key": "field_64feea9e5b57f",
+            "label": "Google maps IPI KEY",
+            "name": "google_maps_ipi_key",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 2,
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
         }
     ],
     "location": [
@@ -664,5 +662,5 @@
     "description": "",
     "show_in_rest": 0,
     "acfml_field_group_mode": "localization",
-    "modified": 1694199805
+    "modified": 1694510083
 }

@@ -1,5 +1,10 @@
 <?php
-get_header();?>
+get_header();
+$price_from = get_field('price_from');
+$product_images = get_field('product_images');
+$post_id = get_the_ID();
+$link = get_field('btn_primary', 'options');
+?>
 <section class="section decor-light hero-product">
     <div class="container">
         <div class="hero-card">
@@ -15,16 +20,23 @@ get_header();?>
                 </div>
                 <div class="price-from">
                     <?php 
-                    $price_from = get_field('price_from');
                     echo $price_from;?>
                 </div>
+                <div class="section-button">
+            <?php 
+            if( $link ): 
+                $link_target = $link['target'] ? $link['target'] : '_self';?>
+                <a type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#modal-price" href="#">
+                    <?php echo __('Прайс', 'granite-ukraine'); ?>
+                </a>
+            <?php endif; ?>
+        </div>
             </div>
         </div>
     </div>
 </section>
 <section class="labor">
     <?php 
-      $product_images = get_field('product_images');
         $arr = array(
             'title' => __('Роботи', 'granite-ukraine'),
             'images' => $product_images,
@@ -39,7 +51,6 @@ get_header();?>
 <section class="related-products products decor-light section">
     <div class="container">
         <?php
-        $post_id = get_the_ID();
         $related_products = get_posts(
             array(
                 'post_type' => 'product',

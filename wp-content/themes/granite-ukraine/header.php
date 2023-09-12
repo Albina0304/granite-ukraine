@@ -16,7 +16,6 @@
         <?php wp_head()?>
     </head>
     <body>
-    <?php echo get_template_part('template-parts/modules/social');?>
     <?php
     $logo = get_field('logo', 'options');
     $logo_mobile = get_field('logo_mobile', 'options');

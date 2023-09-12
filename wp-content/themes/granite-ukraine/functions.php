@@ -7,6 +7,7 @@ function cc_mime_types($mimes) {
 add_filter('upload_mimes', 'cc_mime_types');
 function my_scripts() {
     wp_enqueue_script( 'jQuery', "https://code.jquery.com/jquery-3.6.3.js", array(), false, true);
+	wp_enqueue_script( 'map', "https://maps.googleapis.com/maps/api/js?key=".get_field('google_maps_ipi_key', 'options'), array('jQuery'), false, true);
     wp_enqueue_script('main_js', get_template_directory_uri() . "/dist/js/main.js", array('jQuery'), false, true);
     wp_enqueue_style('main_css', get_template_directory_uri() . "/dist/css/main.css");
 }
@@ -89,3 +90,8 @@ function granite_ukraine() {
 	register_post_type( 'product', $args );
 }
 add_action( 'init', 'granite_ukraine' );
+
+function my_acf_init() {
+    acf_update_setting('google_api_key', get_field('google_maps_ipi_key', 'options'));
+}
+add_action('acf/init', 'my_acf_init');

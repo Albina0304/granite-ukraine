@@ -1,11 +1,18 @@
 .map {
-    padding: 56px 0;
     .title-card {
         margin: 0 0 8px;
         color: $white;
+        @include media-down(s) {
+            font-size: $sm-size;
+            line-height: $base-height;
+        }
     }
     .description-card {
         color: $secondary-color;
+        @include media-down(s) {
+            font-size: $btn-size;
+            line-height: $mobile-card;
+        }
         p {
             margin: 0;
         }
@@ -14,9 +21,23 @@
         &-colons {
             display: flex;
             justify-content: space-between;
+            margin-bottom: 56px;
+            flex-wrap: wrap;
+            @include media-down(md) {
+                width: 100%;
+                margin: -24px 0 32px 0;
+            }
         }
         &-card {
             max-width: 25%;
+            @include media-down(md) {
+                max-width: inherit;
+                padding-bottom: 24px;
+                width: 50%;
+            }
+            @include media-down(lsm) {
+                width: 100%;
+            }
         }
     }
     
