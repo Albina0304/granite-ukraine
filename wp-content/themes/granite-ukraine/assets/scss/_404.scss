@@ -1,0 +1,12 @@
+.section-404 {
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    padding-top: 160px;
+    h1 {
+        color: $text-color;
+        font-size: max(40px, 5.5vw);
+        line-height: 1.2;
+    }
+}
