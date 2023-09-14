@@ -32,7 +32,6 @@ if( have_rows('modules') ):
                 'link' => $link
             );
             echo get_template_part('template-parts/modules/labors', '', $arr);
-
         endif;
     endwhile;
 endif;

@@ -17,6 +17,7 @@
     </head>
     <body>
     <?php
+    echo get_template_part('template-parts/modules/modal');
     $logo = get_field('logo', 'options');
     $logo_mobile = get_field('logo_mobile', 'options');
     $phone = get_field('phone', 'options');
