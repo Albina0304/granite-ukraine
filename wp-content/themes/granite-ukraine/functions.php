@@ -40,7 +40,8 @@ add_image_size( 'card-img', 40, 40 );
 add_image_size( 'about-image', 282, 330 );
 add_image_size( 'price-image', 70, 50 );
 add_image_size( 'product-card', 588, 417 );
-add_image_size( 'slider-img', 131, 'auto' );
+add_image_size( 'slider-img', 131, 93 );
+add_image_size( 'labor-img', 282, 376 );
 function getImage($image, $size = false) {
     if($image['mime_type'] !== 'image/svg+xml'):
     return wp_get_attachment_image($image['ID'], $size ? $size : 'full');
@@ -95,3 +96,27 @@ function my_acf_init() {
     acf_update_setting('google_api_key', get_field('google_maps_ipi_key', 'options'));
 }
 add_action('acf/init', 'my_acf_init');
+
+add_action("wp_ajax_js_action", "my_image_ajax");
+add_action("wp_ajax_nopriv_js_action", "my_image_ajax");
+
+function my_image_ajax() {
+	$product_images = get_field('product_images', $_GET['post_id']);
+	$images = array_slice($product_images, 6, -1);
+	ob_start();
+	if($images) {
+		foreach($images as $image) {
+			if(is_array($image) && !empty($image['image'])) { ?>
+				<div class="box">
+					<a href="<?php echo $image['image']['sizes']['large'];?>" data-lightbox="labor-images">
+						<?php echo wp_get_attachment_image($image['image']['id'], 'product-card');?>
+					</a>
+				</div>
+			<?php }
+		} 
+	}
+	
+	$image_boxes = ob_get_clean();
+	return wp_send_json_success($image_boxes);
+   	die();
+}

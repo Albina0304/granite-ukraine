@@ -1,6 +1,32 @@
+//=../../node_modules/lightbox2/dist/js/lightbox.min.js
 //=../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js
 //=../../node_modules/slick-carousel/slick/slick.min.js
 jQuery(document).ready(function ($) {
+    $(".labors .btn").click( function(e) {
+        e.preventDefault();
+        var self = $(this);
+        var product_id = $(this).data('product_id');
+        $.ajax({
+           type : "GET",
+           url : 'http://localhost/Projects/granite-ukraine-wp/wp-admin/admin-ajax.php',
+           data : {
+                action: "js_action",
+                post_id: product_id,
+            },
+           success: function(response) {
+            if(response.data) {
+                $('.boxes').append(response.data);
+                self.hide();
+            }
+           }
+        });
+     });
+
+
+    lightbox.option({
+        'resizeDuration': 200,
+        'wrapAround': true
+      })
     $('.main-wrapper a').click(function(e) {
         e.preventDefault();
         var linkid = $(this).attr('href');

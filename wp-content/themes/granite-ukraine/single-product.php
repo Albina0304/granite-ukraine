@@ -12,38 +12,50 @@ $link = get_field('btn_primary', 'options');
             <div class="hero-slider-wrap">
                 <div class="card-image">
                     <div class="slider-image">
-                        <?php the_post_thumbnail('product-card');?>
+                        <a href="<?php echo get_the_post_thumbnail_url();?>" data-lightbox="hero-granite">
+                            <?php the_post_thumbnail('product-card');?>
+                        </a>
                     </div>
-                    <?php foreach ($slider_images as $slider_image) : 
-                        $image_id = $slider_image['image']['ID']; ?>
-                        <div class="slider-image">
-                            <?php echo wp_get_attachment_image($image_id, 'product-card');?>
-                        </div> 
-                    <?php endforeach; ?>
+                    <?php 
+                    if ($slider_images) :
+                        foreach ($slider_images as $slider_image) : 
+                            $image_id = $slider_image['image']['ID'];?>
+                            <div class="slider-image">
+                                <?php echo wp_get_attachment_image($image_id, 'product-card');?>
+                            </div> 
+                        <?php endforeach;
+                    endif; ?>
                 </div>
                 <div class="hero-slider">
                     <div class="slider-image">
-                        <?php the_post_thumbnail('product-card');?>
+                        <?php the_post_thumbnail('product-card', array('data-lightbox' => 'hero-granite'));?>
                     </div>
-                    <?php foreach ($slider_images as $slider_image) : 
-                        $image_id = $slider_image['image']['ID']; ?>
-                        <div class="slider-image">
-                                <?php echo wp_get_attachment_image($image_id, 'slider-img');?>
-                        </div> 
-                    <?php endforeach; ?>
+                    <?php if ($slider_images) :
+                        foreach ($slider_images as $slider_image) : 
+                            $image_id = $slider_image['image']['ID']; ?>
+                            <div class="slider-image">
+                                    <?php echo wp_get_attachment_image($image_id, 'slider-img');?>
+                            </div> 
+                        <?php endforeach; 
+                    endif; ?>
                 </div>
             </div>
             <div class="hero-info">
-                <h3 class="card-title">
-                    <?php the_title();?>
-                </h3>
-                <div class="card-description">
-                    <?php the_content();?>
-                </div>
-                <div class="price-from">
-                    <?php 
-                    echo $price_from;?>
-                </div>
+                <?php if (the_title()) : ?>
+                    <h3 class="card-title">
+                        <?php the_title();?>
+                    </h3>
+                <?php endif;?>
+                <?php if (the_content()) : ?>
+                    <div class="card-description">
+                        <?php the_content();?>
+                    </div>
+                <?php endif;?>
+                <?php if ($price_from) : ?>
+                    <div class="price-from">
+                        <?php echo $price_from;?>
+                    </div>
+                <?php endif;?>
                 <div class="section-button">
                     <?php 
                     if( $link ): 
@@ -61,7 +73,7 @@ $link = get_field('btn_primary', 'options');
     <?php 
         $arr = array(
             'title' => __('Роботи', 'granite-ukraine'),
-            'images' => $product_images,
+            'images' => array_slice($product_images, 0, 6),
             'link' => array(
                 'title' => __('Завантажити більше', 'granite-ukraine')
             )

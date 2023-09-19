@@ -1,5 +1,5 @@
 <?php
-/* Template Name: Головна */ 
+/* Template Name: Головна */
 get_header();
 if( have_rows('modules') ):
     while ( have_rows('modules') ) : the_row();
@@ -16,19 +16,23 @@ if( have_rows('modules') ):
             $link = get_field('secondary_button', 'options');
             $args = array(
                 'post_type' => 'product',
-                'posts_per_page' => -1
+                'posts_per_page' => -1,
+                'suppress_filters' => false
             );
             $products = get_posts($args);
             $images = array();
             foreach ($products as $product) {
                 $product_images = get_field('product_images', $product);
                 if ($product_images) {
-                    $images = $product_images;
+                    foreach ($product_images as $product_image) {
+                        $images[] = $product_image;
+                    }
                 }
             }
+            shuffle($images);
             $arr = array(
                 'title' => $title,
-                'images' => $images,
+                'images' => array_slice($images, 0, 6),
                 'link' => $link
             );
             echo get_template_part('template-parts/modules/labors', '', $arr);
