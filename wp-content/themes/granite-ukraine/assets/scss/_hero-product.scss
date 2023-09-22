@@ -1,118 +1,118 @@
-.hero-product {
-    padding: 190px 0;
-    .hero-card {
-        display: flex;
-        gap: 126px;
-        align-items: center;
-        > *{
-            width: 50%;
-            @include media-down(ms) {
-                width: 100%;
-            }
+
+
+    .hero {
+        &-product {
+            padding: 190px 0;
         }
-        @include media-down(ml) {
-            gap: 34px;
-        }
-        @include media-down(ms) {
-            flex-direction: column;
-        }
-        .card-image,
-        .hero-info {
-            cursor: pointer;
-        }
-        .card-title {
-            margin: 0 0 8px;
-            @include media-down(md) {
-                font-size: $sm-size;
-                line-height: $base-height;
-            }
-        }
-        .card-description {
-            margin: 8px 0 24px;
-            p {
-                margin: 0;
-                @include media-down(md) {
-                    font-size: $btn-size;
-                    line-height: $mobile-card;
-                }
-            }
-        }
-        .price-from {
-            font-size: $sm-size;
-            line-height: $sm-height;
-            margin-bottom: 56px;
-            @include media-down(md) {
-                line-height: $base-height;
-                margin-bottom: 32px;
-            }
-        }
-        .section-button {
-            margin-top: 56px;
-            @include media-down(md) {
-                margin-top: 32px;
-            }
-            .btn-secondary {
-                @include media-down(md) {
-                    font-size: $base-size;
-                    line-height: $base-height;
-                }
-                @include media-down(xs) {
+        &-card {
+            display: flex;
+            gap: 126px;
+            align-items: center;
+            > *{
+                width: 50%;
+                @include media-down(ms) {
                     width: 100%;
                 }
             }
+            @include media-down(ml) {
+                gap: 34px;
+            }
+            @include media-down(ms) {
+                flex-direction: column;
+            }
         }
-    }
-    .hero-slider-wrap {
-        display: flex;
-        flex-direction: column;
-        .hero-slider {
+        &-slider {
             display: none;
             &.slick-initialized {
                 display: block;
                 cursor: pointer;
                 margin-top: 24px;
             }
-        }
-        .slider-image {
-            &.slick-active {
+            &-wrap {
                 display: flex;
-                justify-content: center;
-            }
-        }
-        .card-image {
-            .slick-dots {
-                margin: 16px 0 0;
-                display: flex;
-                justify-content: center;
-                list-style: none;
-                li {
-                    margin: 0 8px;
-                    &:marker {
-                        display: none;
-                    }
-                    button {
-                        font-size: 0;
-                        width: 10px;
-                        height: 10px;
-                        border-radius: 100%;
-                        background-color: $primary-color;
-                        opacity: 0.2;
-                        border: none;
-                        padding: 0;
-                    }
-                    &.slick-active {
-                        button {
-                            background-color: $primary-color;
-                            opacity: 1;
+                flex-direction: column;
+                .slider-image {
+                    cursor: pointer;
+                    .slick-dots {
+                        margin: 16px 0 0;
+                        display: flex;
+                        justify-content: center;
+                        list-style: none;
+                        li {
+                            margin: 0 8px;
+                            &:marker {
+                                display: none;
+                            }
+                            button {
+                                font-size: 0;
+                                width: 10px;
+                                height: 10px;
+                                border-radius: 100%;
+                                background-color: $primary-color;
+                                opacity: 0.2;
+                                border: none;
+                                padding: 0;
+                            }
+                            &.slick-active {
+                                button {
+                                    background-color: $primary-color;
+                                    opacity: 1;
+                                }
+                            }
                         }
                     }
-                
+                    &-card {
+                        &.slick-active {
+                            display: flex;
+                            justify-content: center;
+                        }
+                    }
+                }
+            }
+        }
+        &-info {
+            &-title {
+                margin: 0 0 8px;
+                @include media-down(md) {
+                    font-size: $sm-size;
+                    line-height: $base-height;
+                }
+            }
+            &-description {
+                margin: 8px 0 24px;
+                @include media-down(md) {
+                    font-size: $btn-size;
+                    line-height: $mobile-card;
+                }
+                p {
+                    margin: 0;
+                }
+            }
+            &-price {
+                font-size: $sm-size;
+                line-height: $sm-height;
+                margin-bottom: 56px;
+                @include media-down(md) {
+                    line-height: $base-height;
+                    margin-bottom: 32px;
+                }
+            }
+            .section-button {
+                cursor: pointer;
+                display: block;
+                margin-top: 56px;
+                @include media-down(md) {
+                    margin-top: 32px;
+                }
+                .btn-secondary {
+                    @include media-down(md) {
+                        font-size: $base-size;
+                        line-height: $base-height;
+                    }
+                    @include media-down(xs) {
+                        width: 100%;
+                    }
                 }
             }
         }
     }
-}
-
-
-
-
