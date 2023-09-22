@@ -1,13 +1,12 @@
             <?php
-            // echo get_template_part('template-parts/modules/modal');
-            // echo get_template_part('template-parts/modules/form');
-            // echo get_template_part('template-parts/modules/map');
+            echo get_template_part('template-parts/general/form');
+            echo get_template_part('template-parts/general/map');
             $logo = get_field('logo', 'options');
             $phone = get_field('phone', 'options');
             $email = get_field('email', 'options');
             $copyright = get_field('copyright', 'options');
             $result = preg_replace('/[\s-]+/', "", $phone );?>
-            <footer class="footer decor">
+            <footer class="decor footer">
                 <div class="container">
                     <div class="footer-global">
                         <?php if ($logo['ID']) :?>
@@ -49,8 +48,9 @@
                     </div>
                 </div>
             </footer>        
-        
         </div>
-        <?php wp_footer();?>
+        <?php 
+            echo get_template_part('template-parts/general/modal');
+        wp_footer();?>
     </body>
 </html>

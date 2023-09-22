@@ -72,7 +72,7 @@
     &-copyright {
         color: $secondary-color;
         font-size: $min-size;
-        line-height: $min-height;
+        line-height: $base-size;
         padding: 16px 0 24px;
         @include media-down(s) {
             padding-bottom: 16px;
@@ -111,7 +111,7 @@
     #scroll {
         padding: 0;
         font-size: $min-size;
-        line-height: $min-height;
+        line-height: $base-size;
         border: none;
         outline: none;
         color: $secondary-color;
