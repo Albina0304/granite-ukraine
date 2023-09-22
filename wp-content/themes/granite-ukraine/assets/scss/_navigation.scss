@@ -8,7 +8,7 @@
         a {
             color: $white;
             font-size: $min-size;
-            line-height: $min-height;
+            line-height: $base-size;
             transition: color .3s;
             letter-spacing: 0.6px;
             display: flex;
@@ -29,9 +29,6 @@
             }
         }
     }
-}
-.wpml-ls-current-language {
-    display: none;
 }
 .contact-navigation {
     display: flex;

@@ -1,6 +1,4 @@
 .btn {
-    position: relative;
-    z-index: 1;
     cursor: pointer;
 	background-color: transparent;
 	display: inline-block;
@@ -19,9 +17,6 @@
         background-color: $btn-color;
     }
 	&-secondary {
-        font-size: $sm-size;
-        line-height: $btn-height;
-        padding: 16px 40px;
         color: $black;
         background-color: $btn-color;
         &:hover{
@@ -29,4 +24,16 @@
             background-color: $black;
 		}
 	}
+    &-sm {
+        font-size: $sm-size;
+        line-height: $btn-height;
+        padding: 16px 40px;
+    }
+    &-close {
+        background-color: transparent;
+        border: none;
+        position: absolute;
+        right: 0;
+        top: 10px;
+    }
 }
