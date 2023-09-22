@@ -1,4 +1,5 @@
 .about {
+    position: relative;
     &-title {
         text-align: center;
         margin: 0 0 40px;
@@ -16,7 +17,7 @@
             gap: 24px;
         }
     }
-    .column {
+    &-column {
         flex: 1 1 50%;
         display: flex;
         align-items: center;
@@ -27,11 +28,7 @@
         }
     }
     .section-button {
-        display: flex;
-        justify-content: center;
         .btn-secondary {
-            font-size: $min-height;
-            line-height: $base-height;
             @include media-down(s) {
                 width: 100%;
             }
