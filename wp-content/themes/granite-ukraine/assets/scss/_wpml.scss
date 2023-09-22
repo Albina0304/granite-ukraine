@@ -1,0 +1,42 @@
+.language {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .dropdown {
+        &-toggle {
+            color: $white;
+            &.show::after {
+                content: '';
+                transform: rotate(180deg);
+            }
+            &::after {
+                margin-left: 8px;
+            }
+        }
+        .wpml-ls-legacy-list-horizontal {
+            padding: 0;
+            border: none;
+            a {
+                color: $black;
+                margin: 8px 0;
+                font-size: $min-size;
+                line-height: $base-size;
+                padding: 0;
+            }
+            &.wpml-ls-statics-footer {
+                margin: 0;
+                &>ul {
+                    text-align: start;
+                    display: flex;
+                    flex-direction: column; 
+                }
+            }
+            &.wpml-ls-flag+span {
+                margin-left: 4px;
+            }
+        }
+    }
+}
+.wpml-ls-current-language {
+    display: none;
+}
