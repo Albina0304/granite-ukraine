@@ -1,26 +1,20 @@
 .hero {
-    padding: 157px 0 297px;
     text-align: center;
-    @include media-down(ms) {
-        padding-bottom: 200px;
-    }
+    height: 110vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     &-title {
         text-transform: uppercase;
         color: $white;
         margin: 0 0 48px;
-        @include media-down(xl) {
-            font-size: 60px;
-        }
-        @include media-down(ms) {
-            font-size: 41px;
-            line-height: 49px;
-        }
+        font-size: clamp(41px, 5vw, $h1-size); 
+        line-height: 1.2;
         @include media-down(sm) {
             text-align: start;
         }
     }
     .btn-secondary {
-        line-height: $base-height;
         @include media-down(sm) {
             width: 100%;
         }
