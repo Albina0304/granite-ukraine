@@ -1,4 +1,5 @@
 .products {
+    position: relative;
     &-title {
         text-align: center;
         margin: 0 0 40px;
@@ -10,36 +11,41 @@
             line-height: $main-height;
         }
     }
-    .product-cards {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        margin: -12px;
-        .product-col {
-            max-width: 25%;
-            padding: 12px;
+    .product {
+        &-cards {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: -12px;
             @include media-down(md) {
-                max-width: 33.3%;
-                padding: 8px;
+                margin: -8px;
             }
-            @include media-down(lsm) {
-                max-width: 50%;
+            &-column {
+                max-width: 25%;
+                padding: 12px;
+                @include media-down(md) {
+                    max-width: 33.3%;
+                    padding: 8px;
+                }
+                @include media-down(lsm) {
+                    max-width: 50%;
+                }
+                .slick-dots {
+                    display: none;
+                }
             }
         }
-        .product-card {
+        &-card {
             .card-title {
                 color: $black;
-                padding: 8px 0 32px;
+                margin: 8px 0 32px;
                 text-align: center;
                 background-color: $white;
                 border-radius: 4px;
                 @include media-down(lsm) {
-                    padding-bottom: 0;
+                    margin-bottom: 0;
                     font-size: $btn-size;
                     line-height: $mobile-card;
-                }
-                h4 {
-                    margin: 0;
                 }
             }
         }
