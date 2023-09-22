@@ -1,4 +1,5 @@
 .advantages {
+    position: relative;
     .advantage {
         &-title {
             text-align: center;
@@ -29,21 +30,21 @@
             @include media-down(sm) {
                 width: 100%;
             }
-            .title-card {
+            &-title {
                 margin: 12px 0 8px;
                 @include media-down(md) {
                     margin-top: 8px;
                 }
             }
-            .image-card {
-                margin-bottom: 12px;
-                @include media-down(md) {
-                    margin-bottom: 8px;
-                }
+        }
+        &-image {
+            margin-bottom: 12px;
+            @include media-down(md) {
+                margin-bottom: 8px;
             }
-            .description-card p {
-                margin: 0;
-            }
+        }
+        &-description p {
+            margin: 0;
         }
     } 
 }
