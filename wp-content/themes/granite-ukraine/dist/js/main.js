@@ -30,7 +30,7 @@ jQuery(document).ready(function ($) {
            type : "GET",
            url : 'http://localhost/Projects/granite-ukraine-wp/wp-admin/admin-ajax.php',
            data : {
-                action: "js_action",
+                action: "labor_action",
                 post_id: product_id,
             },
            success: function(response) {
@@ -41,8 +41,6 @@ jQuery(document).ready(function ($) {
            }
         });
      });
-
-
     lightbox.option({
         'resizeDuration': 200,
         'wrapAround': true
@@ -55,9 +53,9 @@ jQuery(document).ready(function ($) {
           scrollTop: $(linkid).offset().top - headerHeight
         }, 1);
     });
-    $('.header-burger, .main-wrapper li a').on ('click', function(e) {
+    $('.header-mobile-menu, .main-wrapper li a').on ('click', function(e) {
         $('.main-wrapper').toggleClass('is-active');
-        $('#burger-nav').toggleClass('open');
+        $('#mobile-nav').toggleClass('open');
     });
     window.onscroll = function() {scrollFunction()};
     window.onload = function() {scrollFunction()};
@@ -76,24 +74,6 @@ jQuery(document).ready(function ($) {
     });
     $(document).ready(function () {
         $(".menu-menu-container").contents().unwrap();
-    });
-    $('.form-wrapper input').on('focus input', function(e) {
-        $(this).parents('.form-wrapper').find('.label').css('display','none')
-    })
-    $('.form-wrapper input').on('blur', function(e) {
-        if(!$(this).val()) {
-            $(this).parents('.form-wrapper').find('.label').css('display','block')
-        }
-    })
-    $('.form-wrapper .label').on('click', function(e) {
-        $(this).parents('.form-wrapper').find('input').focus();
-    })
-    $('.form-contact').on('submit', function(e) {
-        e.preventDefault();
-        setTimeout(function() {
-            $('.form-wrapper input').val('');
-            $('.form-wrapper .label').css('display', 'block');
-        }, 2000);
     });
     function myMap() {
         var mapProp= {
@@ -270,7 +250,7 @@ jQuery(document).ready(function ($) {
             ]
         }
         ]
-        var mapEl = document.getElementById("googleMap");
+        var mapEl = document.getElementById("google-map");
         if(mapEl){
             var dataLatlan = JSON.parse(mapEl.getAttribute('data-latlan'));
             var dataMarker = mapEl.getAttribute('data-marker');
@@ -287,7 +267,7 @@ jQuery(document).ready(function ($) {
         }
     }
     myMap();
-    $('.card-image').slick({
+    $('.slider-image').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
         arrows: false,
@@ -306,7 +286,7 @@ jQuery(document).ready(function ($) {
         slidesToShow: 4,
         slidesToScroll: 1,
         arrows: false,
-        asNavFor: '.card-image',
+        asNavFor: '.slider-image',
         focusOnSelect: true,
         responsive: [
             {

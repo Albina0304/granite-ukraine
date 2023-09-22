@@ -27,3 +27,54 @@
         display: none;
     }
 }
+.header {
+    .social {
+        @include reset-list;
+        margin: 0 -12px;
+        @include media-down(md) {
+            flex-direction: column;
+            margin: 0;
+            display: flex;
+            flex: 1;
+            width: 100%;
+        }
+        svg {
+            @include media-down(md) {
+                margin-right: 4px;
+            }
+        }
+        &-title {
+            @include media-down(md) {
+                display: flex;
+                align-items: center;
+            }
+        }
+        .title {
+           @include media-up(md) {
+            display: none;
+           }
+        }
+        li {
+            @include media-down(md) {
+                padding: 13px 0;
+            }
+            a {
+                transition: color .3s;
+                @include media-down(md) {
+                    font-size: $min-size;
+                    line-height: $base-size;
+                }
+                svg path {
+                    @include media-down(md) {
+                        fill: $black;
+                    }
+                }
+                &:hover {
+                    & svg path {
+                        fill: $btn-color;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,3 +1,38 @@
+form {
+    input {
+        &::placeholder {
+            color: $text-color;
+        }
+        padding: 8px 16px;
+        border-radius: 4px;
+        border: 1px solid var(--txt-light-grren, #7A8279);
+        width: 100%;
+        font-size: 16px;
+        line-height: 22px;
+        font-weight: 400;
+        min-height: 48px;
+        &:focus::placeholder {
+            color: transparent;
+        }
+    }
+}
+.wpcf7 {
+    & form {
+        .wpcf7-response-output {
+            color: $white;
+            font-size: $min-size;
+            border: none;
+            border-bottom: 1px solid;
+            margin-bottom: 0;
+            text-align: center;
+        }
+    }
+    &-not-valid-tip {
+        font-size: $min-size;
+        display: flex;
+        position: absolute;
+    }
+}
 .form {
     &-global {
         margin: 0 auto;
@@ -16,6 +51,13 @@
         }
     }
     &-description {
+        color: $secondary-color;
+        font-size: $sm-size;
+        line-height: $sm-height;
+        @include media-down(md) {
+            font-size: $base-size;
+            line-height: $base-height;
+        }
         margin: 16px 0 40px;
         @include media-down(md) {
             margin-bottom: 24px;
@@ -24,16 +66,10 @@
             text-align: left;
         }
         p {
-            color: $secondary-color;
-            font-size: $sm-size;
-            line-height: $sm-height;
-            @include media-down(md) {
-                font-size: $base-size;
-                line-height: $base-height;
-            }
+            margin: 0;
         }
     }
-    .form-wrapper {
+    &-wrapper {
         margin-bottom: 32px;
         position: relative;
         @include media-down(s) {
@@ -51,54 +87,8 @@
                 }
             }
         }
-        .label {
-            position: absolute;
-            z-index: 1;
-            top: 50%;
-            left: 16px;
-            transform: translateY(-50%);
-            @include media-down(s) {
-                font-size: $btn-size;
-            }
-        }
         p {
             margin: 0;
         }
-        br {
-            display: none;
-        }
-    }
-    .wpcf7-form-control-wrap {
-        position: relative;
     }
 }
-.wpcf7-form-control {
-    padding: 8px 16px;
-    border-radius: 4px;
-    border: 1px solid var(--txt-light-grren, #7A8279);
-    width: 100%;
-    font-size: 16px;
-    line-height: 22px;
-    font-weight: 400;
-    min-height: 48px;
-}
-.section.form {
-    padding-bottom: 84px;
-}
-    .wpcf7 {
-        form {
-            .wpcf7-response-output {
-                color: $white;
-                font-size: $min-size;
-                border: none;
-                border-bottom: 1px solid;
-                margin-bottom: 0;
-                text-align: center;
-            }
-        }
-        &-not-valid-tip {
-            font-size: $min-size;
-            display: flex;
-            position: absolute;
-        }
-    }

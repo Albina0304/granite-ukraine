@@ -10,11 +10,14 @@
 @import '../../node_modules/lightbox2/dist/css/lightbox.css';
 @import '_vars';
 @import '_mixins';
+@import '_global';
 @import '_social';
 @import '_navigation';
 @import '_btn';
-@import '_global';
 @import '_header';
+@import '_dropdown';
+@import '_mobile-menu';
+@import '_wpml';
 @import '_hero';
 @import '_products';
 @import '_advantages';
