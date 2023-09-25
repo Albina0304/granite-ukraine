@@ -51,6 +51,7 @@
         </div>
         <?php 
             echo get_template_part('template-parts/general/modal');
+            echo get_template_part('template-parts/general/modal-confirmation');
         wp_footer();?>
     </body>
 </html>

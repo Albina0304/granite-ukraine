@@ -2,6 +2,7 @@
 //=../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js
 //=../../node_modules/slick-carousel/slick/slick.min.js
 jQuery(document).ready(function ($) {
+    console.log
     $(".labors .btn").click( function(e) {
         e.preventDefault();
         var self = $(this);
@@ -276,4 +277,13 @@ jQuery(document).ready(function ($) {
             }
         ]
     });
+
+    $('.form-wrapper').on('click', function(e) {
+        $(this).find('input').focus();
+    });
+    // $('.form-contact .wpcf7').on('wpcf7mailsent', function(event) {
+    //     // event.preventDefault();
+    //         $('#confirmation').modal('show');
+    // });
+
 });
