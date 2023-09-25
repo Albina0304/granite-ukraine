@@ -2,7 +2,6 @@
 //=../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js
 //=../../node_modules/slick-carousel/slick/slick.min.js
 jQuery(document).ready(function ($) {
-    console.log
     $(".labors .btn").click( function(e) {
         e.preventDefault();
         var self = $(this);
@@ -277,13 +276,25 @@ jQuery(document).ready(function ($) {
             }
         ]
     });
-
     $('.form-wrapper').on('click', function(e) {
         $(this).find('input').focus();
     });
-    // $('.form-contact .wpcf7').on('wpcf7mailsent', function(event) {
-    //     // event.preventDefault();
-    //         $('#confirmation').modal('show');
-    // });
-
+    $('.form-contact .wpcf7').on('wpcf7mailsent', function(event) {
+        $('#confirmation').modal('show');
+        setTimeout(function() {
+            $('#confirmation').modal('hide');
+        }, 2000);
+    });
+    $('.form-wrapper').on('click', function(e) {
+        $(this).find('input').focus();
+    });
+    $('#modal-form .wpcf7').on('wpcf7mailsent', function(event) {
+        $('#confirmation').modal('show');
+        setTimeout(function() {
+            $('#confirmation').modal('hide');
+        }, 2000);
+    });
+    $('#confirmation').on('show.bs.modal', function () {
+        $('#modal-form').modal('hide');
+    });
 });

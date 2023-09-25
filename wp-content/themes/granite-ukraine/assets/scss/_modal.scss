@@ -11,10 +11,30 @@
         text-align: center;
     }
     &-content {
+        text-align: center;
         padding: 40px 88px 16px;
         border-radius: 4px;
         max-width: 764px;
         max-height: 588px;
+        .modal {
+            &-image {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            &-title-confirmation {
+                margin: 16px 0 20px;
+                color: $btn-color;
+            }
+            &-text {
+                margin-bottom: 24px;
+                color: $white;
+                p {
+                    margin: 0;
+                }
+            }
+        }
+
     }
     &-body {
         table {
