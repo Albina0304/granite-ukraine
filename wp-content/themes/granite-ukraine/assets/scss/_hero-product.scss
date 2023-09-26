@@ -73,6 +73,7 @@
         &-info {
             &-title {
                 margin: 0 0 8px;
+                font-weight: bold;
                 @include media-down(md) {
                     font-size: $sm-size;
                     line-height: $base-height;

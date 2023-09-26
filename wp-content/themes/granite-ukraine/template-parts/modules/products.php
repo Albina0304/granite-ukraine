@@ -8,7 +8,7 @@ $products = get_posts(
     )
 );
 if($products) : ?>
-    <section class="section products">
+    <section id="product" class="section products">
         <div class="decor-light">
             <img src="<?php echo get_template_directory_uri().'/assets/images/declight.png';?>" alt="" loading="lazy">
         </div>

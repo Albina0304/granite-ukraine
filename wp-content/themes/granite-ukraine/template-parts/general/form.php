@@ -3,7 +3,7 @@ $title_form = get_field('title_form', 'options');
 $text_form = get_field('text_form', 'options');
 $form = get_field('form', 'options');
 if($form) : ?>
-    <section class="section decor form">
+    <section id="contacts" class="section decor form">
         <div class="form-global">
             <div class="container">
                 <?php if ($title_form):?>

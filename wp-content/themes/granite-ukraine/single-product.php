@@ -97,7 +97,7 @@ $related_products = get_posts(
     </section>
 <?php endif;
 if($related_products) : ?>
-    <section class="section products related-products">
+    <section id="product" class="section products related-products">
         <div class="decor-light">
             <img src="<?php echo get_template_directory_uri().'/assets/images/declight.png';?>" alt="" loading="lazy">
         </div>

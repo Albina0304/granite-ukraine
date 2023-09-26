@@ -4,7 +4,7 @@ $description = get_sub_field('description');
 $repeater = get_sub_field('repeater');
 $link = get_field('btn_primary', 'options');
 if($repeater && $description) : ?>
-    <section class="section about">
+    <section id="about-us" class="section about">
         <div class="decor-light">
             <img src="<?php echo get_template_directory_uri().'/assets/images/declight.png';?>" alt="" loading="lazy">
         </div>

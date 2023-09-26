@@ -1,7 +1,7 @@
 <?php
 extract($args);
 if ($images) : ?>
-    <section class="section decor labors">
+    <section id="work" class="section decor labors">
         <div class="container">
             <?php if ($title) : ?>
                 <h2 class="labors-title">

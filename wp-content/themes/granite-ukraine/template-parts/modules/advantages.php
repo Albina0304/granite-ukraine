@@ -2,7 +2,7 @@
 $title = get_sub_field('title');
 $repeater_cards = get_sub_field('repeater_card');
 if($repeater_cards) : ?>
-    <section class="section advantages">
+    <section id="advantage" class="section advantages">
         <div class="decor-light">
             <img src="<?php echo get_template_directory_uri().'/assets/images/declight.png';?>" alt="" loading="lazy">
         </div>
