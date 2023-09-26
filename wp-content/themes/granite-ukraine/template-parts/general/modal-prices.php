@@ -5,9 +5,8 @@ $global_product_image = get_field('product_image', 'options');
 $page_product_image = get_post_thumbnail_id();
 $product_image_id = $page_product_image ? $page_product_image : $global_product_image;
 $global_modal_prices = get_field('modal_price', 'options');
-$modal_price = $page_modal_price ? $page_modal_price : $global_modal_prices;
-$modal_price_title = !empty($modal_price['title']) ? $modal_price['title'] : $global_modal_prices['title'];
-?>
+$modal_price = !empty($page_modal_price['prices']) ? $page_modal_price : $global_modal_prices;
+$modal_price_title = !empty($modal_price['title']) ? $modal_price['title'] : $global_modal_prices['title'];?>
 <div class="modal fade" id="modal-price">
     <div class="modal-dialog">
         <div class="modal-content decor">
@@ -29,7 +28,7 @@ $modal_price_title = !empty($modal_price['title']) ? $modal_price['title'] : $gl
                         </tr>
                     </thead>
                     <tbody> 
-                        <?php if (!empty($modal_price['prices'])) :
+                        <?php if (is_array($modal_price['prices']) && !empty($modal_price['prices'])) :
                             foreach ($modal_price['prices'] as $price) :?>
                                 <tr>
                                     <td>
