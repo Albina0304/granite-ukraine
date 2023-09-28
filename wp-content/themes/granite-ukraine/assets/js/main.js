@@ -24,15 +24,30 @@ jQuery(document).ready(function ($) {
     lightbox.option({
         'resizeDuration': 200,
         'wrapAround': true
-      })
-    $('.main-wrapper a').click(function(e) {
-        e.preventDefault();
-        var linkid = $(this).attr('href');
-        var headerHeight = $('.header').outerHeight();
-        $('html, body').animate({
-          scrollTop: $(linkid).offset().top - headerHeight
-        }, 1);
-    });
+    })
+    if ($('.lightbox').length) {
+        var lbContainer = $('.lightbox').find('.lb-container');
+        var lbDataContainer = $('.lightbox').find('.lb-dataContainer');
+        $(lbContainer).before($(lbDataContainer));
+    }
+    var homeMenuLink = $('.home .main-wrapper a');
+    if (homeMenuLink.length) {
+        homeMenuLink.click(function(e) {
+            e.preventDefault();
+            var linkid = $(this).attr('href');
+            var headerHeight = $('.header').outerHeight();
+            $('html, body').animate({
+            scrollTop: $(linkid).offset().top - headerHeight+1
+            }, 800);
+        });
+    } else {
+        $('.main-wrapper a').click(function(event) {
+            event.preventDefault();
+            window.location.href = '/'+ e.currentTarget.hash
+        });
+    }
+
+
     $('.header-mobile-menu, .main-wrapper li a').on ('click', function(e) {
         $('.main-wrapper').toggleClass('is-active');
         $('#mobile-nav').toggleClass('open');
@@ -47,33 +62,6 @@ jQuery(document).ready(function ($) {
         document.getElementById("scroll").style.display = "none";
         }
     }
-    document.querySelectorAll('.menu-item a').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            const targetId = this.getAttribute('href').substring(1);
-            const targetElement = document.getElementById(targetId);
-            if (targetElement) {
-                const offsetTop = targetElement.getBoundingClientRect().top;
-                const scrollOffset = window.pageYOffset;
-                const targetOffset = offsetTop + scrollOffset - 70;
-                const duration = 300;
-                const frames = 50;
-                const increment = (targetOffset - scrollOffset) / frames;
-                
-                let currentScroll = scrollOffset;
-                
-                const animateScroll = () => {
-                    currentScroll += increment;
-                    window.scrollTo(0, currentScroll);
-    
-                    if (Math.abs(currentScroll - targetOffset) > Math.abs(increment)) {
-                        requestAnimationFrame(animateScroll);
-                    }
-                };
-                animateScroll();
-            }
-        });
-    });
     $('#scroll').click(function() {
         $('html, body').animate({
             scrollTop: 0,

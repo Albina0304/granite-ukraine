@@ -7,6 +7,7 @@ $post_id = get_the_ID();
 $link = get_field('btn_primary', 'options');
 $content = get_the_content();
 $title = get_the_title();
+$title_products = __('Цікаві пропозиції', 'granite-ukraine');
 $related_products = get_posts(
     array(
         'post_type' => 'product',
@@ -50,7 +51,7 @@ $related_products = get_posts(
                         foreach ($slider_images as $slider_image) : 
                             $image_id = $slider_image['image']['ID']; ?>
                             <div class="slider-image-card">
-                                    <?php echo wp_get_attachment_image($image_id, 'slider-img');?>
+                                <?php echo wp_get_attachment_image($image_id, 'slider-img');?>
                             </div> 
                         <?php endforeach; 
                     endif; ?>
@@ -102,9 +103,9 @@ if($related_products) : ?>
             <img src="<?php echo get_template_directory_uri().'/assets/images/declight.png';?>" alt="" loading="lazy">
         </div>
         <div class="container">
-            <?php if (isset($title)):?>
+            <?php if (isset($title_products)):?>
                 <h2 class="products-title">
-                    <?php echo $title; ?>
+                    <?php echo $title_products; ?>
                 </h2>
             <?php endif;?>
             <div class="product-cards">

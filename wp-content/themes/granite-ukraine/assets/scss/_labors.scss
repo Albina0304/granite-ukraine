@@ -57,9 +57,16 @@
     }
     .section-button {
         margin-top: 56px;
+        @include media-down(sm) {
+            margin-top: 32px;
+        }
         .btn {
             font-size: $sm-size;
             line-height: $btn-height;
+            @include media-down(sm) {
+                font-size: $base-size;
+                line-height: $base-height;
+            }
         }
     }
 }

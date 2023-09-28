@@ -6,7 +6,7 @@
         @include media-down(lsm) {
             margin: 0 0 24px;
         }
-        @include media-down(lsm) {
+        @include media-down(ms) {
             font-size: $sm-height;
             line-height: $main-height;
         }
@@ -19,6 +19,9 @@
             margin: -12px;
             @include media-down(md) {
                 margin: -8px;
+            }
+            @include media-down(ms) {
+                gap: 16px;
             }
             &-column {
                 max-width: 25%;

@@ -15,7 +15,7 @@
         <meta name="theme-color" content="#ffffff">
         <?php wp_head()?>
     </head>
-    <body>
+    <body <?php echo body_class();?>>
     <?php
     $logo = get_field('logo', 'options');
     $logo_mobile = get_field('logo_mobile', 'options');
