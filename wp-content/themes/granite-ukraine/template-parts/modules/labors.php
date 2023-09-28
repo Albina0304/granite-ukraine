@@ -19,7 +19,7 @@ if ($images) : ?>
                     <?php endif;
                 endforeach;?>
             </div>
-            <?php if($link && count($images) > 5) : ?>
+            <?php if($link && $images_count > 6) : ?>
                 <div class="section-button">
                     <?php $link_target = isset($link['target']) ? $link['target'] : '_self';?>
                     <a href="#" class="btn" data-product_id="<?php echo get_the_id();?>">

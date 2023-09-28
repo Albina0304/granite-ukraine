@@ -33,7 +33,8 @@ if( have_rows('modules') ):
             $arr = array(
                 'title' => $title,
                 'images' => array_slice($images, 0, 6),
-                'link' => $link
+                'link' => $link,
+                'images_count' => count($images)
             );
             echo get_template_part('template-parts/modules/labors', '', $arr);
         endif;

@@ -7,20 +7,21 @@ jQuery(document).ready(function ($) {
         var self = $(this);
         var product_id = $(this).data('product_id');
         $.ajax({
-           type : "GET",
-           url : 'http://localhost/Projects/granite-ukraine-wp/wp-admin/admin-ajax.php',
+            type : "GET",
+            url : 'http://localhost/Projects/granite-ukraine-wp/wp-admin/admin-ajax.php',
+            // url : '/wp-admin/admin-ajax.php',  
            data : {
                 action: "labor_action",
                 post_id: product_id,
             },
            success: function(response) {
-            if(response.data) {
-                $('.boxes').append(response.data);
-                self.hide();
-            }
+                if(response.data) {
+                    $('.boxes').append(response.data);
+                    self.hide();
+                }
            }
         });
-     });
+    });
     lightbox.option({
         'resizeDuration': 200,
         'wrapAround': true
@@ -46,8 +47,6 @@ jQuery(document).ready(function ($) {
             window.location.href = '/'+ e.currentTarget.hash
         });
     }
-
-
     $('.header-mobile-menu, .main-wrapper li a').on ('click', function(e) {
         $('.main-wrapper').toggleClass('is-active');
         $('#mobile-nav').toggleClass('open');

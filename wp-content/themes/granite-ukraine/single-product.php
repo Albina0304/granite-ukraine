@@ -34,7 +34,7 @@ $related_products = get_posts(
                     if ($slider_images) :
                         foreach ($slider_images as $slider_image) : 
                             $image_id = $slider_image['image']['ID'];
-                            $image_large = wp_get_attachment_image_src($image_id, 'product-card');?>
+                            $image_large = wp_get_attachment_image_src($image_id, 'large');?>
                             <div class="slider-image-card">
                                 <a href="<?php echo $image_large[0];?>" data-lightbox="hero-granite">
                                     <?php echo wp_get_attachment_image($image_id, 'product-card');?>
@@ -92,7 +92,8 @@ $related_products = get_posts(
             'images' => array_slice($product_images, 0, 6),
             'link' => array(
                 'title' => __('Завантажити більше', 'granite-ukraine')
-            )
+            ),
+            'images_count' => count($product_images)
         );
         echo get_template_part('template-parts/modules/labors', '', $arr);?>
     </section>
