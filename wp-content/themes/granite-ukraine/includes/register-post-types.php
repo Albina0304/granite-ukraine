@@ -1,25 +1,24 @@
 <?php
 function granite_ukraine() {
 	$labels = array(
-		'name'                  => _x( 'Products', 'Post type general name', 'textdomain' ),
-		'singular_name'         => _x( 'Product', 'Post type singular name', 'textdomain' ),
-		'menu_name'             => _x( 'Products', 'Admin Menu text', 'textdomain' ),
-		'name_admin_bar'        => _x( 'Product', 'Add New on Toolbar', 'textdomain' ),
-		'add_new'               => __( 'Add New', 'textdomain' ),
-		'add_new_item'          => __( 'Add New Product', 'textdomain' ),
-		'new_item'              => __( 'New Product', 'textdomain' ),
-		'edit_item'             => __( 'Edit Product', 'textdomain' ),
-		'view_item'             => __( 'View Product', 'textdomain' ),
-		'all_items'             => __( 'All Products', 'textdomain' ),
-		'search_items'          => __( 'Search Products', 'textdomain' ),
-		'parent_item_colon'     => __( 'Parent Products:', 'textdomain' ),
-		'not_found'             => __( 'No products found.', 'textdomain' ),
-		'not_found_in_trash'    => __( 'No products found in Trash.', 'textdomain' ),
-		'featured_image'        => _x( 'Product Cover Image', 'textdomain' ),
-		'set_featured_image'    => _x( 'Set cover image', 'textdomain' ), 
-		'remove_featured_image' => _x( 'Remove cover image', 'textdomain' ),
-		'use_featured_image'    => _x( 'Use as cover image', 'textdomain' ),
-
+		'name'                  => _x( 'Продукти', 'Post type general name', 'textdomain' ),
+        'singular_name'         => _x( 'Продукт', 'Post type singular name', 'textdomain' ),
+        'menu_name'             => _x( 'Продукти', 'Admin Menu text', 'textdomain' ),
+        'name_admin_bar'        => _x( 'Продукт', 'Add New on Toolbar', 'textdomain' ),
+        'add_new'               => __( 'Додати новий', 'textdomain' ),
+        'add_new_item'          => __( 'Додати новий продукт', 'textdomain' ),
+        'new_item'              => __( 'Новий продукт', 'textdomain' ),
+        'edit_item'             => __( 'Редагувати продукт', 'textdomain' ),
+        'view_item'             => __( 'Переглянути продукт', 'textdomain' ),
+        'all_items'             => __( 'Всі продукти', 'textdomain' ),
+        'search_items'          => __( 'Пошук продуктів', 'textdomain' ),
+        'parent_item_colon'     => __( 'Основні продукти:', 'textdomain' ),
+        'not_found'             => __( 'Продукти не знайдено.', 'textdomain' ),
+        'not_found_in_trash'    => __( 'У кошику не знайдено продуктів.', 'textdomain' ),
+        'featured_image'        => _x( 'Обкладинка продукту', 'textdomain' ),
+        'set_featured_image'    => _x( 'Встановити зображення обкладинки', 'textdomain' ), 
+        'remove_featured_image' => _x( 'Видалити зображення обкладинки', 'textdomain' ),
+        'use_featured_image'    => _x( 'Використовувати як обкладинку', 'textdomain' ),
 	);
 
 	$args = array(

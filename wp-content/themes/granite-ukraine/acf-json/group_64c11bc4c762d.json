@@ -297,7 +297,7 @@
         },
         {
             "key": "field_64f5b16e49fd7",
-            "label": "Modal Form",
+            "label": "Модальна Форма",
             "name": "modal_form",
             "aria-label": "",
             "type": "group",
@@ -353,7 +353,7 @@
         },
         {
             "key": "field_64f5b215e3442",
-            "label": "Modal Price",
+            "label": "Прайс",
             "name": "modal_price",
             "aria-label": "",
             "type": "group",
@@ -543,7 +543,7 @@
                         "class": "",
                         "id": ""
                     },
-                    "wpml_cf_preferences": 0,
+                    "wpml_cf_preferences": 3,
                     "return_format": "array",
                     "library": "all",
                     "min_width": "",
@@ -619,7 +619,7 @@
         },
         {
             "key": "field_64fb6d5885c9a",
-            "label": "Title Form",
+            "label": "Заголовок Форми",
             "name": "title_form",
             "aria-label": "",
             "type": "text",
@@ -640,7 +640,7 @@
         },
         {
             "key": "field_650d45164078b",
-            "label": "Form",
+            "label": "Модальна Форма",
             "name": "form",
             "aria-label": "",
             "type": "acf_cf7",
@@ -656,7 +656,7 @@
         },
         {
             "key": "field_64fb6e00aa343",
-            "label": "Text Form",
+            "label": "Текст Форми",
             "name": "text_form",
             "aria-label": "",
             "type": "wysiwyg",
@@ -677,7 +677,7 @@
         },
         {
             "key": "field_64feea2f5b57c",
-            "label": "Google Maps",
+            "label": "Google Карти",
             "name": "",
             "aria-label": "",
             "type": "tab",
@@ -695,7 +695,7 @@
         },
         {
             "key": "field_64feea595b57d",
-            "label": "Maps",
+            "label": "Карти",
             "name": "maps",
             "aria-label": "",
             "type": "repeater",
@@ -718,7 +718,7 @@
             "sub_fields": [
                 {
                     "key": "field_64feea715b57e",
-                    "label": "Map",
+                    "label": "Карта",
                     "name": "map",
                     "aria-label": "",
                     "type": "google_map",
@@ -741,7 +741,7 @@
         },
         {
             "key": "field_64feea9e5b57f",
-            "label": "Google maps IPI KEY",
+            "label": "КЛЮЧ API карт Google",
             "name": "google_maps_ipi_key",
             "aria-label": "",
             "type": "text",
@@ -780,5 +780,5 @@
     "description": "",
     "show_in_rest": 0,
     "acfml_field_group_mode": "localization",
-    "modified": 1695649063
+    "modified": 1695978365
 }

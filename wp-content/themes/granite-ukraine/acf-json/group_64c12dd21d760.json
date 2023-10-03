@@ -1,10 +1,10 @@
 {
     "key": "group_64c12dd21d760",
-    "title": "Modules",
+    "title": "Модулі",
     "fields": [
         {
             "key": "field_64c12dd205e78",
-            "label": "Modules",
+            "label": "Модулі",
             "name": "modules",
             "aria-label": "",
             "type": "flexible_content",
@@ -21,12 +21,12 @@
                 "layout_64c12e2d0688a": {
                     "key": "layout_64c12e2d0688a",
                     "name": "hero",
-                    "label": "Hero",
+                    "label": "Головна Секція",
                     "display": "block",
                     "sub_fields": [
                         {
                             "key": "field_64c12e8105e79",
-                            "label": "Text",
+                            "label": "Текст",
                             "name": "text",
                             "aria-label": "",
                             "type": "text",
@@ -52,12 +52,12 @@
                 "layout_64fb14bd06542": {
                     "key": "layout_64fb14bd06542",
                     "name": "products",
-                    "label": "Products",
+                    "label": "Секція Продукти",
                     "display": "block",
                     "sub_fields": [
                         {
                             "key": "field_64fb14d006544",
-                            "label": "title",
+                            "label": "Заголовок",
                             "name": "title",
                             "aria-label": "",
                             "type": "text",
@@ -83,12 +83,12 @@
                 "layout_64cb63398d096": {
                     "key": "layout_64cb63398d096",
                     "name": "advantages",
-                    "label": "Advantages",
+                    "label": "Секція Переваги",
                     "display": "block",
                     "sub_fields": [
                         {
                             "key": "field_64cb63568d098",
-                            "label": "Title",
+                            "label": "Заголовок",
                             "name": "title",
                             "aria-label": "",
                             "type": "text",
@@ -109,7 +109,7 @@
                         },
                         {
                             "key": "field_64cb63b48d09b",
-                            "label": "Repeater  card",
+                            "label": "Картка",
                             "name": "repeater_card",
                             "aria-label": "",
                             "type": "repeater",
@@ -131,7 +131,7 @@
                             "sub_fields": [
                                 {
                                     "key": "field_64cb63ed8d09c",
-                                    "label": "Image",
+                                    "label": "Зображення",
                                     "name": "image",
                                     "aria-label": "",
                                     "type": "image",
@@ -158,7 +158,7 @@
                                 },
                                 {
                                     "key": "field_64cb63f88d09d",
-                                    "label": "Title",
+                                    "label": "Заголовок",
                                     "name": "title",
                                     "aria-label": "",
                                     "type": "text",
@@ -180,7 +180,7 @@
                                 },
                                 {
                                     "key": "field_64cb64068d09e",
-                                    "label": "Description",
+                                    "label": "Опис",
                                     "name": "description",
                                     "aria-label": "",
                                     "type": "wysiwyg",
@@ -209,12 +209,12 @@
                 "layout_64fb1735fb569": {
                     "key": "layout_64fb1735fb569",
                     "name": "labors",
-                    "label": "Labors",
+                    "label": "Секція Роботи",
                     "display": "block",
                     "sub_fields": [
                         {
                             "key": "field_64fb1741fb56b",
-                            "label": "Title",
+                            "label": "Заголовок",
                             "name": "title",
                             "aria-label": "",
                             "type": "text",
@@ -240,12 +240,12 @@
                 "layout_64cba27762d73": {
                     "key": "layout_64cba27762d73",
                     "name": "about",
-                    "label": "About",
+                    "label": "Секція Про нас",
                     "display": "block",
                     "sub_fields": [
                         {
                             "key": "field_64cba28b62d75",
-                            "label": "Title",
+                            "label": "Заголовок",
                             "name": "title",
                             "aria-label": "",
                             "type": "text",
@@ -266,7 +266,7 @@
                         },
                         {
                             "key": "field_64cba2aa62d76",
-                            "label": "Description",
+                            "label": "Опис",
                             "name": "description",
                             "aria-label": "",
                             "type": "wysiwyg",
@@ -287,7 +287,7 @@
                         },
                         {
                             "key": "field_64cba2d762d77",
-                            "label": "Repeater",
+                            "label": "Повторювальні Зображення",
                             "name": "repeater",
                             "aria-label": "",
                             "type": "repeater",
@@ -309,7 +309,7 @@
                             "sub_fields": [
                                 {
                                     "key": "field_64cba30062d78",
-                                    "label": "Image",
+                                    "label": "Зображення",
                                     "name": "image",
                                     "aria-label": "",
                                     "type": "image",
@@ -333,84 +333,6 @@
                                     "mime_types": "",
                                     "preview_size": "medium",
                                     "parent_repeater": "field_64cba2d762d77"
-                                }
-                            ]
-                        }
-                    ],
-                    "min": "",
-                    "max": ""
-                },
-                "layout_64f1da0550b1c": {
-                    "key": "layout_64f1da0550b1c",
-                    "name": "map",
-                    "label": "Map",
-                    "display": "block",
-                    "sub_fields": [
-                        {
-                            "key": "field_64f1da2150b1e",
-                            "label": "Address",
-                            "name": "address",
-                            "aria-label": "",
-                            "type": "repeater",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "wpml_cf_preferences": 1,
-                            "layout": "block",
-                            "min": 0,
-                            "max": 0,
-                            "collapsed": "",
-                            "button_label": "Додати рядок",
-                            "rows_per_page": 20,
-                            "sub_fields": [
-                                {
-                                    "key": "field_64f1da3a50b1f",
-                                    "label": "Title",
-                                    "name": "title",
-                                    "aria-label": "",
-                                    "type": "text",
-                                    "instructions": "",
-                                    "required": 0,
-                                    "conditional_logic": 0,
-                                    "wrapper": {
-                                        "width": "",
-                                        "class": "",
-                                        "id": ""
-                                    },
-                                    "wpml_cf_preferences": 2,
-                                    "default_value": "",
-                                    "maxlength": "",
-                                    "placeholder": "",
-                                    "prepend": "",
-                                    "append": "",
-                                    "parent_repeater": "field_64f1da2150b1e"
-                                },
-                                {
-                                    "key": "field_64f1da4450b20",
-                                    "label": "Text",
-                                    "name": "text",
-                                    "aria-label": "",
-                                    "type": "wysiwyg",
-                                    "instructions": "",
-                                    "required": 0,
-                                    "conditional_logic": 0,
-                                    "wrapper": {
-                                        "width": "",
-                                        "class": "",
-                                        "id": ""
-                                    },
-                                    "wpml_cf_preferences": 2,
-                                    "default_value": "",
-                                    "tabs": "all",
-                                    "toolbar": "full",
-                                    "media_upload": 1,
-                                    "delay": 0,
-                                    "parent_repeater": "field_64f1da2150b1e"
                                 }
                             ]
                         }
@@ -443,5 +365,5 @@
     "description": "",
     "show_in_rest": 0,
     "acfml_field_group_mode": "translation",
-    "modified": 1694199492
+    "modified": 1695977737
 }
