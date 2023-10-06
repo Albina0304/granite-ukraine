@@ -1,5 +1,62 @@
 .modal {
-    --bs-modal-margin: 5%;
+    &#modal-form {
+        & .modal-content {
+            @include media-down(ms) {
+                padding: 20px 24px 16px;
+            }
+        }
+        form input {
+            @include media-down(ms) {
+                min-height: auto;
+                width: auto;
+            }
+            @include media-down(xs) {
+                width: 100%;
+                font-size: $btn-size;
+            }
+        }
+        .form-wrapper {
+            @include media-down(ms) {
+                margin-bottom: 24px;
+            }
+            &.form-wrapper-button {
+                & .btn-secondary {
+                    margin-bottom: 24px;
+                    @include media-down(ms) {
+                        margin: 16px 0 0;
+                        padding: 10px 24px;
+                        font-size: $base-size;
+                        line-height: $base-height;
+                        width: 50%;
+                    }
+                    @include media-down(xs) {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+    &#modal-price {
+        .modal-content {
+            @include media-down(ms) {
+                padding: 20px 16px;
+            }
+        }
+        & .modal-dialog .body-price-table {
+            @include media-down(ms) {
+                font-size: $btn-size;
+            }
+        }
+        .section-button {
+            .btn-sm {
+                @include media-down(ms) {
+                    font-size: 16px;
+                    line-height: 24px;
+                    padding: 10px 23px;
+                }
+            }
+        }
+    }
     &-main {
         display: flex;
         align-items: center;
@@ -9,6 +66,13 @@
         margin: 0 0 40px;
         color: $white;
         text-align: center;
+        @include media-down(ms) {
+            margin-bottom: 20px;
+            font-size: $btn-height;
+        }
+        @include media-down(xs) {
+            font-size: $main;
+        }
     }
     &-content {
         text-align: center;
@@ -16,6 +80,9 @@
         border-radius: 4px;
         max-width: 764px;
         max-height: 588px;
+        & .screen-reader-response {
+            display: none;
+        }
         .modal {
             &-image {
                 display: flex;
@@ -37,6 +104,7 @@
 
     }
     &-body {
+        padding: 0;
         table {
             thead {
                 tr {
@@ -50,7 +118,10 @@
     }
     &.show .modal-dialog {
         min-width: 763px;
-        min-height: 408px;
+        @include media-down(ms) {
+            min-width: 60%;
+            justify-content: center;
+        }
     }
     .modal-dialog { 
         .body-price {
@@ -73,6 +144,9 @@
                         padding: 8px 0;
                         &:first-child {
                             width: 20%;
+                            @include media-down(ms) {
+                                width: auto;
+                            }
                         }
                     }
                 }
