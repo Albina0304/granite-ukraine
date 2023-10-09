@@ -1,5 +1,5 @@
 <?php exit; ?>{
-    "version": "2.4.1",
+    "version": "2.5.0",
     "cluster.messagebus.debug": false,
     "cluster.messagebus.enabled": false,
     "cluster.messagebus.sns.region": "",
@@ -63,7 +63,7 @@
         "\\bfound_rows\\(\\)"
     ],
     "docroot_fix.enable": false,
-    "lazyload.enabled": false,
+    "lazyload.enabled": true,
     "lazyload.threshold": "",
     "lazyload.process_img": true,
     "lazyload.process_background": true,
@@ -1027,9 +1027,12 @@
     "common.instance_id": 1754931556,
     "common.force_master": true,
     "extensions.active": {
-        "fragmentcache": "w3-total-cache\/Extension_FragmentCache_Plugin.php"
+        "fragmentcache": "w3-total-cache\/Extension_FragmentCache_Plugin.php",
+        "user-experience-emoji": "w3-total-cache\/UserExperience_Emoji_Extension.php"
     },
-    "extensions.active_frontend": [],
+    "extensions.active_frontend": {
+        "user-experience-emoji": "*"
+    },
     "extensions.active_dropin": [],
     "plugin.license_key": "",
     "plugin.type": "",
@@ -1046,5 +1049,17 @@
     "pgcache.bad_behavior_path": "",
     "newrelic": {
         "monitoring_type": "apm"
-    }
+    },
+    "page": "w3tc_general",
+    "_wpnonce": "2a5008f1ce",
+    "_wp_http_referer": "\/Projects\/granite-ukraine-wp\/wp-admin\/admin.php?page=w3tc_general&w3tc_message=651ecb82e8cbc",
+    "w3tc_save_options": "Save Settings",
+    "opcache.engine": "Not Available",
+    "opcache.validate_timestamps": "0",
+    "extension.user-experience-emoji": "1",
+    "extension.user-experience-defer-scripts": "0",
+    "extension.user-experience-oembed": "0",
+    "file_locking": "0",
+    "file_nfs": "0",
+    "extension.imageservice": "0"
 }

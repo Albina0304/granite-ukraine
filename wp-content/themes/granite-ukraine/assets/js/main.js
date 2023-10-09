@@ -8,13 +8,12 @@ jQuery(document).ready(function ($) {
         var product_id = $(this).data('product_id');
         $.ajax({
             type : "GET",
-            // url : 'http://localhost/Projects/granite-ukraine-wp/wp-admin/admin-ajax.php',
             url : '/wp-admin/admin-ajax.php',  
-           data : {
+            data : {
                 action: "labor_action",
                 post_id: product_id,
             },
-           success: function(response) {
+            success: function(response) {
                 if(response.data) {
                     $('.boxes').append(response.data);
                     self.hide();

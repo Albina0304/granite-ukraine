@@ -26,6 +26,13 @@ form {
         font-size: $min-size;
         display: flex;
         position: absolute;
+        color: red;
+    }
+}
+#contacts {
+    padding: 56px 0;
+    & .screen-reader-response {
+        display: none;
     }
 }
 .form {

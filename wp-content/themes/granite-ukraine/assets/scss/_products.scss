@@ -33,6 +33,9 @@
                 @include media-down(lsm) {
                     max-width: 50%;
                 }
+                @include media-down(xs) {
+                    max-width: 100%;
+                }
                 .slick-dots {
                     display: none;
                 }

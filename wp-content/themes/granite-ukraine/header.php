@@ -13,6 +13,7 @@
         <link rel="mask-icon" href="<?php echo get_template_directory_uri();?>/favicon/apple-touch-icon.png">
         <meta name="msapplication-TileColor" content="#da532c">
         <meta name="theme-color" content="#ffffff">
+        <title></title>
         <?php wp_head()?>
     </head>
     <body <?php echo body_class();?>>

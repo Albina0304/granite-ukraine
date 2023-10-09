@@ -14,7 +14,7 @@
             text-align: start;
         }
         @include media-down(xs) {
-            margin: 114px 0 48px;
+            margin: 0 0 48px;
             font-size: clamp(39px, 5vw, $h1-size); 
         }
     }

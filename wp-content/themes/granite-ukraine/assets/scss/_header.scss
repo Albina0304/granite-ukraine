@@ -159,6 +159,7 @@
     .global-menus {
         margin: 0;
         li {
+            padding: 0 min(1.8vw, 24px);
             @include media-down(md) {
                 padding: 24px 0;
             }
