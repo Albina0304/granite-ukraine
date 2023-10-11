@@ -51,7 +51,7 @@ $modal_price_title = !empty($modal_price['title']) ? $modal_price['title'] : $gl
             <?php if( $link ): ?>
                 <div class="section-button">
                     <?php $link_target = $link['target'] ? $link['target'] : '_self';?>
-                    <a href="#" type="button" class="btn btn-sm btn-secondary" data-bs-toggle="modal" data-bs-target="#modal-form">
+                    <a href="#" type="button" class="btn btn-sm btn-secondary" id="toggleModalShow">
                         <?php echo esc_html( $link['title'] ); ?>
                     </a>
                 </div>
