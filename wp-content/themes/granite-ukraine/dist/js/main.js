@@ -306,7 +306,6 @@ jQuery(document).ready(function ($) {
         }
     }
     myMap();
-    
     function scrollFunction() {
         if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
             document.getElementById("scroll").style.display = "block";
@@ -325,7 +324,7 @@ jQuery(document).ready(function ($) {
         var product_id = $(this).data('product_id');
         $.ajax({
             type : "GET",
-            url : '/wp-admin/admin-ajax.php',  
+            url : window.data_obj.ajaxurl,
             data : {
                 action: "labor_action",
                 post_id: product_id,

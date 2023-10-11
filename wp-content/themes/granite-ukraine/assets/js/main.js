@@ -7,7 +7,6 @@ jQuery(document).ready(function ($) {
     //=../../assets/js/header.js
     //=../../assets/js/modal.js
     //=../../assets/js/map.js
-    //=../../assets/js/contactForm.js
     //=../../assets/js/scroll.js
     //=../../assets/js/ajax.js
     var homeMenuLink = $('.home .main-wrapper a');

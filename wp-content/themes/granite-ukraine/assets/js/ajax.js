@@ -4,7 +4,7 @@ $(".labors .btn").click( function(e) {
     var product_id = $(this).data('product_id');
     $.ajax({
         type : "GET",
-        url : '/wp-admin/admin-ajax.php',  
+        url : window.data_obj.ajaxurl,
         data : {
             action: "labor_action",
             post_id: product_id,
