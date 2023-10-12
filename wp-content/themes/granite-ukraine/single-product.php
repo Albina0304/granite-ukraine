@@ -90,6 +90,7 @@ $related_products = get_posts(
         <?php $arr = array(
             'title' => __('Роботи', 'granite-ukraine'),
             'images' => array_slice($product_images, 0, 6),
+            'class_name' => 'labor-single-product',
             'link' => array(
                 'title' => __('Завантажити більше', 'granite-ukraine')
             ),

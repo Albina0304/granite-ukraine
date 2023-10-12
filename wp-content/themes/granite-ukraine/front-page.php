@@ -30,11 +30,23 @@ if( have_rows('modules') ):
                 }
             }
             shuffle($images);
+            $outImages = array_slice($images, 6);
+            $imageRow = [];
+            foreach($outImages as $image) {
+                $imageRow[]['image'] = array(
+                    'id' => $image['image']['id'],
+                    'sizes' => array(
+                        'large' => $image['image']['sizes']['large']
+                    )
+                );
+            }
             $arr = array(
                 'title' => $title,
                 'images' => array_slice($images, 0, 6),
                 'link' => $link,
-                'images_count' => count($images)
+                'class_name' => 'home-labor',
+                'images_count' => count($images),
+                'additional_images' => $imageRow
             );
             echo get_template_part('template-parts/modules/labors', '', $arr);
         endif;
