@@ -151,6 +151,12 @@
                     }
                 }
             }
+            &-information {
+                color: $btn-color;
+                text-align: start;
+                font-size: $min-size;
+                margin: 10px 0;
+            }
         }
     }
 }

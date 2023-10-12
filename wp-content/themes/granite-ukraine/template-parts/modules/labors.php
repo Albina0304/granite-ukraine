@@ -1,7 +1,7 @@
 <?php
 extract($args);
 if ($images) :
-    if($additional_images) :
+    if(isset($additional_images)) :
         $json = json_encode($additional_images, JSON_FORCE_OBJECT);
     endif;?>
     <section id="work" class="section decor labors <?php echo isset($class_name) ? $class_name : '';?>">

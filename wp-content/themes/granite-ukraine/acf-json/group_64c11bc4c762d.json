@@ -509,6 +509,27 @@
                             "parent_repeater": "field_64f5b255e3444"
                         }
                     ]
+                },
+                {
+                    "key": "field_6527f4b036e34",
+                    "label": "Price Info",
+                    "name": "price_info",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "wpml_cf_preferences": 0,
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": ""
                 }
             ]
         },
@@ -780,5 +801,5 @@
     "description": "",
     "show_in_rest": 0,
     "acfml_field_group_mode": "localization",
-    "modified": 1695978365
+    "modified": 1697117388
 }

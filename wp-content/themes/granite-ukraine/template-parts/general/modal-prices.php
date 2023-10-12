@@ -6,7 +6,8 @@ $page_product_image = get_post_thumbnail_id();
 $product_image_id = $page_product_image ? $page_product_image : $global_product_image;
 $global_modal_prices = get_field('modal_price', 'options');
 $modal_price = !empty($page_modal_price['prices']) ? $page_modal_price : $global_modal_prices;
-$modal_price_title = !empty($modal_price['title']) ? $modal_price['title'] : $global_modal_prices['title'];?>
+$modal_price_title = !empty($modal_price['title']) ? $modal_price['title'] : $global_modal_prices['title'];
+$content_info = $global_modal_prices['price_info']?>
 <div class="modal fade" id="modal-price">
     <div class="modal-dialog">
         <div class="modal-content decor">
@@ -47,6 +48,11 @@ $modal_price_title = !empty($modal_price['title']) ? $modal_price['title'] : $gl
                         endif;?>
                     </tbody>
                 </table>
+                <?php if ($content_info) :?>
+                    <div class="body-price-information">
+                        <?php echo $content_info;?>
+                    </div>
+                <?php endif;?>
             </div>
             <?php if( $link ): ?>
                 <div class="section-button">
