@@ -2,7 +2,7 @@
 $address_cards = get_field('address_cards', 'options');
 $maps = get_field('maps', 'options');
 $latsLang = [];
-if($maps && $address_cards) : ?>
+if($maps) : ?>
     <section class="decor map">
         <div class="map-global">
             <div class="container">

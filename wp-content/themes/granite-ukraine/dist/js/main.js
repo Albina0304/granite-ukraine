@@ -67,7 +67,7 @@ jQuery(document).ready(function ($) {
             ]
         });
     }
-    $('.header-mobile-menu, .main-wrapper li a').on ('click', function(e) {
+    $('.header-mobile-menu, .main-wrapper.global-menus-header li a').on ('click', function(e) {
         $('.main-wrapper').toggleClass('is-active');
         $('#mobile-nav').toggleClass('open');
     });
@@ -115,10 +115,17 @@ jQuery(document).ready(function ($) {
         });
     }
     function myMap() {
-        var mapProp= {
-            center: new google.maps.LatLng(50.892723,45.997514),
-            zoom:5,
-        };
+        const screenWidth = window.innerWidth;
+        let zoom;
+        if (screenWidth >= 1100) {
+            zoom = 5;
+          } else {
+            zoom = 3;
+          }
+          var mapProp = {
+            center: new google.maps.LatLng(50.892723, 45.997514),
+            zoom: zoom
+          };
         var googleMapsStyle = [
         {
             "featureType": "all",

@@ -1,8 +1,15 @@
 function myMap() {
-    var mapProp= {
-        center: new google.maps.LatLng(50.892723,45.997514),
-        zoom:5,
-    };
+    const screenWidth = window.innerWidth;
+    let zoom;
+    if (screenWidth >= 1100) {
+        zoom = 5;
+      } else {
+        zoom = 3;
+      }
+      var mapProp = {
+        center: new google.maps.LatLng(50.892723, 45.997514),
+        zoom: zoom
+      };
     var googleMapsStyle = [
     {
         "featureType": "all",
