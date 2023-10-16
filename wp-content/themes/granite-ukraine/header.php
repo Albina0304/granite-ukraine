@@ -86,7 +86,7 @@
                         <?php endif;
                         $menu_args = array(
                             'theme_location' => 'main',
-                            'menu_class' => 'main-wrapper global-menus'
+                            'menu_class' => 'main-wrapper global-menus global-menus-header'
                         );
                         wp_nav_menu($menu_args);
                         if( $link ) : ?>

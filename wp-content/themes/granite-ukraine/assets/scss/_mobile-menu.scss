@@ -1,6 +1,6 @@
 #mobile-nav {
-    width: 50px;
-    height: 45px;
+    width: 40px;
+    height: 16px;
     position: relative;
     -webkit-transform: rotate(0deg);
     -moz-transform: rotate(0deg);
@@ -15,17 +15,11 @@
         width: 24px;
         height: 32px;
     }
-    &.open {
-        @include media-down(s) {
-            width: 24px;
-            height: 32px;
-        }
-    }
     & span {
         display: block;
         position: absolute;
-        height: 3px;
-        width: 90%;
+        height: 2px;
+        width: 80%;
         background: $white;
         border-radius: 9px;
         opacity: 1;
@@ -46,13 +40,13 @@
             top: 0;
         }
         &:nth-child(2) {
-            top: 16px;
+            top: 8px;
             @include media-down(s) {
                 top: 7px;
             }
         }
         &:nth-child(3) {
-            top: 32px;
+            top: 16px;
             @include media-down(s) {
                 top: 14px;
             }
@@ -60,7 +54,7 @@
     }
     &.open {
         & span:nth-child(1) {
-            top: 16px;
+            top: 7px;
             -webkit-transform: rotate(135deg);
             -moz-transform: rotate(135deg);
             -o-transform: rotate(135deg);
@@ -71,7 +65,7 @@
             left: -60px;
         }
         & span:nth-child(3) {
-            top: 16px;
+            top: 7px;
             -webkit-transform: rotate(-135deg);
             -moz-transform: rotate(-135deg);
             -o-transform: rotate(-135deg);
@@ -82,6 +76,9 @@
 .header-mobile-menu {
         position: relative;
         z-index: 3;
+        @include media-down(s) {
+            max-height: 16px;
+        }
     @include media-up(up) {
         display: none;
     }
