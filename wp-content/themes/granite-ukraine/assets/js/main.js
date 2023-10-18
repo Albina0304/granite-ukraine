@@ -22,7 +22,7 @@ jQuery(document).ready(function ($) {
     } else {
         $('.main-wrapper a').click(function(event) {
             event.preventDefault();
-            window.location.href = '/'+ e.currentTarget.hash
+            window.location.href = '/'+ event.currentTarget.hash
         });
     }
     $(".menu-menu-container").contents().unwrap();

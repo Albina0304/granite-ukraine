@@ -2,7 +2,10 @@
 
 .hero {
     &-product {
-        padding: 190px 0;
+        padding: 170px 0 88px;
+        @include media-down(ms) {
+            padding: 138px 0 64px;
+        }
     }
     &-card {
         display: flex;
