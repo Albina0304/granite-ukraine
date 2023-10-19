@@ -27,7 +27,7 @@ $related_products = get_posts(
                 <div class="slider-image">
                     <div class="slider-image-card">
                         <a href="<?php echo get_the_post_thumbnail_url();?>" data-lightbox="hero-granite">
-                            <?php the_post_thumbnail('product-card');?>
+                            <?php the_post_thumbnail('product-card', array('data-no-lazy' => -1));?>
                         </a>
                     </div>
                     <?php 
@@ -51,7 +51,7 @@ $related_products = get_posts(
                         foreach ($slider_images as $slider_image) : 
                             $image_id = $slider_image['image']['ID']; ?>
                             <div class="slider-image-card">
-                                <?php echo wp_get_attachment_image($image_id, 'slider-img');?>
+                                <?php echo wp_get_attachment_image($image_id, 'slider-img',);?>
                             </div> 
                         <?php endforeach; 
                     endif; ?>

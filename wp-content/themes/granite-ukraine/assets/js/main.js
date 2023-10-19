@@ -2,6 +2,8 @@
 //=../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js
 //=../../node_modules/slick-carousel/slick/slick.min.js
 jQuery(document).ready(function ($) {
+
+    //=../../assets/js/asyncLoadJsFiles.js
     //=../../assets/js/initLightbox.js
     //=../../assets/js/initSliders.js
     //=../../assets/js/header.js
@@ -25,5 +27,7 @@ jQuery(document).ready(function ($) {
             window.location.href = '/'+ event.currentTarget.hash
         });
     }
+
     $(".menu-menu-container").contents().unwrap();
+
 });

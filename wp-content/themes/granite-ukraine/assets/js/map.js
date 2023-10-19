@@ -196,4 +196,8 @@ function myMap() {
         marker.setMap(map);
     }
 }
-myMap();
+
+
+$(document).on('scroll mousemove', function () {
+    loadScript(window.data_obj.google_script, myMap)
+});

@@ -81,10 +81,12 @@
             @include media-down(md) {
                 margin-right: 0;
             }
+            a {
+                display: inline-block;
+            }
             svg {
                 @include media-down(s) {
                     display: none;
-                    
                 }
             }
         }

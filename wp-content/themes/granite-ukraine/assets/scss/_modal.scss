@@ -142,6 +142,7 @@
                     td {
                         color: $white;
                         padding: 8px 0;
+                        vertical-align: middle;
                         &:first-child {
                             width: 20%;
                             @include media-down(ms) {

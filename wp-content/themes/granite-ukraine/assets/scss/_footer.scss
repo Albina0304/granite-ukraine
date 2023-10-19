@@ -14,6 +14,9 @@
         @include media-down(s) {
             margin-bottom: 12px;
         }
+        a {
+            display: inline-block;
+        }
     }
     .global-menus {
         margin: 16px 0;

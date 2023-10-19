@@ -17,30 +17,35 @@
             &::after {
                 margin: 0 12px 0 19px;
                 @include media-down(xs) {
-                    margin: 0 9px 0 19px;
+                    margin: 0 0 0 19px;
                 }
             }
         }
-        .wpml-ls-legacy-list-horizontal {
-            padding: 0;
-            border: none;
-            a {
-                color: $black;
-                margin: 8px 0;
-                font-size: $min-size;
-                line-height: $base-size;
-                padding: 0;
-            }
-            &.wpml-ls-statics-footer {
-                margin: 0;
-                &>ul {
-                    text-align: start;
-                    display: flex;
-                    flex-direction: column; 
+        .wpml {
+            &-ls {
+                &-legacy-list-horizontal {
+                    padding: 0;
+                    border: none;
+
+                    a {
+                        color: $black;
+                        margin: 8px 0;
+                        font-size: $min-size;
+                        line-height: $base-size;
+                        padding: 0;
+                    }
                 }
-            }
-            &.wpml-ls-flag+span {
-                margin-left: 4px;
+                &-statics-footer {
+                    margin: 0;
+                    &>ul {
+                        text-align: start;
+                        display: flex;
+                        flex-direction: column;
+                    }
+                }
+                &-link span {
+                    margin-left: 4px;
+                }
             }
         }
     }
