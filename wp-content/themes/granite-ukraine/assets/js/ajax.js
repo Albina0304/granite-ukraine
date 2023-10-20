@@ -16,7 +16,7 @@ if ($laborSingleButton) {
                     $('.boxes').append(response.data);
                     self.hide();
                 }
-           }
+            }
         });
     });
 }
@@ -42,7 +42,7 @@ if ($homeLaborButton) {
                     $('.boxes').append(response.data.content);
                 }
                 if (response.data.lastPosts)self.hide();
-           }
+            }
         });
     });
 }

@@ -27,8 +27,8 @@ jQuery(document).ready(function ($) {
       if (document.querySelectorAll( `script[src = "${url}"]` ).length > 0) {
         return;
       }
-      var script                                 = document.createElement( "script" );
-      script.type                                = "text/javascript";
+      var script = document.createElement( "script" );
+      script.type = "text/javascript";
     
       script.setAttribute( 'src', url );
       document.head.appendChild( script );
@@ -329,8 +329,6 @@ jQuery(document).ready(function ($) {
             marker.setMap(map);
         }
     }
-    
-    
     $(document).on('scroll mousemove', function () {
         loadScript(window.data_obj.google_script, myMap)
     });
@@ -364,7 +362,7 @@ jQuery(document).ready(function ($) {
                         $('.boxes').append(response.data);
                         self.hide();
                     }
-               }
+                }
             });
         });
     }
@@ -390,7 +388,7 @@ jQuery(document).ready(function ($) {
                         $('.boxes').append(response.data.content);
                     }
                     if (response.data.lastPosts)self.hide();
-               }
+                }
             });
         });
     }

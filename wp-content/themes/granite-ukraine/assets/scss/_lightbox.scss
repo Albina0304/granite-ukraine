@@ -1,0 +1,24 @@
+.lightbox {
+    .lb {
+        &-dataContainer {
+            position: absolute;
+            z-index: 100;
+        }
+        &-image {
+            border: 0;
+        }
+        &-number {
+            color: $white;
+        }
+        &-close {
+            background-size: 20px;
+        }
+        &-nav {
+            .lb-next,
+            .lb-prev {
+                background-size: 30px;
+            }
+        }
+  
+    }
+}
