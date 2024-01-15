@@ -1,4 +1,11 @@
-.header {
+.language {
+        .dropdown-toggle {
+            transition: color .3s;
+            &:hover {
+                color: $btn-color; 
+            }
+        }
+    }
     .dropdown {
         &-menu {
             &.show {
@@ -56,7 +63,7 @@
             transform: rotate(180deg);
         }
     }
-    &-top-wrapper .dropdown-menu {
+    .header-top-wrapper .dropdown-menu {
         @include media-up(up) {
             position: static!important;
             display: block!important;
@@ -68,4 +75,3 @@
             padding: 0;
         }
     }
-}
