@@ -50,6 +50,9 @@ h4 {
     font-weight: 400;
     line-height: $base-height;
 }
+.list {
+    @include reset-list;
+}
 .wrapper {
     overflow: hidden;
 }
