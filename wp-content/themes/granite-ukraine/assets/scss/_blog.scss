@@ -7,7 +7,7 @@
         .posts {
             display: flex;
             flex-wrap: wrap;
-            margin: -12px;
+            margin: -12px -12px 20px;
             article {
                 flex: 0 1  25%;
                 padding: 12px;
@@ -70,5 +70,49 @@
         display: flex;
         align-items: center;
         flex-direction: column;
+    }
+    &-post {
+        .pagination {
+            .nav-links {
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+                gap: 6px;
+                color: $btn-color;
+                a {
+                    color: $text-color;
+                    transition: color .3s;
+                    &:hover {
+                        color: $btn-color;
+                    }
+                }
+            }
+        }
+        .pagination-two {
+            .page-numbers {
+                color: $text-color;
+                transition: color .3s;
+                &:hover {
+                    color: $btn-color;
+                }
+                &.current {
+                    color: $btn-color;
+                }
+            }
+        }
+        .pagination-three {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            color: $btn-color;
+            transition: color .3s;
+            .inactive,
+            .arrow {
+                color: $text-color;
+                &:hover {
+                    font-weight: bold;
+                }
+            }
+        }
     }
 }
