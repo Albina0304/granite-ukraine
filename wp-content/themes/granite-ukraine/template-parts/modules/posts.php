@@ -1,18 +1,50 @@
 
  <!-- Blog, Категория, отметка -->
         <?php $paged = (get_query_var('paged')) ? (get_query_var('paged')) : 1;
+        $serchParam = isset($_GET) && isset($_GET['s']) ? esc_html($_GET['s']) : '';
+        $catParam = isset($_GET) && isset($_GET['cat']) ? esc_html($_GET['cat']) : '';
+        $tagParam = isset($_GET) && isset($_GET['tag']) ? esc_html($_GET['tag']) : '';
         $args = array(
             'posts_per_page' => 10,
-            'paged' => $paged
+            'paged' => $paged,
+            's' => $serchParam,
+            'tax_query' => array(
+                'relation' => 'AND',
+            ),
+            'meta_query' => array(
+                array(
+                    'key' => '_thumbnail_id',
+                    'compare' => 'EXISTS'
+                ),
+            ),
         );
+        if($catParam) {
+            $args['tax_query'] =  array_merge($args['tax_query'] , array(
+                array(
+                    'taxonomy' => 'category',
+                    'field' => 'slug',
+                    'terms' => array( $catParam)
+                )
+            )); 
+        }
+        if($tagParam) {
+            $args['tax_query'] =  array_merge($args['tax_query'], 
+                 array(
+                    array(
+                        'taxonomy' => 'post_tag',
+                        'field' => 'slug',
+                        'terms' => array( $tagParam)
+                    )
+                )
+            );
+        };
         $postsItems = get_posts(
             $args
-        )
-        ?>
+        );?>
         <div class="posts-wrap">
-            <?php if($posts):?>
+            <?php if($postsItems):?>
                 <div class="posts">
-                    <?php foreach ($posts as $post) :
+                    <?php foreach ($postsItems as $post) :
                         setup_postdata($post);?>
                         <article <?php post_class();?>>
                             <?php if(has_post_thumbnail()):?>
@@ -29,14 +61,14 @@
                         </article>
                     <?php endforeach;?>
                 </div>
-                <div class="pagination">
+                <div class="pagination pagination-one">
                     <?php the_posts_pagination( array(
                         'mid_size'  => 2,
                         'prev_text' => __( 'Назад', 'textdomain' ),
                         'next_text' => __( 'Вперед', 'textdomain' ),
                     ) ); ?>
                 </div>
-                <div class="pagination-two">
+                <div class="pagination pagination-two">
                     <?php $big = 99999999;
                     echo paginate_links(
                         array(
@@ -49,7 +81,7 @@
                         )
                     );?>
                 </div>
-                <div class="pagination-three">
+                <div class="pagination pagination-three">
                     <?php global $paged;
                     if(empty($paged)) $paged = 1;
                     global $wp_query;
