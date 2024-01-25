@@ -42,107 +42,10 @@
         .input-search {
             border-radius: 100px;
         }
-        .filter {
-            &-search {
-                display: flex;
-                align-items: center;
-                gap: 10px;
-                margin-bottom: 10px;
-            }
-            &-options {
-                margin: 10px 0 20px;
-                display: flex;
-                gap: 20px;
-                .selection {
-                    border: none;
-                    font-size: $mobile-card;
-                    margin-left: -4px;
-                    cursor: pointer;
-                    transition: color .3s;
-                    &:hover {
-                        color: $btn-color;
-                    }
-                    &-option {
-                        color: $text-color;
-                    }
-                }
-            }
-        }
-    }
-    &-posts {
-        .dropdown-toggle {
-            display: flex;
-            align-items: center;
-            text-transform: inherit;
-        }
-        a {
-            color: $text-color;
-            transition: color .3s;
-            &:hover {
-                color: $btn-color;
-            }
-            .title-tags {
-                margin: 0 4px 0 0;
-                @include media-down(xs) {
-                    font-size: $sm-size;
-                    line-height: $btn-height;
-                }
-            }
-        }
-    }
-    &-main {
-        display: flex;
-        justify-content: space-between;
-        margin-bottom: 20px;
     }
     &-description {
         display: flex;
         align-items: center;
         flex-direction: column;
-    }
-    &-post {
-        .pagination {
-            margin: 20px 0;
-            .nav-links {
-                display: flex;
-                align-items: center;
-                justify-content: flex-end;
-                gap: 6px;
-                color: $btn-color;
-                a {
-                    color: $text-color;
-                    transition: color .3s;
-                    &:hover {
-                        color: $btn-color;
-                    }
-                }
-            }
-        }
-        .pagination-two {
-            .page-numbers {
-                color: $text-color;
-                transition: color .3s;
-                &:hover {
-                    color: $btn-color;
-                }
-                &.current {
-                    color: $btn-color;
-                }
-            }
-        }
-        .pagination-three {
-            display: flex;
-            align-items: center;
-            gap: 6px;
-            color: $btn-color;
-            transition: color .3s;
-            .inactive,
-            .arrow {
-                color: $text-color;
-                &:hover {
-                    font-weight: bold;
-                }
-            }
-        }
     }
 }

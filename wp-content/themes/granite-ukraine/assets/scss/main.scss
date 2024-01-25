@@ -8,6 +8,7 @@
 @import '../../node_modules/bootstrap/scss/_dropdown';
 @import '../../node_modules/slick-carousel/slick/slick';
 @import '../../node_modules/lightbox2/dist/css/lightbox.css';
+@import '../../node_modules/select2/dist/css/select2.css';
 @import '_vars';
 @import '_mixins';
 @import '_global';
@@ -29,6 +30,8 @@
 @import '_map';
 @import '_hero-product';
 @import '_blog';
+@import '_pagination';
+@import '_select';
 @import '_modal';
 @import '_footer';
 @import '_404';
