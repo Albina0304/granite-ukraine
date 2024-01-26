@@ -6,4 +6,5 @@
         </h1>
     </div>
 </div>
-<?php get_footer()?>
+<?php echo get_template_part('template-parts/general/form');
+get_footer()?>

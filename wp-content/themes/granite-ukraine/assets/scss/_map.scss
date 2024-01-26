@@ -21,7 +21,7 @@
         &-colons {
             display: flex;
             justify-content: space-between;
-            padding-bottom: 56px;
+            padding: 28px 0 56px;
             flex-wrap: wrap;
             @include media-down(md) {
                 width: 100%;

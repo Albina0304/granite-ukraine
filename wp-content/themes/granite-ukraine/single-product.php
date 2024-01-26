@@ -124,4 +124,5 @@ if($related_products) : ?>
     </section>
 <?php endif;
     echo get_template_part('template-parts/general/modal-prices');
+    echo get_template_part('template-parts/general/form');
 get_footer();

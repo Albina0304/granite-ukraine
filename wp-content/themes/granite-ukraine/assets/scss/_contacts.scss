@@ -1,0 +1,59 @@
+#contactForm {
+    padding: 88px 0;
+}
+.contacts {
+    margin-top: 50px;
+    .contact {
+        &-form {
+            .wpcf7-textarea {
+                width: 100%;
+            }
+            .btn-secondary {
+                width: auto;
+                display: flex;
+                @include media-down(s) {
+                    width: 100%;
+                    justify-content: center;
+                }
+            }
+            &-global {
+                max-width: 100%;
+            }
+            &-name {
+                display: flex;
+                gap: 10px;
+                &-wrap {
+                    width: 50%;
+                }
+            }
+        } 
+        &-description {
+            text-align: start;
+            color: $text-color;
+            a {
+                color: $btn-color;
+            }
+        }
+        &-title {
+            color: $text-color;
+            text-align: start;
+        }
+        &-checkbox {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 0;
+            @include media-down(s) {
+                font-size: $btn-size;
+            }
+            @include media-down(xs) {
+                font-size: $min-size;
+            }
+
+            &-form {
+                max-width: 20px;
+                cursor: pointer;
+            }
+        }
+    }
+}

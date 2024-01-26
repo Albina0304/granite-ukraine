@@ -1,5 +1,4 @@
             <?php
-            echo get_template_part('template-parts/general/form');
             echo get_template_part('template-parts/general/map');
             $logo = get_field('logo', 'options');
             $phone = get_field('phone', 'options');

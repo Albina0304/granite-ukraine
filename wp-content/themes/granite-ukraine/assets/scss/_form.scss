@@ -1,5 +1,5 @@
 form {
-    input {
+    input, textarea {
         &::placeholder {
             color: $text-color;
         }
@@ -30,7 +30,7 @@ form {
     }
 }
 #contacts {
-    padding: 56px 0;
+    padding: 56px 0 28px;
     & .screen-reader-response {
         display: none;
     }

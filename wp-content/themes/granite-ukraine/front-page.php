@@ -52,4 +52,5 @@ if( have_rows('modules') ):
         endif;
     endwhile;
 endif;
+echo get_template_part('template-parts/general/form');
 get_footer();
