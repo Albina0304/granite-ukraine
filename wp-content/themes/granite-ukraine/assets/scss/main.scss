@@ -9,6 +9,7 @@
 @import '../../node_modules/slick-carousel/slick/slick';
 @import '../../node_modules/lightbox2/dist/css/lightbox.css';
 @import '../../node_modules/select2/dist/css/select2.css';
+@import '../../node_modules/bootstrap/dist/css/bootstrap.min.css';
 @import '_vars';
 @import '_mixins';
 @import '_global';
@@ -33,6 +34,7 @@
 @import '_pagination';
 @import '_select';
 @import '_contacts';
+@import '_questions';
 @import '_modal';
 @import '_footer';
 @import '_404';

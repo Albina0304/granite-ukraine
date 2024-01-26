@@ -5,6 +5,9 @@
     margin-top: 50px;
     .contact {
         &-form {
+            form input, textarea {
+                background-color: transparent;
+            }
             .wpcf7-textarea {
                 width: 100%;
             }
