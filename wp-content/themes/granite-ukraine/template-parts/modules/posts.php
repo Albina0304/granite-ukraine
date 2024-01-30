@@ -1,4 +1,3 @@
-
  <!-- Blog, Категория, отметка -->
 <?php $paged = (get_query_var('paged')) ? (get_query_var('paged')) : 1;
 $serchParam = isset($_GET['s']) ? esc_html($_GET['s']) : '';
