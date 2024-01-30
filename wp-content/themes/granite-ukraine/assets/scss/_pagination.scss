@@ -1,9 +1,8 @@
 .pagination {
     margin: 20px 0;
+    justify-content: center;
     .nav-links {
         display: flex;
-        align-items: center;
-        justify-content: center;
         gap: 6px;
         color: $btn-color;
         a {

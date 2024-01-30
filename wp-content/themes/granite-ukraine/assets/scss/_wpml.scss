@@ -10,6 +10,9 @@
     .dropdown {
         &-toggle {
             color: $white;
+            &:hover {
+                color: $btn-color; 
+            }
             &.show::after {
                 content: '';
                 transform: rotate(180deg);

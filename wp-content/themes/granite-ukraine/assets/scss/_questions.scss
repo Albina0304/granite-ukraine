@@ -58,6 +58,9 @@
         }
         &-body {
             color: $secondary-color;
+            a {
+                color: $btn-color;
+            }
         }
     }
 }

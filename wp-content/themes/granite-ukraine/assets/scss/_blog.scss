@@ -8,28 +8,31 @@
             display: flex;
             flex-wrap: wrap;
             margin: -12px -12px 20px;
-            article {
+            &-card {
                 flex: 0 1  25%;
                 padding: 12px;
                 display: flex;
-                flex-direction: column;
-                justify-content: space-between;
                 @include media-down(lsm) {
                     align-items: center;
+                }
+                &-article {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
                 }
                 .post-image {
                     display: flex;
                     width: 100%;
                     max-height: 188px;
+                    img {
+                        object-fit: cover;
+                        height: 100%;
+                        width: 100%;
+                    }
                 }
-                img {
-                    object-fit: cover;
-                    height: 100%;
-                    width: 100%;
-                }
-                .title-link {
+                &-title {
                     margin: 8px 0 32px;
-                    a {
+                    &-reference {
                         color: $text-color;
                         transition: color .3s;
                         &:hover {

@@ -46,19 +46,9 @@ $postsItems = query_posts(
         <div class="posts">
             <?php foreach ($postsItems as $post) :
                 setup_postdata($post);?>
-                <article <?php post_class();?>>
-                    <?php if(has_post_thumbnail()):?>
-                        <a href="<?php the_permalink();?>" class="post-image">
-                            <?php the_post_thumbnail('product-img', get_the_ID());?>
-                        </a>
-                    <?php endif;?>
-                    <h3 class="title-link">
-                        <a href="<?php the_permalink();?>">
-                            <?php the_title();?>
-                        </a>
-                    </h3>
-                    <a href="<?php the_permalink() ?>" class="btn btn-secondary">Дивитись більше...</a>
-                </article>
+                <div class="posts-card">
+                    <?php echo get_template_part('template-parts/cards/blog-card');?>
+                </div>
             <?php endforeach;?>
         </div>
         <div class="pagination">
