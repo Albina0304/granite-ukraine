@@ -49,6 +49,8 @@ if( have_rows('modules') ):
                 'additional_images' => $imageRow
             );
             echo get_template_part('template-parts/modules/labors', '', $arr);
+        elseif( get_row_layout() == 'contact-form' ): 
+            echo get_template_part('template-parts/modules/contact-form');
         endif;
     endwhile;
 endif;
