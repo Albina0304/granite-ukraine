@@ -342,7 +342,7 @@
                 },
                 "layout_65b2452fb1bc4": {
                     "key": "layout_65b2452fb1bc4",
-                    "name": "contact",
+                    "name": "contacts",
                     "label": "Секція Контакти",
                     "display": "block",
                     "sub_fields": [
@@ -405,9 +405,9 @@
                             "wpml_cf_preferences": 2
                         },
                         {
-                            "key": "field_65b2467d6357e",
-                            "label": "Title Popular Questions",
-                            "name": "title_popular_questions",
+                            "key": "field_65ba6d88aac34",
+                            "label": "Questions title",
+                            "name": "questions_title",
                             "aria-label": "",
                             "type": "text",
                             "instructions": "",
@@ -418,7 +418,7 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "wpml_cf_preferences": 2,
+                            "wpml_cf_preferences": 0,
                             "default_value": "",
                             "maxlength": "",
                             "placeholder": "",
@@ -426,9 +426,9 @@
                             "append": ""
                         },
                         {
-                            "key": "field_65b246be6357f",
-                            "label": "Description Popular Questions",
-                            "name": "description_popular_questions",
+                            "key": "field_65ba6d9faac35",
+                            "label": "Questions description",
+                            "name": "questions_description",
                             "aria-label": "",
                             "type": "wysiwyg",
                             "instructions": "",
@@ -439,7 +439,7 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "wpml_cf_preferences": 2,
+                            "wpml_cf_preferences": 0,
                             "default_value": "",
                             "tabs": "all",
                             "toolbar": "full",
@@ -447,9 +447,9 @@
                             "delay": 0
                         },
                         {
-                            "key": "field_65b246d963580",
-                            "label": "Popular Questions",
-                            "name": "popular_questions",
+                            "key": "field_65ba6db8aac36",
+                            "label": "Questions",
+                            "name": "questions",
                             "aria-label": "",
                             "type": "post_object",
                             "instructions": "",
@@ -460,8 +460,10 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "wpml_cf_preferences": 1,
-                            "post_type": "",
+                            "wpml_cf_preferences": 0,
+                            "post_type": [
+                                "faq"
+                            ],
                             "post_status": "",
                             "taxonomy": "",
                             "return_format": "object",
@@ -507,5 +509,5 @@
     "description": "",
     "show_in_rest": 0,
     "acfml_field_group_mode": "translation",
-    "modified": 1706196011
+    "modified": 1706716638
 }
