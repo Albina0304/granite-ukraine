@@ -40,7 +40,7 @@
                             <div class="footer-bottom">
                                 <?php if (isset($copyright)):?>
                                     <div class="footer-copyright">
-                                        &copy;<?php echo $copyright;?>
+                                        &copy; <?php echo date('Y') . ' ' . $copyright; ?>
                                     </div>
                                 <?php endif;?>
                                 <div class="scroll-btn">

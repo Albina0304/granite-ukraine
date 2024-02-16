@@ -22,6 +22,7 @@ use Polylang;
 use SitePress;
 use WP_CLI;
 use WP_Error;
+use WP_Post;
 use wpdb;
 use Exception;
 use CyrToLat\Settings\Settings;
@@ -145,10 +146,26 @@ class Main {
 	 * @return void
 	 */
 	public function init_all() {
+		$this->load_textdomain();
+
 		$this->init_multilingual();
 		$this->init_classes();
 		$this->init_cli();
 		$this->init_hooks();
+	}
+
+	/**
+	 * Load plugin text domain.
+	 *
+	 * @return void
+	 */
+	public function load_textdomain() {
+		load_default_textdomain();
+		load_plugin_textdomain(
+			'cyr2lat',
+			false,
+			dirname( plugin_basename( constant( 'CYR_TO_LAT_FILE' ) ) ) . '/languages/'
+		);
 	}
 
 	/**
@@ -252,6 +269,7 @@ class Main {
 		add_filter( 'sanitize_file_name', [ $this, 'sanitize_filename' ], 10, 2 );
 		add_filter( 'wp_insert_post_data', [ $this, 'sanitize_post_name' ], 10, 2 );
 		add_filter( 'pre_insert_term', [ $this, 'pre_insert_term_filter' ], PHP_INT_MAX, 2 );
+		add_filter( 'post_updated', [ $this, 'check_for_changed_slugs' ], 10, 3 );
 
 		if ( ! $this->is_frontend || class_exists( SitePress::class ) ) {
 			add_filter( 'get_terms_args', [ $this, 'get_terms_args_filter' ], PHP_INT_MAX, 2 );
@@ -308,7 +326,7 @@ class Main {
 			// Make sure we search in the db only once being called from wp_insert_term().
 			$this->is_term = false;
 
-			// Fix case when showing previously created categories in cyrillic with WPML.
+			// Fix a case when showing previously created categories in cyrillic with WPML.
 			if ( $this->is_frontend && class_exists( SitePress::class ) ) {
 				return $title;
 			}
@@ -334,7 +352,7 @@ class Main {
 			}
 		}
 
-		return $this->is_wc_attribute_taxonomy( $title ) ? $title : $this->transliterate( $title );
+		return $this->is_wc_attribute( $title ) ? $title : $this->transliterate( $title );
 	}
 
 	/**
@@ -366,21 +384,61 @@ class Main {
 	 * @noinspection PhpUndefinedFunctionInspection
 	 */
 	protected function is_wc_attribute_taxonomy( string $title ): bool {
-		if ( ! function_exists( 'wc_get_attribute_taxonomies' ) ) {
-			return false;
-		}
+		$title = preg_replace( '/^pa_/', '', $title );
 
-		$title = str_replace( 'pa_', '', $title );
-
-		$attribute_taxonomies = wc_get_attribute_taxonomies();
-
-		foreach ( $attribute_taxonomies as $attribute_taxonomy ) {
+		foreach ( wc_get_attribute_taxonomies() as $attribute_taxonomy ) {
 			if ( $title === $attribute_taxonomy->attribute_name ) {
 				return true;
 			}
 		}
 
 		return false;
+	}
+
+	/**
+	 * Check if title is a product not converted attribute.
+	 *
+	 * @param string $title Title.
+	 *
+	 * @return bool
+	 * @noinspection PhpUndefinedFunctionInspection
+	 */
+	protected function is_wc_product_not_converted_attribute( string $title ): bool {
+
+		global $product;
+
+		if ( ! is_a( $product, 'WC_Product' ) ) {
+			return false;
+		}
+
+		// We have to get attributes from postmeta here to see the converted slug.
+		$attributes = (array) get_post_meta( $product->get_id(), '_product_attributes', true );
+
+		foreach ( $attributes as $slug => $attribute ) {
+			$name = $attribute['name'] ?? '';
+
+			if ( $name === $title && sanitize_title_with_dashes( $title ) === $slug ) {
+				return true;
+			}
+		}
+
+		return false;
+	}
+
+	/**
+	 * Check if title is an attribute.
+	 *
+	 * @param string $title Title.
+	 *
+	 * @return bool
+	 * @noinspection PhpUndefinedFunctionInspection
+	 */
+	protected function is_wc_attribute( string $title ): bool {
+		if ( ! function_exists( 'WC' ) ) {
+			return false;
+		}
+
+		return $this->is_wc_attribute_taxonomy( $title ) || $this->is_wc_product_not_converted_attribute( $title );
 	}
 
 	/**
@@ -484,48 +542,31 @@ class Main {
 	}
 
 	/**
-	 * Check if Classic Editor plugin is active.
-	 *
-	 * @link https://kagg.eu/how-to-catch-gutenberg/
+	 * Check if the Block Editor is active.
+	 * Must only be used after plugins_loaded action is fired.
 	 *
 	 * @return bool
+	 * @noinspection PhpUndefinedFunctionInspection
 	 */
-	private function is_classic_editor_plugin_active(): bool {
+	private function is_gutenberg_editor_active(): bool {
+		// Gutenberg plugin is installed and activated.
+		// This filter was removed in WP 5.5.
+		if ( has_filter( 'replace_editor', 'gutenberg_init' ) ) {
+			return true;
+		}
+
 		// @codeCoverageIgnoreStart
 		if ( ! function_exists( 'is_plugin_active' ) ) {
 			include_once ABSPATH . 'wp-admin/includes/plugin.php';
 		}
-
 		// @codeCoverageIgnoreEnd
 
-		return is_plugin_active( 'classic-editor/classic-editor.php' );
-	}
-
-	/**
-	 * Check if Block Editor is active.
-	 * Must only be used after plugins_loaded action is fired.
-	 *
-	 * @link https://kagg.eu/how-to-catch-gutenberg/
-	 *
-	 * @return bool
-	 */
-	private function is_gutenberg_editor_active(): bool {
-
-		// Gutenberg plugin is installed and activated.
-		$gutenberg = ! ( false === has_filter( 'replace_editor', 'gutenberg_init' ) );
-
-		// Block editor since 5.0.
-		$block_editor = version_compare( $GLOBALS['wp_version'], '5.0-beta', '>' );
-
-		if ( ! $gutenberg && ! $block_editor ) {
-			return false;
+		if ( is_plugin_active( 'classic-editor/classic-editor.php' ) ) {
+			return in_array( get_option( 'classic-editor-replace' ), [ 'no-replace', 'block' ], true );
 		}
 
-		if ( $this->is_classic_editor_plugin_active() ) {
-			$editor_option       = get_option( 'classic-editor-replace' );
-			$block_editor_active = [ 'no-replace', 'block' ];
-
-			return in_array( $editor_option, $block_editor_active, true );
+		if ( is_plugin_active( 'disable-gutenberg/disable-gutenberg.php' ) ) {
+			return ! disable_gutenberg();
 		}
 
 		return true;
@@ -788,6 +829,36 @@ class Main {
 			isset( $this->wpml_languages[ $language_code ] ) ?
 				$this->wpml_languages[ $language_code ]['default_locale'] :
 				null;
+	}
+
+	/**
+	 * Checks for changed slugs for published post objects to save the old slug.
+	 *
+	 * @param int     $post_id     Post ID.
+	 * @param WP_Post $post        The post object.
+	 * @param WP_Post $post_before The previous post object.
+	 *
+	 * @noinspection PhpMissingParamTypeInspection
+	 */
+	public function check_for_changed_slugs( $post_id, $post, $post_before ) {
+		// Don't bother if it hasn't changed.
+		if ( $post->post_name === $post_before->post_name ) {
+			return;
+		}
+
+		// We're only concerned with published, non-hierarchical objects.
+		if ( ! ( 'publish' === $post->post_status || ( 'attachment' === get_post_type( $post ) && 'inherit' === $post->post_status ) ) || is_post_type_hierarchical( $post->post_type ) ) {
+			return;
+		}
+
+		// Modify $post_before->post_name when cyr2lat converted the title.
+		if (
+			empty( $post_before->post_name ) &&
+			$post->post_title !== $post->post_name &&
+			$post->post_name === $this->transliterate( $post->post_title )
+		) {
+			$post_before->post_name = rawurlencode( $post->post_title );
+		}
 	}
 
 	/**
