@@ -12,7 +12,6 @@
         <link rel="mask-icon" href="<?php echo get_template_directory_uri();?>/favicon/apple-touch-icon.png">
         <meta name="msapplication-TileColor" content="#da532c">
         <meta name="theme-color" content="#ffffff">
-        <title></title>
         <!-- Google Tag Manager -->
         <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
         new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
