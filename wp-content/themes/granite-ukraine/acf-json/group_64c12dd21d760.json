@@ -418,7 +418,7 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "wpml_cf_preferences": 0,
+                            "wpml_cf_preferences": 2,
                             "default_value": "",
                             "maxlength": "",
                             "placeholder": "",
@@ -439,7 +439,7 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "wpml_cf_preferences": 0,
+                            "wpml_cf_preferences": 2,
                             "default_value": "",
                             "tabs": "all",
                             "toolbar": "full",
@@ -460,7 +460,7 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "wpml_cf_preferences": 0,
+                            "wpml_cf_preferences": 1,
                             "post_type": [
                                 "faq"
                             ],
@@ -496,6 +496,11 @@
                 "param": "post_type",
                 "operator": "==",
                 "value": "page"
+            },
+            {
+                "param": "post_template",
+                "operator": "!=",
+                "value": "template-contacts.php"
             }
         ]
     ],
@@ -509,5 +514,5 @@
     "description": "",
     "show_in_rest": 0,
     "acfml_field_group_mode": "translation",
-    "modified": 1706716638
+    "modified": 1708520294
 }

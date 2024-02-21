@@ -3,15 +3,15 @@
 get_header();
 if( have_rows('modules') ):
     while ( have_rows('modules') ) : the_row();
-        if( get_row_layout() == 'hero' ):
+        if( get_row_layout() === 'hero' ):
             echo get_template_part('template-parts/modules/hero');
-        elseif( get_row_layout() == 'products' ): 
+        elseif( get_row_layout() === 'products' ): 
             echo get_template_part('template-parts/modules/products');
-        elseif( get_row_layout() == 'advantages' ): 
+        elseif( get_row_layout() === 'advantages' ): 
             echo get_template_part('template-parts/modules/advantages');
-        elseif( get_row_layout() == 'about' ): 
+        elseif( get_row_layout() === 'about' ): 
             echo get_template_part('template-parts/modules/about');
-        elseif( get_row_layout() == 'labors' ):
+        elseif( get_row_layout() === 'labors' ):
             $title = get_sub_field('title');
             $link = get_field('secondary_button', 'options');
             $args = array(
@@ -49,7 +49,7 @@ if( have_rows('modules') ):
                 'additional_images' => $imageRow
             );
             echo get_template_part('template-parts/modules/labors', '', $arr);
-        elseif( get_row_layout() == 'contact-form' ): 
+        elseif( get_row_layout() === 'contact-form' ): 
             echo get_template_part('template-parts/modules/contact-form');
         endif;
     endwhile;
