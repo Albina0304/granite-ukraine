@@ -1,8 +1,8 @@
 <?php
 /* Template Name: Контакти */
 get_header();
-if (have_rows('modules')):
-    while (have_rows('modules')) : the_row();
+if (have_rows('modules_contacts')):
+    while (have_rows('modules_contacts')) : the_row();
         if (get_row_layout() === 'contacts'):
             echo get_template_part('template-parts/modules/contact-form', '', array(
                 'title' => get_sub_field('contact_title'),
