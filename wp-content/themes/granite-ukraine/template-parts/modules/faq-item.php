@@ -2,7 +2,7 @@
 <div class="accordion accordion-main" id="accordion-open">
     <?php if (is_array($faqs) && !empty($faqs)) {
         foreach ($faqs as $key => $faqPost) :
-            $post = get_post($faqPost);
+            $post = $faqPost;
             setup_postdata($post);
             if ($post) {?>
                 <div class="accordion-item">
