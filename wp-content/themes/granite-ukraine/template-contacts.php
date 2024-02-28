@@ -12,7 +12,8 @@ if (have_rows('modules_contacts')):
             echo get_template_part('template-parts/modules/faqs', '', array(
                 'faq_title' => get_sub_field('questions_title'),
                 'faq_description' => get_sub_field('questions_description'),
-                'faqs' => get_sub_field('questions')
+                'faqs' => get_sub_field('questions'),
+                'faq_link' => get_sub_field('faq_link'),
             ));
         endif;
     endwhile;

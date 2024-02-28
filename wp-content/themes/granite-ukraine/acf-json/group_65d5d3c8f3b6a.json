@@ -253,6 +253,23 @@
                             "bidirectional": 0,
                             "ui": 1,
                             "bidirectional_target": []
+                        },
+                        {
+                            "key": "field_65d89bbdb68c2",
+                            "label": "FAQ link",
+                            "name": "faq_link",
+                            "aria-label": "",
+                            "type": "link",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "wpml_cf_preferences": 0,
+                            "return_format": "array"
                         }
                     ],
                     "min": "",
@@ -283,5 +300,5 @@
     "description": "",
     "show_in_rest": 0,
     "acfml_field_group_mode": "translation",
-    "modified": 1708520070
+    "modified": 1708694493
 }

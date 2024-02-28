@@ -70,4 +70,13 @@
             }
         }
     }
+    & .section-button {
+        margin-top: 32px;
+        justify-content: flex-start;
+        & .btn-primary {
+            padding: 12px 24px;
+            font-size: $btn-size;
+            line-height: $mobile-card;
+        }
+    }
 }

@@ -8,7 +8,7 @@
                 <div class="accordion-item">
                     <h2 class="accordion-title" id="accordion-heading-<?php echo get_the_ID();?>">
                         <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-<?php echo get_the_ID(); ?>" aria-expanded="false" aria-controls="collapse-<?php echo get_the_ID(); ?>">
-                            <?php the_title(); ?>
+                            <?php echo __(get_the_title(), 'granite-ukraine' );?>
                             <div class="accordion-button-img">
                                 <div class="accordion-button-img-open"></div> 
                                 <div class="accordion-button-img-close"></div> 
@@ -16,7 +16,7 @@
                         </button>
                     </h2>
                     <div id="collapse-<?php echo get_the_ID(); ?>" class="accordion-collapse collapse" aria-labelledby="accordion-heading-<?php echo get_the_ID(); ?>" data-bs-parent="#accordion-open">
-                        <div class="accordion-body"><?php the_content(); ?></div>
+                        <div class="accordion-body"><?php echo __(get_the_content(), 'granite-ukraine'); ?></div>
                     </div>
                 </div>
             <?php }

@@ -40,7 +40,7 @@ $faq_description = get_field('faq_description');
                         )
                     );?>
                     <h3 class="faqs-category">
-                        <?php echo $faq_taxonomy->name;?>
+                        <?php echo __($faq_taxonomy->name, 'granite-ukraine');?>
                     </h3>
                     <?php
                     $postsfaq = get_posts($faqs_obj);

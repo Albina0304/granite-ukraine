@@ -16,6 +16,7 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
+            gap: 24px;
             margin: -12px;
             @include media-down(md) {
                 margin: -8px;
