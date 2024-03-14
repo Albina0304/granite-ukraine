@@ -4,6 +4,7 @@
     }
 }
 .faqs {
+    margin-top: 50px;
     &-description {
         color: $secondary-color;
         text-align: center;
@@ -40,9 +41,12 @@
             justify-content: space-between;
             align-items: center;
             padding: 8px;
-                    padding-left: 0;
+            padding-left: 0;
             @include media-down(lsm) {
                 font-size: $btn-size;
+            }
+            @include media-down(xs) {
+                font-size: $min-size;
             }
             &:focus {
                 background-color: transparent;
@@ -89,6 +93,9 @@
                     font-size: $btn-size;
                     padding: 8px;
                     padding-left: 0;
+                }
+                @include media-down(xs) {
+                    font-size: $min-size;
                 }
             }
         }
