@@ -1,16 +1,16 @@
 <?php
 function granite_ukraine() {
 	$labels = array(
-		'name'                  => _x( 'Продукти', 'Post type general name', 'textdomain' ),
-        'singular_name'         => _x( 'Продукт', 'Post type singular name', 'textdomain' ),
-        'menu_name'             => _x( 'Продукти', 'Admin Menu text', 'textdomain' ),
-        'name_admin_bar'        => _x( 'Продукт', 'Add New on Toolbar', 'textdomain' ),
+		'name'                  => _x( 'Products', 'Post type general name', 'textdomain' ),
+        'singular_name'         => _x( 'Product', 'Post type singular name', 'textdomain' ),
+        'menu_name'             => _x( 'Products', 'Admin Menu text', 'textdomain' ),
+        'name_admin_bar'        => _x( 'Product', 'Add New on Toolbar', 'textdomain' ),
         'add_new'               => __( 'Додати новий', 'textdomain' ),
         'add_new_item'          => __( 'Додати новий продукт', 'textdomain' ),
         'new_item'              => __( 'Новий продукт', 'textdomain' ),
         'edit_item'             => __( 'Редагувати продукт', 'textdomain' ),
         'view_item'             => __( 'Переглянути продукт', 'textdomain' ),
-        'all_items'             => __( 'Всі продукти', 'textdomain' ),
+        'all_items'             => __( 'All Products', 'textdomain' ),
         'search_items'          => __( 'Пошук продуктів', 'textdomain' ),
         'parent_item_colon'     => __( 'Основні продукти:', 'textdomain' ),
         'not_found'             => __( 'Продукти не знайдено.', 'textdomain' ),
@@ -37,6 +37,44 @@ function granite_ukraine() {
 	);
 
 	register_post_type( 'product', $args );
+
+	$labels_production = array(
+		'name'                  => _x( 'Productions', 'Post type general name', 'textdomain' ),
+        'singular_name'         => _x( 'Production', 'Post type singular name', 'textdomain' ),
+        'menu_name'             => _x( 'Productions', 'Admin Menu text', 'textdomain' ),
+        'name_admin_bar'        => _x( 'Production', 'Add New on Toolbar', 'textdomain' ),
+        'add_new'               => __( 'Додати новий', 'textdomain' ),
+        'add_new_item'          => __( 'Додати новий production', 'textdomain' ),
+        'new_item'              => __( 'Новий production', 'textdomain' ),
+        'edit_item'             => __( 'Редагувати production', 'textdomain' ),
+        'view_item'             => __( 'Переглянути production', 'textdomain' ),
+        'all_items'             => __( 'Всі productions', 'textdomain' ),
+        'search_items'          => __( 'Пошук productions', 'textdomain' ),
+        'parent_item_colon'     => __( 'Основні productions:', 'textdomain' ),
+        'not_found'             => __( 'Productions не знайдено.', 'textdomain' ),
+        'not_found_in_trash'    => __( 'У кошику не знайдено productions.', 'textdomain' ),
+        'featured_image'        => _x( 'Обкладинка productions', 'textdomain' ),
+        'set_featured_image'    => _x( 'Встановити зображення обкладинки', 'textdomain' ), 
+        'remove_featured_image' => _x( 'Видалити зображення обкладинки', 'textdomain' ),
+        'use_featured_image'    => _x( 'Використовувати як обкладинку', 'textdomain' ),
+	);
+
+	$args = array(
+		'labels'             => $labels_production,
+		'public'             => true,
+		'publicly_queryable' => true,
+		'show_ui'            => true,
+		'show_in_menu'       => true,
+		'query_var'          => true,
+		'rewrite'            => array( 'slug' => 'production' ),
+		'capability_type'    => 'post',
+		'has_archive'        => true,
+		'hierarchical'       => false,
+		'menu_position'      => null,
+		'supports'           => array( 'title', 'editor', 'thumbnail'),
+	);
+
+	register_post_type( 'production', $args );
 
 	$labels_faq = array(
 		'name'                  => _x( 'FAQs', 'Post type general name', 'textdomain' ),
