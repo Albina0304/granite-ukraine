@@ -94,6 +94,27 @@
             "wpml_cf_preferences": 2
         },
         {
+            "key": "field_65e9a4d04cb3e",
+            "label": "Додатковий телефон",
+            "name": "additional_phone",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 2,
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
             "key": "field_64c11d6e85643",
             "label": "Електронна пошта",
             "name": "email",
@@ -524,7 +545,7 @@
                         "class": "",
                         "id": ""
                     },
-                    "wpml_cf_preferences": 0,
+                    "wpml_cf_preferences": 2,
                     "default_value": "",
                     "maxlength": "",
                     "placeholder": "",
@@ -801,5 +822,5 @@
     "description": "",
     "show_in_rest": 0,
     "acfml_field_group_mode": "localization",
-    "modified": 1697117388
+    "modified": 1709810993
 }

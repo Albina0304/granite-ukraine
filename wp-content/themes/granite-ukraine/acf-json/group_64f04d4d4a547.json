@@ -209,6 +209,7 @@
                             "collapsed": "",
                             "button_label": "Додати рядок",
                             "rows_per_page": 20,
+                            "parent_repeater": "field_650af4bb8815b",
                             "sub_fields": [
                                 {
                                     "key": "field_650af4bb8815d",
@@ -232,8 +233,7 @@
                                     "append": "",
                                     "parent_repeater": "field_650af4bb8815c"
                                 }
-                            ],
-                            "parent_repeater": "field_650af4bb8815b"
+                            ]
                         },
                         {
                             "key": "field_650af4bb8815e",
@@ -281,5 +281,5 @@
     "description": "",
     "show_in_rest": 0,
     "acfml_field_group_mode": "translation",
-    "modified": 1695978143
+    "modified": 1710344945
 }
