@@ -1,11 +1,26 @@
+.popular-questions {
+    @include media-down(lsm) {
+        padding-bottom: 40px;
+    }
+}
 .faqs {
+    margin-top: 50px;
     &-description {
         color: $secondary-color;
         text-align: center;
-        margin-bottom: 30px;
+        margin-bottom: 24px;
+        line-height: 28px;
+        @include media-down(lsm) {
+            font-size: 13px;
+        }
     }
     &-title {
-        margin-bottom: 20px;
+        margin-bottom: 16px;
+        font-size: $sm-height;
+        line-height: $main-height;
+        @include media-down(lsm) {
+            font-size: $base-height;
+        }
     }
     &-category {
         color: $btn-color;
@@ -25,7 +40,14 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            padding: 8px;
             padding-left: 0;
+            @include media-down(lsm) {
+                font-size: $btn-size;
+            }
+            @include media-down(xs) {
+                font-size: $min-size;
+            }
             &:focus {
                 background-color: transparent;
                 border: none;
@@ -43,6 +65,10 @@
                     height: 25px;
                     background-size: contain;
                     display: inline-block;
+                    @include media-down(lsm) {
+                        width: 20px;
+                        height: 20px;
+                    }
                 }
                 &-open::after {
                     background-image: url('../../assets/images/plus.svg');
@@ -62,11 +88,41 @@
                     }
                 }
             }
+            &.collapsed {
+                @include media-down(lsm) {
+                    font-size: $btn-size;
+                    padding: 8px;
+                    padding-left: 0;
+                }
+                @include media-down(xs) {
+                    font-size: $min-size;
+                }
+            }
         }
         &-body {
             color: $secondary-color;
+            padding-left: 0;
+            @include media-down(lsm) {
+                font-size: $min-size;
+                padding: 10px;
+            }
             a {
                 color: $btn-color;
+            }
+        }
+        &-title {
+            margin: 0;           
+        }
+    }
+    & .section-button {
+        margin-top: 32px;
+        justify-content: center;
+        & .btn-primary {
+            padding: 12px 24px;
+            font-size: $btn-size;
+            line-height: $mobile-card;
+            @include media-down(xs) {
+                font-size: $min-size;
             }
         }
     }

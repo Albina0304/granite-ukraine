@@ -1,8 +1,8 @@
 <?php
 /* Template Name: Контакти */
 get_header();
-if (have_rows('modules')):
-    while (have_rows('modules')) : the_row();
+if (have_rows('modules_contacts')):
+    while (have_rows('modules_contacts')) : the_row();
         if (get_row_layout() === 'contacts'):
             echo get_template_part('template-parts/modules/contact-form', '', array(
                 'title' => get_sub_field('contact_title'),
@@ -12,7 +12,8 @@ if (have_rows('modules')):
             echo get_template_part('template-parts/modules/faqs', '', array(
                 'faq_title' => get_sub_field('questions_title'),
                 'faq_description' => get_sub_field('questions_description'),
-                'faqs' => get_sub_field('questions')
+                'faqs' => get_sub_field('questions'),
+                'faq_link' => get_sub_field('faq_link'),
             ));
         endif;
     endwhile;

@@ -16,6 +16,7 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
+            gap: 24px;
             margin: -12px;
             @include media-down(md) {
                 margin: -8px;
@@ -26,6 +27,7 @@
             &-column {
                 max-width: 25%;
                 padding: 12px;
+                margin-bottom: 32px;
                 @include media-down(md) {
                     max-width: 33.3%;
                     padding: 8px;
@@ -41,12 +43,15 @@
                 }
             }
         }
+        &-col {
+            padding: 12px;
+        }
         &-card {
             .card-title {
                 color: $black;
-                margin: 8px 0 32px;
+                margin: 8px 0 0;
                 text-align: center;
-                background-color: $white;
+                background-color: transparent;
                 border-radius: 4px;
                 @include media-down(lsm) {
                     margin-bottom: 0;

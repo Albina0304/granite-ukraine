@@ -44,6 +44,27 @@
                             "placeholder": "",
                             "prepend": "",
                             "append": ""
+                        },
+                        {
+                            "key": "field_65f176cbaefc3",
+                            "label": "Text opt",
+                            "name": "text_opt",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "wpml_cf_preferences": 2,
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
                         }
                     ],
                     "min": "",
@@ -227,6 +248,27 @@
                                 "id": ""
                             },
                             "wpml_cf_preferences": 2,
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
+                            "key": "field_65f179d819cc7",
+                            "label": "Заголовок ОПТ",
+                            "name": "title_opt",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "wpml_cf_preferences": 0,
                             "default_value": "",
                             "maxlength": "",
                             "placeholder": "",
@@ -418,7 +460,7 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "wpml_cf_preferences": 0,
+                            "wpml_cf_preferences": 2,
                             "default_value": "",
                             "maxlength": "",
                             "placeholder": "",
@@ -439,7 +481,7 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "wpml_cf_preferences": 0,
+                            "wpml_cf_preferences": 2,
                             "default_value": "",
                             "tabs": "all",
                             "toolbar": "full",
@@ -460,7 +502,7 @@
                                 "class": "",
                                 "id": ""
                             },
-                            "wpml_cf_preferences": 0,
+                            "wpml_cf_preferences": 1,
                             "post_type": [
                                 "faq"
                             ],
@@ -496,6 +538,11 @@
                 "param": "post_type",
                 "operator": "==",
                 "value": "page"
+            },
+            {
+                "param": "post_template",
+                "operator": "!=",
+                "value": "template-contacts.php"
             }
         ]
     ],
@@ -509,5 +556,5 @@
     "description": "",
     "show_in_rest": 0,
     "acfml_field_group_mode": "translation",
-    "modified": 1706716638
+    "modified": 1710324215
 }

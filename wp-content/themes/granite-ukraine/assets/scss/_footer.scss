@@ -41,10 +41,13 @@
     .menu-contact {
         @include media-down(lsm) {
             margin-bottom: 12px;
+            gap: 16px;
+            justify-content: center;
         }
         @include media-down(s) {
             flex-direction: column;
             margin: 0;
+            gap: 0;
         }
         li {
             @include media-down(lsm) {
@@ -68,11 +71,16 @@
     .contact-navigation {
         max-width: 687px;
         margin: 16px auto 32px;
+        flex-direction: column;
         @include media-down(lsm) {
             flex-direction: column;
         }
         @include media-down(s) {
             margin: 32px auto;
+        }
+        & .menu-contact {
+            margin: 0 0 32px 0;
+            flex-wrap: wrap;
         }
     }
     &-copyright {

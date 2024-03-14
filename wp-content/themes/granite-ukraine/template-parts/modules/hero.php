@@ -1,11 +1,13 @@
 <?php
 $text = get_sub_field('text');
+$text_opt = get_sub_field('text_opt');
+$finalText = isset($_GET['utm_content']) && $_GET['utm_content'] === 'opt' ?  $text_opt : $text;
 $link = get_field('btn_primary', 'options');
 if($text) : ?>
     <section class="decor hero">
         <div class="container">
             <h1 class="hero-title">
-                <?php echo $text;?>
+                <?php echo $finalText;?>
             </h1>
             <?php if( $link ): ?>
                 <div class="section-button">
