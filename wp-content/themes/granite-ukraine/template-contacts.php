@@ -9,13 +9,15 @@ if (have_rows('modules_contacts')):
                 'description' => get_sub_field('contact_description'),
                 'form_shortcode' => get_sub_field('form_shortcode')
             ));
-            echo get_template_part('template-parts/modules/faqs', '', array(
-                'faq_title' => get_sub_field('questions_title'),
-                'faq_description' => get_sub_field('questions_description'),
-                'faqs' => get_sub_field('questions'),
-                'faq_link' => get_sub_field('faq_link'),
-            ));
         endif;
+        if(get_row_layout() === 'extensive_questions') {
+            echo get_template_part('template-parts/modules/faqs', '', array(
+                'faq_title' => get_sub_field('title_questions'),
+                'faq_description' => get_sub_field('description_questions'),
+                'faqs' => get_sub_field('questions_object'),
+                'faq_link' => get_sub_field('questions_link'),
+            ));
+        }
     endwhile;
 endif;
 get_footer();
