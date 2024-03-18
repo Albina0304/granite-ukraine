@@ -1,7 +1,12 @@
 <?php 
 $title = get_sub_field('title');
-$repeater_cards = get_sub_field('repeater_card');
-if($repeater_cards) : ?>
+$utm_advantage = isset($_GET['utm_content']) ? $_GET['utm_content'] : '';
+if ($utm_advantage === 'opt') {
+    $variation_cards = get_sub_field('cards_opt');
+} else {
+    $variation_cards = get_sub_field('repeater_card');
+}
+if($variation_cards) : ?>
     <section id="advantage" class="section advantages">
         <div class="decor-light">
             <img src="<?php echo get_template_directory_uri().'/assets/images/declight.png';?>" alt="" loading="lazy">
@@ -13,7 +18,7 @@ if($repeater_cards) : ?>
                 </h2>
             <?php endif;?>
             <div class="advantage-colons">
-                <?php foreach ($repeater_cards as $card) :
+                <?php foreach ($variation_cards as $card) :
                     $image = isset($card['image']) ? $card['image'] : '';
                     $title_card = $card['title'];
                     $description = $card['description'];?>

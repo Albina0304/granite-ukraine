@@ -3,7 +3,13 @@ $title = get_sub_field('title');
 $description = get_sub_field('description');
 $repeater = get_sub_field('repeater');
 $link = get_field('btn_primary', 'options');
-if($repeater && $description) : ?>
+$utm_about = isset($_GET['utm_content']) ? $_GET['utm_content'] : '';
+if ($utm_about === 'opt') {
+    $about_images = get_sub_field('about_opt');
+} else {
+    $about_images = get_sub_field('repeater');
+}
+if($about_images&& $description) : ?>
     <section id="about-us" class="section about">
         <div class="decor-light">
             <img src="<?php echo get_template_directory_uri().'/assets/images/declight.png';?>" alt="" loading="lazy">
@@ -20,9 +26,9 @@ if($repeater && $description) : ?>
                         <?php echo $description;?>
                     </div>
                 <?php endif;
-                if ($repeater) : ?>
+                if ($about_images) : ?>
                     <div class="about-column">
-                        <?php foreach ($repeater as $img) :
+                        <?php foreach ($about_images as $img) :
                             $image = isset($img['image']) ? $img['image'] : '';
                             if (isset($image['ID'])) : ?>
                                 <div class="about-column-image">
