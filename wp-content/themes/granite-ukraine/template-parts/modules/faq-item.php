@@ -16,7 +16,7 @@
                         </button>
                     </h2>
                     <div id="collapse-<?php echo get_the_ID(); ?>" class="accordion-collapse collapse" aria-labelledby="accordion-heading-<?php echo get_the_ID(); ?>" data-bs-parent="#faq-<?php echo isset($cat_id) ? $cat_id : '';?>">
-                        <div class="accordion-body"><?php echo __(get_the_content(), 'granite-ukraine'); ?></div>
+                        <div class="accordion-body"><?php echo get_the_content();?></div>
                     </div>
                 </div>
             <?php }

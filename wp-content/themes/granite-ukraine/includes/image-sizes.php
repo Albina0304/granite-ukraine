@@ -9,6 +9,7 @@ add_image_size( 'product-card', 588, 417 );
 add_image_size( 'slider-img', 131, 93 );
 add_image_size( 'labor-img', 282, 376 );
 add_image_size( 'modal-img', 170, 50 );
+add_image_size( 'about-image-opt', 600, 660 );
 
 function getImage($image, $size = false) {
     if($image['mime_type'] !== 'image/svg+xml'):

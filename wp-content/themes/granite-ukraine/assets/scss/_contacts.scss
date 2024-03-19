@@ -3,6 +3,13 @@
 }
 .contacts {
     margin-top: 50px;
+    position: relative;
+    .decor-light {
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
     .contact {
         &-general-description {
             display: flex;
@@ -69,7 +76,7 @@
             }
         } 
         &-description {
-            text-align: start;
+            text-align: center;
             color: $text-color;
             line-height: $sm-height;
             margin: 8px 0 0;
