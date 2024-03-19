@@ -13,7 +13,7 @@ $faq_description = get_field('faq_description');
 <section class="section popular-questions decor">
     <div class="faqs">
         <div class="container">
-            <div class="faqs-description">
+            <div class="faqs-main">
                 <?php if ($faq_title):?>
                     <h2 class="faqs-title">
                         <?php echo $faq_title;?>
@@ -38,15 +38,16 @@ $faq_description = get_field('faq_description');
                                 'terms' => $faq_taxonomy -> term_id
                             )
                         )
-                    );?>
-                    <h3 class="faqs-category">
-                        <?php echo __($faq_taxonomy->name, 'granite-ukraine');?>
-                    </h3>
-                    <?php
-                    $postsfaq = get_posts($faqs_obj);
-                    if($postsfaq) :
+                    );
+                    $posts_faq = get_posts($faqs_obj);
+                    if($posts_faq) :?>
+                        <h3 class="faqs-category">
+                            <?php echo $faq_taxonomy->name;?>
+                        </h3>
+                        <?php
                         echo get_template_part('template-parts/modules/faq-item', '', array(
-                            'faqs' => $postsfaq
+                            'faqs' => $posts_faq,
+                            'cat_id' => $faq_taxonomy -> term_id
                         ));
                     endif;
                 };

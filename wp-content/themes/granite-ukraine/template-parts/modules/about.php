@@ -32,7 +32,7 @@ if($about_images&& $description) : ?>
                             $image = isset($img['image']) ? $img['image'] : '';
                             if (isset($image['ID'])) : ?>
                                 <div class="about-column-image">
-                                    <?php echo wp_get_attachment_image($image['ID'], 'about-image'); ?>  
+                                    <?php echo wp_get_attachment_image($image['ID'], 'about-image-opt'); ?>  
                                 </div>
                             <?php endif;
                         endforeach;?>

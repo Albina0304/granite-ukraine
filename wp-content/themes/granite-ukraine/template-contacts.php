@@ -9,13 +9,15 @@ if (have_rows('modules_contacts')):
                 'description' => get_sub_field('contact_description'),
                 'form_shortcode' => get_sub_field('form_shortcode')
             ));
+        endif;
+        if(get_row_layout() === 'popular_questions') {
             echo get_template_part('template-parts/modules/faqs', '', array(
                 'faq_title' => get_sub_field('questions_title'),
                 'faq_description' => get_sub_field('questions_description'),
                 'faqs' => get_sub_field('questions'),
-                'faq_link' => get_sub_field('faq_link'),
+                'faq_link' => get_sub_field('faq_link_item'),
             ));
-        endif;
+        }
     endwhile;
 endif;
 get_footer();

@@ -2,7 +2,7 @@
 extract($args);?>
 <section id="contacts contactForm" class="section form contacts">
     <div class="decor-light">
-        <img src="<?php echo get_template_directory_uri().'/assets/images/declight.png';?>" alt="" loading="lazy">
+        <img src="<?php echo get_template_directory_uri().'/assets/images/declight.png';?>" alt="declight" loading="lazy">
     </div>
     <div class="form-global contact-form-global">
         <div class="container">

@@ -3,7 +3,7 @@
 <section class="section popular-questions decor">
     <div class="faqs">
         <div class="container">
-            <div class="faqs-description">
+            <div class="faqs-main">
                 <?php if ($faq_title):?>
                     <h2 class="faqs-title">
                         <?php echo $faq_title;?>
