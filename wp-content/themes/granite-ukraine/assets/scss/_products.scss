@@ -1,6 +1,5 @@
 .products {
     position: relative;
-    padding-bottom: 44px;
     &-title {
         text-align: center;
         margin: 0 0 40px;
@@ -18,20 +17,11 @@
             flex-wrap: wrap;
             justify-content: center;
             gap: 24px;
-            margin: -12px;
-            @include media-down(md) {
-                margin: -8px;
-            }
-            @include media-down(ms) {
-                gap: 16px;
-            }
-            &-column {
-                max-width: 25%;
-                padding: 12px;
+            &-column, .product-col {
+                max-width: calc(25% - 24px);
                 margin-bottom: 32px;
                 @include media-down(md) {
                     max-width: 33.3%;
-                    padding: 8px;
                 }
                 @include media-down(lsm) {
                     max-width: 50%;
@@ -45,7 +35,7 @@
             }
         }
         &-col {
-            padding: 12px;
+            margin-bottom: 0!important;
         }
         &-card {
             .card-title {
@@ -53,7 +43,6 @@
                 margin: 8px 0 0;
                 text-align: center;
                 background-color: transparent;
-                border-radius: 4px;
                 @include media-down(lsm) {
                     margin-bottom: 0;
                     font-size: $btn-size;

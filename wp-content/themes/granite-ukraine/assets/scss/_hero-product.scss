@@ -2,6 +2,7 @@
 
 .hero {
     &-product {
+        position: relative;
         padding: 170px 0 88px;
         @include media-down(ms) {
             padding: 138px 0 64px;

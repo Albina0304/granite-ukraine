@@ -40,8 +40,9 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 8px;
+            padding: 14px 10px;
             padding-left: 0;
+            box-shadow: none;
             @include media-down(lsm) {
                 font-size: $btn-size;
             }
@@ -102,6 +103,7 @@
             color: $secondary-color;
             padding-left: 0;
             font-size: $btn-size;
+            padding-top: 0;
             @include media-down(lsm) {
                 font-size: $min-size;
                 padding: 10px;
