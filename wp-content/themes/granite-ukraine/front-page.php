@@ -14,7 +14,7 @@ if( have_rows('modules') ):
             elseif( get_row_layout() === 'labors' ):
                 $title = get_sub_field('title');
                 $title_opt = get_sub_field('title_opt');
-                $finalTitle = isset($_GET['utm_content']) && $_GET['utm_content'] === 'opt' ?  $title_opt : $title;
+                $finalTitle = isset($_GET['ads_content']) && $_GET['ads_content'] === 'opt' ?  $title_opt : $title;
                 $link = get_field('secondary_button', 'options');
                 $args = array(
                     'post_type' => 'product',
@@ -22,7 +22,7 @@ if( have_rows('modules') ):
                     'suppress_filters' => false
                 );
             
-                if(isset($_GET['utm_content']) && $_GET['utm_content'] === 'opt') {
+                if(isset($_GET['ads_content']) && $_GET['ads_content'] === 'opt') {
                     $args['post_type'] = 'production';
                     $image_field = 'images_productions';
                 } else {
