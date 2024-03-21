@@ -18,16 +18,17 @@ jQuery(document).ready(function ($) {
     var homeMenuLink = $('.home .main-wrapper a');
     if (homeMenuLink.length) {
         homeMenuLink.click(function(e) {
-            e.preventDefault();
-            
             var linkid = $(this).attr('href');
-            var headerHeight = $('.header').outerHeight();
-            $('html, body').animate({
-            scrollTop: $(linkid).offset().top - headerHeight+1
-            }, 800);
+            var el = $(linkid);
+            if(el.length) {
+                var headerHeight = $('.header').outerHeight();
+                $('html, body').animate({
+                    scrollTop: $(linkid).offset().top - headerHeight+1
+                    }, 800);
+            }
         });
     } else {
-        $('.main-wrapper a').click(function(event) {
+        $('#menu-menu a').click(function(event) {
             event.preventDefault();
             window.location.href = '/'+ event.currentTarget.hash
         });
