@@ -17,11 +17,20 @@
             align-items: center;
             justify-content: center;
             margin-bottom: 32px;
+            @include media-down(xs) {
+                margin-bottom: 12px;
+            }
         }
         &-form {
             display: block;
             max-width: 60%;
             margin: 0 auto;
+            @include media-down(ms) {
+                max-width: 80%;
+            }
+            @include media-down(sm) {
+                max-width: 100%;
+            }
             & .form-wrapper {
                 margin-bottom: 16px;
                 .wpcf7-form-control-wrap {
@@ -29,6 +38,9 @@
                 }
                 &-button { 
                     margin: 24px 0 0 0!important;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
                 }
             }
             form input, textarea {
@@ -88,7 +100,6 @@
                 line-height: $base-height;
             }
             @include media-down(xs) {
-                font-size: $min-size;
                 line-height: $main;
                 margin: 14px 0;
             }

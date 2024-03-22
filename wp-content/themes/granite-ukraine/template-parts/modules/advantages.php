@@ -1,6 +1,6 @@
 <?php 
 $title = get_sub_field('title');
-$utm_advantage = isset($_GET['utm_content']) ? $_GET['utm_content'] : '';
+$utm_advantage = isset($_GET['ads_content']) ? $_GET['ads_content'] : '';
 if ($utm_advantage === 'opt') {
     $variation_cards = get_sub_field('cards_opt');
 } else {

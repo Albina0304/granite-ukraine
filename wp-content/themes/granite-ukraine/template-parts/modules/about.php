@@ -3,7 +3,7 @@ $title = get_sub_field('title');
 $description = get_sub_field('description');
 $repeater = get_sub_field('repeater');
 $link = get_field('btn_primary', 'options');
-$utm_about = isset($_GET['utm_content']) ? $_GET['utm_content'] : '';
+$utm_about = isset($_GET['ads_content']) ? $_GET['ads_content'] : '';
 if ($utm_about === 'opt') {
     $about_images = get_sub_field('about_opt');
 } else {

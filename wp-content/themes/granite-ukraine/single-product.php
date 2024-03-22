@@ -110,7 +110,7 @@ if($related_products) : ?>
                     <?php echo $title_products; ?>
                 </h2>
             <?php endif;?>
-            <div class="product-cards">
+            <div class="product-cards offers">
                 <?php foreach($related_products as $post) :
                     setup_postdata($post);?>
                     <div class="product-col">
