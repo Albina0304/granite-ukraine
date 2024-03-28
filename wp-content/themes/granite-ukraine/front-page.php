@@ -41,15 +41,16 @@ if( have_rows('modules') ):
                 $outImages = array_slice($images, 6);
                 $imageRow = [];
                 foreach($outImages as $image) {
-                    if(isset($image['image'])) {
+                    if(!empty($image['image'])) {
                         $imageRow[]['image'] = array(
-                            'id' =>  $image['image'] ? $image['image']['id'] : '',
+                            'id' =>   $image['image']['id'],
                             'sizes' => array(
-                                'large' => $image['image'] ? $image['image']['sizes']['large'] : ''
+                                'large' => $image['image']['sizes']['large']
                             )
                         );
                     }
                 }
+    
                 $arr = array(
                     'title' => $finalTitle,
                     'medias' => array_slice($images, 0, 6),
