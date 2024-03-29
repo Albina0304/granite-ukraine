@@ -89,7 +89,7 @@ $related_products = get_posts(
     <section class="labor">
         <?php $arr = array(
             'title' => __('Роботи', 'granite-ukraine'),
-            'images' => array_slice($product_images, 0, 6),
+            'medias' => array_slice($product_images, 0, 6),
             'class_name' => 'labor-single-product',
             'link' => array(
                 'title' => __('Завантажити більше', 'granite-ukraine')
@@ -110,7 +110,7 @@ if($related_products) : ?>
                     <?php echo $title_products; ?>
                 </h2>
             <?php endif;?>
-            <div class="product-cards">
+            <div class="product-cards offers">
                 <?php foreach($related_products as $post) :
                     setup_postdata($post);?>
                     <div class="product-col">

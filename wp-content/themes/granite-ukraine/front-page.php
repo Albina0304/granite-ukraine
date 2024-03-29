@@ -14,21 +14,19 @@ if( have_rows('modules') ):
             elseif( get_row_layout() === 'labors' ):
                 $title = get_sub_field('title');
                 $title_opt = get_sub_field('title_opt');
-                $finalTitle = isset($_GET['utm_content']) && $_GET['utm_content'] === 'opt' ?  $title_opt : $title;
+                $finalTitle = isset($_GET['ads_content']) && $_GET['ads_content'] === 'opt' ?  $title_opt : $title;
                 $link = get_field('secondary_button', 'options');
                 $args = array(
                     'post_type' => 'product',
                     'posts_per_page' => -1,
                     'suppress_filters' => false
                 );
-            
-                if(isset($_GET['utm_content']) && $_GET['utm_content'] === 'opt') {
+                if(isset($_GET['ads_content']) && $_GET['ads_content'] === 'opt') {
                     $args['post_type'] = 'production';
                     $image_field = 'images_productions';
                 } else {
                     $image_field = 'product_images';
                 }
-            
                 $products = get_posts($args);
                 $images = array();
                 foreach ($products as $product) {
@@ -39,29 +37,30 @@ if( have_rows('modules') ):
                         }
                     }
                 }
-            
                 shuffle($images);
                 $outImages = array_slice($images, 6);
                 $imageRow = [];
                 foreach($outImages as $image) {
-                    $imageRow[]['image'] = array(
-                        'id' => $image['image']['id'],
-                        'sizes' => array(
-                            'large' => $image['image']['sizes']['large']
-                        )
-                    );
+                    if(!empty($image['image'])) {
+                        $imageRow[]['image'] = array(
+                            'id' =>   $image['image']['id'],
+                            'sizes' => array(
+                                'large' => $image['image']['sizes']['large']
+                            )
+                        );
+                    }
                 }
+    
                 $arr = array(
                     'title' => $finalTitle,
-                    'images' => array_slice($images, 0, 6),
+                    'medias' => array_slice($images, 0, 6),
                     'link' => $link,
                     'class_name' => 'home-labor',
                     'images_count' => count($images),
                     'additional_images' => $imageRow
                 );
                 echo get_template_part('template-parts/modules/labors', '', $arr);
-
-        elseif( get_row_layout() === 'contact-form' ): 
+            elseif( get_row_layout() === 'contact-form' ): 
             echo get_template_part('template-parts/modules/contact-form');
         endif;
     endwhile;

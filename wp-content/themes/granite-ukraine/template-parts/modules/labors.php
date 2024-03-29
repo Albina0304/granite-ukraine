@@ -1,6 +1,6 @@
 <?php
 extract($args);
-if ($images) :
+if ($medias) :
     if(isset($additional_images)) :
         $json = json_encode($additional_images, JSON_FORCE_OBJECT);
     endif;?>
@@ -12,15 +12,20 @@ if ($images) :
                 </h2>
             <?php endif;?>
             <div class="boxes" data-images='<?php echo isset($json) ? $json : '';?>'>
-                <?php foreach($images as $image) :
-                    if(is_array($image) && !empty($image['image'])) : ?>
+                <?php foreach($medias as $media) :
+                    if(is_array($media) && !empty($media['image'])) : ?>
                         <div class="box">
-                            <a href="<?php echo $image['image']['sizes']['large'];?>" data-lightbox="labor-images">
-                                <?php echo wp_get_attachment_image($image['image']['id'], 'product-card');?>
+                            <a href="<?php echo $media['image']['sizes']['large'];?>" data-lightbox="labor-images">
+                                <?php echo wp_get_attachment_image($media['image']['id'], 'product-card');?>
                             </a>
                         </div>
-                    <?php endif;
-                endforeach;?>
+                    <?php endif;?>
+                        <?php if(isset($media['select_type']) && $media['select_type'] === 'video' && isset($media['productions_video'])) :?>
+                            <div class="box">
+                                <video autoplay muted src="<?php echo $media['productions_video']['url'];?>"></video>
+                             </div>
+                        <?php endif;?>
+                <?php endforeach;?>
             </div>
             <?php if($link && $images_count > 6) : ?>
                 <div class="section-button">
