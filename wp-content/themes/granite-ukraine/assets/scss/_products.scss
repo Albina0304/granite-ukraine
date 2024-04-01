@@ -38,6 +38,12 @@
             margin-bottom: 0!important;
         }
         &-card {
+            position: relative;
+            .tags {
+                position: absolute;
+                right: 5px;
+                top: 5px;
+            }
             .card-title {
                 color: $black;
                 margin: 8px 0 0;

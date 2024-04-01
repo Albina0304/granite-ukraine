@@ -76,6 +76,27 @@
             "append": ""
         },
         {
+            "key": "field_660a1226d85f2",
+            "label": "Product Sale",
+            "name": "product_sale",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "wpml_cf_preferences": 2,
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
             "key": "field_6500727cdfe10",
             "label": "Зображення слайдера",
             "name": "slider_images",
@@ -281,5 +302,5 @@
     "description": "",
     "show_in_rest": 0,
     "acfml_field_group_mode": "translation",
-    "modified": 1710344945
+    "modified": 1711936732
 }

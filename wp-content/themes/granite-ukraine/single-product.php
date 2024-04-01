@@ -1,6 +1,7 @@
 <?php
 get_header();
 $price_from = get_field('price_from');
+$product_sale = get_field('product_sale');
 $product_images = get_field('product_images');
 $slider_images = get_field('slider_images');
 $post_id = get_the_ID();
@@ -24,6 +25,16 @@ $related_products = get_posts(
     <div class="container">
         <div class="hero-card">
             <div class="hero-slider-wrap">
+                <?php $product_tags = get_the_terms(get_the_id(),'product_tag');?>
+                <?php if($product_tags) : ?>
+                    <div class="tags">
+                        <?php foreach($product_tags as $product_tag) {?>
+                            <span class="tag tag-sale">
+                                <?php echo $product_tag->name;?>
+                            </span>
+                        <?php }?>
+                    </div> 
+                <?php endif;?>
                 <div class="slider-image">
                     <div class="slider-image-card">
                         <a href="<?php echo get_the_post_thumbnail_url();?>" data-lightbox="hero-granite">
@@ -71,6 +82,13 @@ $related_products = get_posts(
                 <?php if ($price_from) : ?>
                     <div class="hero-info-price">
                         <?php echo $price_from;?>
+                    </div>
+                <?php endif;
+                if ($product_sale) : ?>
+                    <div class="hero-info-content">
+                        <h4 class="hero-info-content-sale">
+                            <?php echo $product_sale;?>
+                        </h4>
                     </div>
                 <?php endif;
                 if($link) : ?>

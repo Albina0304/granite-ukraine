@@ -33,6 +33,17 @@
             margin-top: 24px;
         }
         &-wrap {
+            position: relative;
+            .tags {
+                position: absolute;
+                right: 10px;
+                top: 10px;
+                z-index: 11;
+            }
+            .tag {
+                padding: 5px 8px;
+                font-size: 12px;
+            }
             display: flex;
             flex-direction: column;
             .slider-image {
@@ -105,6 +116,25 @@
             @include media-down(md) {
                 line-height: $base-height;
                 margin-bottom: 32px;
+            }
+        }
+        &-content {
+            &-sale {
+                color: red;
+                font-size: $mobile-card;
+                text-align: center;
+                line-height: 1.3;
+                font-weight: bold;
+                margin: 0;
+                animation: saleAnimate 1s infinite linear;
+            }
+            @-webkit-keyframes saleAnimate {
+                from {
+                    color: red;
+                }
+                to {
+                    color: $btn-color;
+                }
             }
         }
         .section-button {
