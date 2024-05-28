@@ -82,3 +82,5 @@ wp-content/mysql.sql
 ._.DS_Store
 .idea
 .vscode
+
+/wp-content/themes/granite-ukraine/dist/*
